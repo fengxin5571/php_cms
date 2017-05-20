@@ -1,0 +1,13 @@
+.new_btn { width:100%; margin:35px 0 24px 0}
+.btn1,.btn2,.btn3,.btn4,.btn5{top:1px;}
+.btn1 { left:20px;}
+.btn2 { left:98px;}
+.btn3 { left:176px;}
+.btn4 { left:254px;}
+.btn5 { left:332px;}
+.app_list {width:100%;}
+.app_list li{margin:0px 0px 30px 4px;}
+.app_list li p{color:#666;}
+.wrapper_rr{border-top:3px solid #058BE6; }
+.m_l_i li{height:100px; overflow:hidden}
+.hot_list { padding-top:23px;}

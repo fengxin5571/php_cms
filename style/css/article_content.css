@@ -1,0 +1,53 @@
+@charset "gb2312";
+/* CSS Document */
+
+.wrapper_ll h1{ background:none; text-align:center; border:0px; font-size:24px; line-height:24px; padding:20px 0 5px 0; font-weight:800; color:#181818}
+.wrapper_ll { padding:0 29px;width:630px;}
+.wrapper_ll h2{ background:url(../images/title_bg.jpg) repeat-x; height:34px; line-height:34px; border-bottom:1px solid #CCC; padding-left:14px; font-size:14px}
+.a_info { text-align:center; color:#8A8A8A; border-bottom:1px solid #E4E4E4; width:100%; margin:0px auto; padding:0 0 10px 0}
+.a_info span{ padding:0px 10px}
+.pl a{ color:#0484D8}
+.pl em{ color:red}
+.content {font-size:14px; color:#333; padding:12px 0 0 0;line-height:25px;}
+.content img{ display:inline}
+.content p{margin-bottom:10px; margin-top:10px}
+.content a{ color:#058BE6}
+.content center img{ margin-top:5px; margin-bottom:5px;}
+.pag { width:100%; text-align:center; margin:0px; padding:10px 0px;}
+.xg{ display: block;height:220px;margin-left:-10px;width:650px;float: left;overflow:hidden;border-top:2px #058BE6 solid;}
+.xg_c{padding: 10px;}
+.xg_list{float: left;width:180px;}
+.xg_list img{border:1px solid #ccc;padding:1px;}
+.xg_right{width: 440px;float:left;}
+.xg_right_title{text-align: left;line-height: 25px;border-bottom:1px solid #ccc;}
+.xg_right_title label {width: 170px;vertical-align: top;display: inline-block;zoom: 1;color:#f00;}
+.xg_right_title label a{color:#f00;}
+.xg_right_title span{vertical-align: top;display: inline-block;}
+.xg_right_title a{margin: 0px 5px;}
+.xg_txt{padding-top: 10px;padding-right:10px;display: block;position: relative;}
+.xg_txt li a{width: 230px;color: #333;line-height: 25px;height:25px;overflow: hidden; background:url(../images/txt.gif) left 10px no-repeat; padding-left:8px;font-size: 12px;vertical-align: top;display: inline-block;zoom: 1;}
+.xg_pic{top: 10px;width: 144px;right: 0px;overflow: hidden;display: block;position: absolute;text-align:center;}
+.xg_pic img{padding: 1px;border:1px solid #ddd;height: 100px;width: 140px;}
+.arc { width:688px; padding:0px; margin:10px 0 0 0}
+.share { clear:both; overflow:hidden; padding:10px 0 0px 0px; height:60px;}
+.mood { clear:both; overflow:hidden; padding:10px 0 10px 60px;border-bottom:1px dashed #ccc;border-top:1px dashed #ccc;margin-bottom:20px;}
+.digg{text-align: center;cursor: pointer;background: url("../images/digg.jpg") no-repeat;font-weight:bold;width:107px;height:50px;color:#3385D9;}
+.digg:hover{background:url("../images/digg.jpg") -110px 0px no-repeat;color:#fff;}
+.digg-count{line-height:35px;padding-left: 23px;font-size:16px;}
+
+.arc_pag { clear:both;height:30px;margin-top:10px;text-align:center;line-height:30px;overflow:hidden;border-top:1px #d7d7d7 solid;border-bottom:1px #d7d7d7 solid;}
+.arc_pag li{display: inline;height:20px;line-height: 20px;float:left; text-align:center;margin-left:5px;color: #666; font-size:12px;}
+.arc_pag a { padding:16px 8px; COLOR: #058BE6;  border: 1px solid #E7E7E7; text-decoration:none;}
+.arc_pag a:hover { BACKGROUND: #058BE6; color:#fff; text-decoration:none;border:#058BE6 1px solid;}  
+.arc_pag span { padding:16px 8px; BACKGROUND: #058BE6; color:#fff; border:#058BE6 1px solid;}
+.arc_pag .thisclass a{display:block; overflow:hidden; width:10px;font-weight: bold; color: #fff; text-align:center;height:20px;line-height: 20px; padding:0 6px; border:#058BE6 1px solid; background: #058BE6;}
+
+.cnewslist{display:block;padding:40px 10px 10px 10px;border-top: 1px solid #eee;width:668px; }
+.cnewslist ul{width:668px; float:left;}
+.cnewslist li{ padding:0px 10px;width:314px;line-height: 30px;height:30px;float: left; overflow:hidden;background:url(../images/txt.gif) left 15px no-repeat;}
+.cnewslist li a{color:#555;font-size:14px;float:left;}.cnewslist li span{color:#999;font-size:12px;float:right;}
+.box-b1,.boxby{width:960px; margin:0px auto; background: url("../images/boxby.gif") repeat-y;overflow:hidden}
+.box-b1{background: url("../images/box-b1.gif") center bottom no-repeat;}
+.ad627{width:627px; margin:10px auto; height:60px;display: block;}
+.eee{ background: #EEEEEE;}
+.wrapper-bb0 .wrapper_rr{border-bottom:0px;}

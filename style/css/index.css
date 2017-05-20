@@ -1,0 +1,226 @@
+@charset "gb2312";
+/* CSS Document */
+body, div, h1, h2, h3, h4, form, img, ul, ol, li, dl, dt, dd, p, input { margin:0; padding:0 }
+ol, ul { list-style:none }
+em { font-style:normal}
+img { display:block; border:0}
+a { text-decoration:none; outline:none; color:#333}
+a:hover { text-decoration:underline; color:#FF6600}
+body { font:12px Arial,"宋体";background-image: url(../images/body_bg.jpg); background-repeat:repeat-x; background-position: center top; background-color:#EEEEEE; color:#333}
+.position { width:960px; margin:20px auto 10px auto; text-indent:10px}
+.hotapp_list li a,.fl_btn,.fr_btn,.news_list li,.wrapper_ll h3,.pc_list li,.tt03,.tt04,.tt05,.tt06,.n_red,.n_blue{ background:url(../images/comm_bg.gif) no-repeat}
+
+
+
+/*滚动推荐*/
+.hotapp { width:958px; margin:10px auto; border:1px solid #CCC; height:128px; background:#FFF; position:relative}
+.hotapp_list { width:864px; margin:16px auto 0 auto; overflow:hidden;height:97px;}
+.hotapp_list li{ float:left; width:108px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hotapp_list li a{ width:76px; display:block; margin:0px auto; text-align:center; background-position:-424px -92px;}
+.hotapp_list li a img{ margin:0 auto; padding:6px 0 10px 0}
+.fl_btn,.fr_btn { position:absolute; background-position:-452px 0; width:24px; height:92px; display: block; text-indent:-9999px; top:18px;}
+.fl_btn { left:8px;}
+.fr_btn { background-position:-476px 0; right:8px;}
+/*第一屏*/
+
+.wrapper,.wrapper1 { width:960px; margin:0 auto 10px auto; overflow:hidden}
+.wrapper_l { float:left; width:330px}
+.hd{ width:328px; height:260px; border:1px solid #CCC; background-color:#FFF; margin:10px 0 0 0; overflow:hidden}
+.hd h4{ background-color:#F7F7F7; height:26px; line-height:26px; border-bottom:1px solid #CCC; padding-left:14px; font-size:14px}
+.hd_list { width:310px;margin:0px auto 0 auto}
+.hd_list li{ float:left; width:50%; text-align:center;}
+.hd_list li img{ margin:15px auto 6px auto; border:1px solid #CCC}
+.flash { width:330px; height:230px; overflow:hidden;}
+.wrapper_c { float:left; width:310px; border:1px solid #CCC; background:#FFF; margin:0 10px; height:485px; padding:15px 19px 0 19px}
+.wrapper_c h1,.wrapper_c h2{ text-align:center;font-size:20px; line-height:20px; height:20px; }
+.wrapper_c h2 { padding-top:10px;}
+.wrapper_c h1 a{ color:#C00;}
+.wrapper_c h4{ background-color:#F7F7F7; height:26px; line-height:26px; border-bottom:1px solid #CCC; padding-left:14px; margin-top:10px;font-size:14px}
+.wrapper_c h2 a{ color:#333;}
+.wrapper_c p{ text-align:center; color: #999; line-height:20px; padding:5px 0 15px 0;border-bottom:1px dotted #CCC; }
+.news_list { margin:10px 0 0; overflow:hidden; clear:both}
+.news_list li{ font-size:14px; line-height:24px; background-position:-497px -183px; text-indent:10px; clear:both}
+.wrapper_c .news_list { padding:10px 0 0; margin:0px;}
+.news_list span{ float:right; display:inline;font-size:12px; color:#999}
+.arc_link {width:272px;white-space:nowrap;overflow:hidden;}
+.news_list i{ font-style:normal; color:#B7B7B7; padding:0 5px;float:left; font-size:12px}
+.wrapper_r { float:right;width:260px}
+.tj01,.tj02 { overflow:hidden; width:260px;display:block;visibility:visible;}
+.gonggao { padding:10px 20px 0 20px; width:218px; border:1px solid #CCC; background-color:#FFF; height:68px; margin:10px 0; overflow:hidden}
+/*资讯模块*/
+.wrapper1 { padding-top:6px;}
+.wrapper_ll { float:left;width:688px; border:1px solid #CCC; border-top:3px solid #333; background-color:#FFF; position:relative; height:366px;line-height:18px;}
+.wrapper_ll h3 { position:absolute; left:16px; top:-9px; width:121px; height:35px;}
+.wrapper_ll h3 a{ width:106px; height:35px; display:block; color:#FFF; line-height:30px; padding-left:15px; font-size:14px}
+.wrapper_ll h4 { height:34px; line-height:34px; font-weight:normal; padding-left:162px; border-bottom:1px solid #CCC; background-color:#F7F7F7; font-size:12px}
+.wrapper_ll h4 span { float:right; display:inline; padding-right:10px;}
+.wrapper_ll h4 a{ margin:0 6px;}
+.title { clear:both; line-height:13px; padding-top:12px;}
+.title a{ color:#058BE5;}
+.title span{ float:right; display:inline;}
+.title span a{ color:#333}
+.pc,.dg,.tk { float:left;overflow:hidden; }
+.pc { width:290px; padding:0 24px; border-right:1px dotted #CCC; margin:20px 0}
+.dg,.tk { padding:0 12px 0 18px; width:312px; margin:20px 0 0}
+.dg .title { padding:0}
+.tk .title { padding:8px 0 5px 0}
+.dg .news_list {margin-left:2px;}
+.h20 li{line-height:23px;}
+.wrapper_rr{ float:right; border:1px solid #CCC; width:258px; border-top:3px solid #058BE6; background-color:#FFF; height:366px;}
+.wrapper_rr h3 { background:url(../images/title_bg.jpg) no-repeat; height:34px; line-height:34px; border-bottom:1px solid #CCC; padding-left:14px; font-size:14px}
+.more{ float:right; display:inline; font-size:12px; margin-right:10px; font-weight:normal}
+.img_list { padding-bottom:13px; border-bottom:1px dotted #CCC}
+.hot_list { padding-top:13px;}
+.hot_list,.img_list { width:248px; margin:0px auto; overflow:hidden}
+.hot_list li{ width:25%; text-align:center; float:left; margin-bottom:10px;}
+.hot_list li img{ margin:0px auto; padding-bottom:2px;}
+.m_l_i li{height:90px; overflow:hidden}
+.img_list { width:232px;}
+.img_list li{ float:left}
+.img_list a{ height:50px; overflow:hidden}
+.img_list img{ margin-top:10px;border:1px solid #CCC;}
+/*安卓游戏*/
+h3.tt03 { background-position:0 -35px;}
+.h390 { height:386px;}
+.game_list { width:260px; padding:0 18px; height:346px; overflow:hidden; }
+.game_list li { width:260px; clear:both; padding:20px 0 20px 0; border-bottom:1px dotted #CCC; color:#666; height:75px; overflow:hidden}
+.game_list li img{ float:left; padding:0 12px 0 0}
+.game_list li a{ color:#FF6600; font-size:14px; font-weight:bold; line-height:14px; height:14px;}
+.game_list li p{ padding-bottom:10px;}
+.game_list li p a{width:75px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.game_list li  a{position:relative;}
+.game_list li a i{position:absolute;display:block;width:80px;left:-89px;top:-2px;height:80px;background:url(/style/images/75.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/style/images/75.png',sizingMethod='scale');cursor:pointer; z-index:1; border:0px;}
+.game_list,.new_btn ,.app_list { float:left}
+.new_btn { border-bottom:1px solid #CCC; width:374px;height:30px; position:relative; margin:12px 0 24px 0}
+.new_btn a{ height:28px; width:68px; text-align:center; display:block; line-height:28px; border:1px solid #CCC; position:absolute; background-color:#FFF}
+.new { left:20px; top:1px;}
+.hot { left:98px; top:1px;}
+.new_btn .hover { border-top:2px solid #058BE6; border-left:1px solid #CCC; border-right:1px solid #CCC; border-bottom:1px solid #FFF; color:#058BE6; font-weight:bold; }
+.app_list {width:376px;}
+.app_list li{ width:94px; text-align:center; float:left; margin-bottom:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.app_list li img{ margin:0px auto; padding:0 0 7px 0}
+.app_list li p a{ color:#666}
+.app_list li {position:relative;}
+.app_list li a i{position:absolute;display:block;width:80px;left:5px;top:-2px;height:80px;background:url(/style/images/75.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/style/images/75.png',sizingMethod='scale');cursor:pointer; z-index:1; border:0px;}
+.type { color: #666}
+/*安卓软件*/
+.n_red,.n_blue{ width:16px; height:15px; text-align:center; line-height:15px; float:left; color:#FFF; display:block; margin:0 8px 0 0}
+.n_red { background-position:-122px 0}
+.n_blue { background-position:-122px -15px;}
+.ph_list { width:224px; margin:5px auto 0 auto}
+.ph_list li{ float:left; line-height:16px; border-bottom:1px dotted #CCC; width:100%; padding:6px 0}
+.ph_img { width:200px; float:right;color:#FF5500}
+.ph_img p {height:16px;line-height: 16px;overflow:hidden;}
+.ph_img_a .ph_img img,.ph_img_a .ph_img span {display:none;}
+.ph_img img{ float:left; padding:0 10px 0 0;}
+h3.ph_link { padding:0; border-bottom:0px;}
+.ph_link a{ width:128px;; height:34px; display:block; text-align:center; float:left; overflow:hidden; border-bottom:1px solid #CCC;}
+.ph_link a.ph_lhover { background-color:#FFF; border-bottom:1px solid #FFF;}
+.ph_link span{ float: left; height:34px; line-height:34px; border-right:1px solid #CCC;  border-bottom:1px solid #CCC;width:1px}
+
+/*刷机ROM*/
+h3.tt04 { background-position:0 -70px;}
+.jc_list { padding:20px 0 0 0; margin-left:20px; display:inline;float:left; overflow:hidden; border-bottom:1px solid #CCC; width:140px;}
+.jc_list li{ border-top:1px solid #CCC; float:left}
+.jc_list a{ background-color:#F5F5F5; border:1px solid #CCCCCC; border-top:0px; border-bottom:0px; width:138px; height:40px; line-height:40px; display:block; text-align:center;}
+.jc_list a:hover{ text-decoration:none}
+.jc_hover0 a{ background-color:#FFF; border-left:2px solid #058BE6; border-right:0px; margin:0px;}
+.jc_all{ float:left; width:498px; margin:24px 0 0 16px; overflow:hidden}
+.jc_all li{ width:124px; float:left; text-align:center; margin-bottom:14px}
+.jc_all li img{ margin:0px auto 4px auto; padding:2px; border:1px solid #CCC}
+/*新手电影壁纸*/
+h3.tt05 { background-position:0 -105px;}
+h3.tt06 { background-position:0 -140px;}
+.zy_list { width:650px; margin:20px auto 0 auto}
+.zy_list li{ width:24.9%; text-align:center; line-height:30px; float:left}
+.zy_list img{ padding:4px; border:1px solid #CCC; margin:0px auto}
+.xs_list { width:240px; margin:0px auto; border-bottom:1px dotted #CCC; padding-bottom:6px; overflow:hidden}
+.xs_list li{ line-height:22px; text-indent:10px; color:#999;}
+.xs_list img{ padding:10px 0; float:left}
+.xs_list strong { color: #360; clear:both}
+h3.tt07 { background-position:0 -175px;}
+.h280 { height:280px;}
+.h730 { height:730px;}
+.h450 { height:450px;}
+.h660 { height:660px;}
+.h330 { height:330px;}
+.h300 { height:300px;}
+.h410 { height:410px;}
+.wrapper_rr .news_list{ margin:10px 0 0 14px}
+.wrapper_rr .news_list li{ font-size:12px; background-position:-497px -185px;}
+.weibo { line-height:22px; margin:5px 0 10px 20px; color:#333}
+.weibo p{ margin-top:5px;}
+\.display0{display:block;}
+
+
+/*焦点图样式*/
+.eye {height: 208px;margin: 0 auto;width: 330px;}
+.tit_eye {background: none repeat scroll 0 0 black;height: 22px;line-height: 22px;overflow: hidden;text-align: center;}
+.title1 {font-size: 12px;height: 22px;line-height: 22px;overflow: hidden;padding-left: 10px;width: 210px; color:#fff;}
+.f_l {display: inline;float: left;}
+.title1 a{ color:#fff;}
+.title1 a:hover{ color:#F60;}
+.eye_pag {display: block;font-size: 11px;}
+.eye_pag .e_ahov, .eye_pag a:hover {background: url("../images/eye_tbg.png") repeat scroll 0 0 transparent; color: #FFFFFF;font-weight: bold;}
+.eye_pag a:hover {text-decoration: none;}
+.eye_pag a {background: url("../images/eye_tbg2.png") repeat scroll 0 0 transparent; color: #999999;margin-left: 2px; padding: 2px 6px;}
+/*友情底部*/
+.fr_link { border:1px solid #CCC; background-color:#FFF; width:958px; margin:0px auto;}
+.fr_link h3{ background:url(../images/title_bg.jpg) repeat-x; height:34px; line-height:34px; border-bottom:1px solid #CCC; padding:0 14px; font-size:14px}
+.fr_link span { float:right; display:inline; font-size:12px; font-weight:normal;}
+.all_link { padding:10px; overflow:hidden}
+.f5{width:100%;clear:both;padding-bottom:10px;height:40px;}
+.f5 li{float:left;line-height:14px;padding:8px 10px 0px;white-space:nowrap;}
+.f5 li a{color:#666666;float:left;}
+.f5 li a img{border:3px solid #EEE;}
+
+.left {float:left; width:690px; overflow:hidden}
+.right { float:right; width:260px; overflow:hidden}
+/*游戏攻略*/
+.gl_list { clear:both; width:258px;}
+.gl_list li{padding:11px 5px 10px 5px; color:#666;border-bottom:1px dotted #CCC; overflow:hidden;width:248px;}
+.gl_list img{ float:left; margin:0px 10px 0 5px; padding:2px; border:1px solid #CCC; display:inline}
+.gl_list a { font-weight:bold;}
+.gl_list h4{ font-size:12px; margin:0 0 6px 0}
+.mg10 {  padding:0; margin:0px;}
+/*每周精华*/
+.topic {height:288px; margin:10px 0 0 0; overflow:hidden}
+.topic a:hover { color:#058BE9}
+.topic h3{background: url(../images/topic_bg.jpg) top repeat-x; border-bottom:0; border-top:1px solid #FFF}
+.topic h3 .more{ padding:6px 0 0 0}
+.topic_img { width:242px; padding:5px 10px 0 6px; color:#666; line-height:18px;clear:both; overflow:hidden;  margin:0 0 0 0; height:auto; float:left}
+.topic_img a {font-weight:bold;color:#333; font-size:14px}
+.topic_img img{ float:left; padding:0 10px 0 7px}
+.topic_list { clear:both;border-top:1px solid #EEEEEE;overflow:hidden; padding:6px 0 0 ; height:49px;}
+.topic_list p{ float:left; width:178px; padding:0 7px 0 8px; color:#999; line-height:20px; }
+.topic_list a{ font-weight:bold; color:#666}
+.b_time,.l_time { background:url(../images/time_bg.gif) no-repeat; height:20px; width:56px; float:left; padding:0 0 0 3px; margin:0 8px 0 0; text-align:center; color:#FFF;line-height:19px; display:inline}
+.b_time { background-position:0 -20px;margin:5px 0 0 6px;}
+/*游戏分类*/
+.game_cat { width:960px; margin:0px auto 10px auto; overflow:hidden;height:70px;}
+.cat_t{ float:left; width:20px; color:#FFF; font-weight:bold; background:url(../images/cat_bg.gif);height:63px; _height:60px; padding:1px 0 0 4px;  _padding:4px 0 0 4px; margin:2px 3px 0 3px; display:inline}
+.cat_list { width:930px; float:left; overflow:hidden; display:inline}
+.cat_list li{ float:left; width:62px; text-align:center;}
+.cat_list li img{ margin:0px auto; padding:0 0 4px 0}
+.cat_list a{ width:48px; background-color:#FFF; border:1px solid #CCC; display:block; padding:4px 4px; margin:0 0 0 4px}
+.cat_list a:hover { border:1px solid #DC5C07; color:#DC5C07; text-decoration:none;}
+.cat_soft .cat_t{ background-position:-24px 0}
+.cat_soft a:hover { border:1px solid #058BE6; color:#058BE6; text-decoration:none;}
+.cat_list li.wl a{ border:1px dashed #eee;}
+/*迷你星*/
+.star1,.star2,.star3,.star4,.star5,.star6,.star7,.star8,.star9,.star10 { background:url(../images/star_mini.gif) no-repeat; width:80px; height:12px; text-indent:-9999px; overflow:hidden;}
+.star9 { background-position:0 -12px;}
+.star8 { background-position:0 -24px;}
+.star7 { background-position:0 -36px;}
+.star6 { background-position:0 -48px;}
+.star5 { background-position:0 -60px;}
+.star4 { background-position:0 -72px;}
+.star3 { background-position:0 -84px;}
+.star2 { background-position:0 -96px;}
+.star1 { background-position:0 -108px;}
+
+.f10{color:#f60;font-size:10px}
+.pb10{padding-bottom:10px}
+.mb10{margin-bottom:10px;}
+.h308{overflow:hidden;height:308px;}
+.h308 .gl_list li{padding:8px 5px 10px 5px;}

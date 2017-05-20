@@ -1,0 +1,21 @@
+@charset "gb2312";
+/* CSS Document */
+
+.v_list,.pic_list { width:664px; margin:5px auto}
+.v_list li,.pic_list li{ float:left; width:130px; padding:11px 18px; border-bottom:1px dotted #CCC; color:#888; display:inline}
+.v_list li img,.pic_list li img{padding:1px; border:4px solid #F0F0F0}
+.v_list li a,.pic_list li a{ font-size:14px; color:#058BE6; line-height:34px;}
+.v_list li a:hover, .pic_list li a:hover {color:#FF6600}
+.v_list li a:hover img,.pic_list li a:hover img{  border:4px solid #ccc}
+.v_list li p a,.pic_list li p a{ font-size:12px; line-height:20px; color: #666;}
+.v_list  li:hover,.pic_list li:hover{ background-color:#FCFDD7}
+.v_list li a{line-height:19px;font-size:12px;}
+.v_list li {position:relative;}
+.v_list li a i{background:url(../images/icon_vd2_03.gif) no-repeat;width:20px;height:20px;position:absolute;z-index:5;left:120px;top:93px;}
+.v_list li a:hover i{background:url(../images/icon_vd2_01.gif) no-repeat;}
+.pic_list li{height:232px; overflow:hidden; }
+.navs_list { width:220px; margin:0 auto; padding:12px 0 14px 0; overflow:hidden}
+.navs_list li{ float:left; width:50%; text-align:center; line-height:30px; overflow:hidden; margin:5px 0}
+.navs_list li a{width:100px; height:30px; display:block; font-size:14px; background-color:#F0F0F0}
+.navs_list .navs_hover a,.navs_list li a:hover{ background-color:#058BE6; color:#FFF; font-weight:bold; text-decoration:none}
+.hauto { height:auto}

@@ -1,0 +1,29 @@
+.hd .hd_list li {position:relative;}
+.hd .hd_list li a i{background:url(/style/images/icon_vd2_03.gif) no-repeat;width:20px;height:20px;position:absolute;z-index:5;left:120px;top:70px;}
+.hd .hd_list li a:hover i{background:url(/style/images/icon_vd2_01.gif) no-repeat;}
+.wrapper_rr{ border-top:3px solid #333;}
+.wrapper_c {height:373px;overflow:hidden}
+.wrapper_c p{padding:5px 0px;}
+.hd{height:148px;overflow:hidden}
+.game_list {margin-top:38px;}
+.app_list li{ margin-bottom:12px;}
+.appl { margin-top:0px;}
+.appl li{line-height:22px;color:#ccc;}
+.appl li a{margin-right:5px;font-size:12px}
+.border-top1{border-top:1px dotted #CCC;margin-top:8px;}
+.new_btn {margin:5px 0 15px 0}
+.wrapper_rr{height:386px;}
+.list_img img{ padding:8px 0 2px 0; height:110px; margin:0px auto}
+.pc { height:330px;overflow:hidden; margin:5px 0}
+.pc .news_list{ height:288px;overflow:hidden;}
+.dg,.tk {margin:5px 0}
+.wrapper_ll_all {width:958px; margin:0 auto;border-top:3px solid #333;  height:207px;}
+.wrapper_ll_all h4 {padding-left:500px; }
+.hotapp { margin:0px auto; height:155px;z-index:1; position:relative; border:0px;}
+.hotapp_list {height:150px;width:860px; }
+.hotapp_list li{width:143px;}
+.hotapp_list li a{ width:140px; background:#fff; padding:6px 0 10px 0}
+.hotapp_list li a img{ margin:0 auto;padding:1px; border:1px solid #CCC; margin-bottom:10px;background:#fafafa;}
+.fl_btn,.fr_btn {top:20px;}
+.h366 { height:366px;overflow:hidden;}
+.mt5{margin-top:5px}

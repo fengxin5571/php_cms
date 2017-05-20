@@ -1,0 +1,19 @@
+@charset "gb2312";
+/* CSS Document */
+
+.article_list li img{ margin-right:20px}
+.star1,.star2,.star3,.star4,.star5,.star6,.star7,.star8,.star9,.star10 { background:url(../images/star_mini.gif) no-repeat; width:80px; height:12px; text-indent:-9999px; overflow:hidden; position:absolute; left:345px; top:45px;}
+.star9 { background-position:0 -12px;}
+.star8 { background-position:0 -24px;}
+.star7 { background-position:0 -36px;}
+.star6 { background-position:0 -48px;}
+.star5 { background-position:0 -60px;}
+.star4 { background-position:0 -72px;}
+.star3 { background-position:0 -84px;}
+.star2 { background-position:0 -96px;}
+.star1 { background-position:0 -108px;}
+.info span{ padding:0 10px 0 0}
+.navs_list { width:250px; margin:0 auto; padding:12px 0 14px 0; overflow:hidden}
+.navs_list li{ float:left; width:50%; text-align:center; line-height:30px; overflow:hidden; margin:5px 0}
+.navs_list li a{width:115px; height:30px; display:block; font-size:14px; background-color:#F0F0F0}
+.navs_list .navs_hover a,.navs_list li a:hover{ background-color:#058BE6; color:#FFF; font-weight:bold; text-decoration:none}

@@ -1,0 +1,16 @@
+.hotapp { width:958px; margin:10px auto; border:1px solid #CCC; height:128px; background:#FFF; position:relative}
+.hotapp_list { width:864px; margin:16px auto 0 auto; overflow:hidden;height:97px;}
+.hotapp_list li{ float:left; width:108px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hotapp_list li a{ width:76px; display:block; margin:0px auto; text-align:center; background:url(../images/comm_bg.gif) no-repeat -424px -92px;}
+.hotapp_list li a img{ margin:0px auto 10px;border:0px; padding:0px}
+.fl_btn,.fr_btn { position:absolute; background-position:-452px 0; width:24px; height:92px; display: block; text-indent:-9999px; top:18px;}
+.fl_btn { left:8px;}
+.fr_btn { background-position:-476px 0; right:8px;}
+.wrapper_ll_all {height:170px;}
+.h390 .news_list li{line-height:26px;}
+.topic ul {width:940px; margin: 15px 10px }
+.topic li { float: left; width: 235px; height: 90px; margin-bottom: 11px; line-height: 26px; overflow: hidden; text-align: center }
+.topic li a.c { display: block; width: 218px; height: 90px; position: relative; cursor: pointer; margin: auto }
+.topic li a.c b { display: block; width: 100%; text-align: center; height: 28px; line-height: 28px; font-size: 14px; background: #000000; filter: Alpha(opacity=70); -moz-opacity: 0.7; -khtml-opacity: 0.7; opacity: 0.7; color: #ffffff; position: absolute; left: 0px; bottom: 0px; overflow: hidden }
+.topic li a:hover.c { text-decoration: none }
+.topic li img { width: 218px; height: 90px }

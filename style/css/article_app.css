@@ -1,0 +1,129 @@
+@charset "gb2312";
+/* CSS Document */
+.wrapper {background:#fff url(../images/box1.gif) 220px 0px repeat-y; border:1px solid #CCC;  width:958px; padding:20px 0}
+.all_about { text-align:right;}
+.all_about a,.left p a{ color:#058BE6}
+.right { width:730px; position:relative; padding:0 0 0 27px}
+.right h1{ font-size:22px; line-height:22px; height:22px; font-weight:normal;padding:0 0 10px 0}
+.share_btn { position:absolute; top:72px; right:24px;}
+.appimg a{position:relative;}
+.appimg a img{width:80px;height:80px;}
+.appimg i{background:url(../images/150.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/150.png',sizingMethod='scale');width:160px;height:160px;position:absolute;z-index:5;left:5px;top:-1px}
+.star1,.star2,.star3,.star4,.star5,.star6,.star7,.star8,.star9,.star10 { background:url(../images/star.gif) no-repeat; width:100px; height:16px; text-indent:-9999px; float:left; overflow:hidden}
+.star9 { background-position:0 -16px;}
+.star8 { background-position:0 -32px;}
+.star7 { background-position:0 -48px;}
+.star6 { background-position:0 -64px;}
+.star5 { background-position:0 -80px;}
+.star4 { background-position:0 -96px;}
+.star3 { background-position:0 -112px;}
+.star2 { background-position:0 -128px;}
+.star1 { background-position:0 -144px;}
+.left { width:168px;padding:0 16px}
+.left img{ margin:0px auto}
+.down_btn { background:url(../images/app_bg.png) 0px -170px no-repeat; width:162px; height:46px; text-indent:-9999px; display:block;_zoom: 1; margin:20px auto 15px auto}
+.left p{ line-height:20px; text-indent:8px; color:#666}
+.left h3{ border-bottom:2px solid #058BE6; margin:20px 0 18px 0}
+.left h3 span { background-color:#058BE6; color:#FFF; padding:2px 6px 0 6px; font-size:12px; }
+.app_top li{ overflow:hidden;clear:both; float:left; width:170px; margin:0 0 20px 0; height:80px; overflow:hidden}
+.app_top li a{ color:#666; display:block}
+.app_top li a:hover{ text-decoration:none;}
+.app_top li a:hover strong{ color:#FF6600}
+.app_top span { margin:0px auto 0; width:80px; overflow:hidden}
+.app_top img { width:75px; height:75px; float:left; padding:0 10px 0 2px}
+.app_top li a{position:relative;}
+.app_top li a i{position:absolute;display:block;width:80px;left:0px;top:-1px;height:80px;background:url(../images/75.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/75.png',sizingMethod='scale');cursor:pointer; z-index:1; border:0px;}
+.app_top li strong{ width:80px;overflow:hidden;height:30px;  color:#333}
+.app_top .star1,.app_top .star2,.app_top .star3,.app_top .star4,.app_top .star5,.app_top .star6,.app_top .star7,.app_top .star8,.app_top .star9,.app_top .star10 { background:url(../images/star_mini.gif) no-repeat; width:80px; height:12px;}
+.app_top .star9 { background-position:0 -12px;}
+.app_top .star8 { background-position:0 -24px;}
+.app_top .star7 { background-position:0 -36px;}
+.app_top .star6 { background-position:0 -48px;}
+.app_top .star5 { background-position:0 -60px;}
+.app_top .star4 { background-position:0 -72px;}
+.app_top .star3 { background-position:0 -84px;}
+.app_top .star2 { background-position:0 -96px;}
+.app_top .star1 { background-position:0 -108px;}
+.left .info table { width:100%;border-collapse: collapse }
+.left .info th { width: 70px; color: #333;font-size: 12px }
+.left .info td { line-height:25px; font-size: 12px; color: #515151 }
+.left .info td a { margin-right: 6px }
+#txtover h5{text-align:right;color:#058BE6; cursor:pointer}
+.fx { overflow: hidden }
+.fl { float: left }
+.fr { float: right }
+.cl { clear: both; height: 0px; overflow: hidden }
+.hd { display: none }
+
+.right .tab2,.right .tab { height: 33px; margin-left:10px; float: left;position:relative;z-index:2;overflow: hidden }
+.right .tab2 li,.right .tab li { float: left; line-height: 33px; font-size: 14px; }
+.right .tab2 li a,.right .tab li a {border-top: 1px #dcdcdc solid; border-right: 1px #dcdcdc solid; float: left; color: #505050; padding: 0px 18px; background: url('../images/app_bg.png') 0px -72px }
+.right .tab2 li b,.right .tab li b { font-size: 11px; color: #999999 }
+.right .tab2 li.cur a,.right .tab li.cur a {border-top: 1px #058BE6 solid;  border-right: 1px #058BE6 solid;background:#058BE6; color:#ffffff;}
+.right .tab2 li a:hover b,.right .tab li a:hover b,.right .tab2 li a:hover,.right .tab li a:hover { text-decoration:none; color:#058BE6}
+.right .tab2 { border-left: 1px #dcdcdc solid;margin-left:-10px}
+.apkdata{width:436px;height:120px;top:0px;right:0px;position:absolute;overflow: hidden;z-index:1;}
+.apkdata i {width:286px;height:48px;display:none; position:absolute; float:left;background:url(../images/erwm.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/erwm.png',sizingMethod='scale');}
+.apkdata img { margin-top:-18px;float:right;}
+.right .main {height: 100%;   border-top:3px #058BE6 solid; }
+.right .bl,.right .box { margin-top: 10px }
+.right .bl .t { height: 25px; background: url('../images/app_bg.png') 0px -277px }
+.right .bl .t h3 { height: 25px; line-height: 25px; font-size: 14px; color: #ffffff; padding: 0px 20px;background:#058BE6; float: left }
+.right .bl .c { margin: 10px }
+.right .box img { width: 100% }
+.right .intro { font-size: 14px; line-height: 26px }
+.right .pic .c { margin: 10px auto }
+.right .pic li { float: left; width: 173px; text-align: center }
+.right .pic li img { width: 130px; height: 217px; border: 1px #dcdcdc solid; padding: 3px; margin: 10px auto }
+.right .pic .w li { width: 231px }
+.right .pic .w li img { width: 200px; height: 120px }
+.right .demo .c { text-align: center }
+.right .arc .c { margin: 10px auto }
+.right .arc .player li { float: left; width: 173px; text-align: center }
+.right .arc .player li a.c { width: 138px; height: 160px; line-height: 20px }
+.right .arc .player li a.c i { left: 48px; top: 34px }
+.right .arc .player li a.c span { bottom: 42px }
+.right .arc .player li a.c img { width: 138px; height: 104px; margin-bottom: 18px }
+.right .arc .doc { width: 694px; margin: 0px 10px }
+.right .arc .doc li { width: 332px; height: 28px; line-height: 28px; font-size: 14px; float: left; overflow: hidden; margin-right: 15px }
+.right .arc .doc li span { float: right; font-size: 12px; color: #8d8d8d }
+.right #downlist{z-index:1;position:relative;}
+.right #downico{display:none;background:url(../images/downico.png) no-repeat ;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/downico.png',sizingMethod='scale');width:286px;height:48px;position:absolute;z-index:5;left:125px;top:140px}
+.right .download dt { width: 100%; height: 24px; background:#fafafa }
+.right .download dt b { font-size: 14px; margin: 0px 10px; line-height: 24px; font-weight: bold; color: #515151 }
+.right .download dd { height:200px; width:100%;  float: left;overflow: hidden;}
+.right .download dd .fl{ height:200px; width:130px;float: left;}
+.right .download dd .fl a{width:126px; height:34px; background:url('../images/anzhuang.png'); display: block; text-indent:-99999px;margin-top:15px}
+.right .download dd .fl #download_local{background-position: 0px 0px}
+.right .download dd .fl #download_apkdata{background-position: 0px -35px}
+.right .download dd .fl #download_wdj{background-position: 0px -71px}
+.right .download dd .fl #download_91{background-position: 0px -105px}
+.right .download dd .fr{ height:200px; width:468px; float:right;margin-top:0px;}
+.right .download dd .fr div{ height:60px; width:468px; margin-top:7px;overflow: hidden; background: #fafafa }
+.right .handle{height:59px;padding-top:22px;overflow:hidden;clear:both; border-top:#eee dotted 1px;}
+.right .handle .digg{float:right;margin-top:-10px;margin-right:12px;}
+.right .handle .digg{text-align: center;cursor: pointer;background: url("../images/digg.jpg") no-repeat;font-weight:bold;width:107px;height:50px;color:#3385D9;}
+.right .handle .digg:hover{background:url("../images/digg.jpg") -110px 0px no-repeat;color:#fff;}
+.right .handle .digg-count{line-height:35px;padding-left: 23px;font-size:16px;}
+.right .actbox{width:260px;text-align:center;float:right;overflow:hidden;height:68px;margin-top:-10px;}
+.right .tool {background: url('../images/app_bg.png') 0px 0px repeat-x;  width: 100%; height: 85px; text-align: center;clear:both;display:block; margin-top: 50px}
+.right .tool a { display: inline-block; width: 165px; height: 60px; background: url('../images/app_bg.png') 0px -390px; margin: 0px 20px 0px 20px}
+.right .tool a.t2 { background-position: 0px -509px }
+.right .tool a.t3 { background-position: 0px -449px }
+.right .tool a.t4 { background-position: 0px -570px }
+.c-orange{color:#f60;}
+.ads_250 { width: 250px; margin: 10px auto }
+.ads_640 { width: 640px; margin: 0px auto 10px }
+.w700{ float:left;width:720px; }
+.w700 .fr-k { float:left;width:700px;margin-top:40px }
+.commit_area { display:block;height:100%;clear:both;	margin-bottom:10px;}
+.commit_area .right{width:350px;margin:0px;padding:0px;height:32px;overflow: hidden;}
+.col_pl{width:688px;}
+.pzlist{width:700px;}
+.col_pl .pl_li_con{width:600px;   border:1px solid #dcdcdc; padding:0px; position:relative}
+
+
+/***CSS控制前台页面显示盗链或本地下载***/
+
+.right .download dd a.url{}
+.right .download dd a.apk{display:none;}

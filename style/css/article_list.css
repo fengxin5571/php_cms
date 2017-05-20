@@ -1,0 +1,19 @@
+@charset "gb2312";
+/* CSS Document */
+
+.wrapper_ll h1{background:url(../images/title_bg.jpg) repeat-x; height:34px; line-height:34px; border-bottom:1px solid #CCC; padding-left:14px; font-size:14px}
+.article_list { margin:2px 2px 12px 2px;}
+.article_list li{ padding:16px; border-bottom:1px dotted #ccc; overflow:hidden; line-height:18px; position:relative; width:650px; height:105px; overflow:hidden}
+.article_list img{ float:left; padding:3px; border:1px solid #CCC; margin:0 10px 0 0; background-color:#FFF}
+.article_list h2{ font-size:16px; line-height:16px; padding:4px 0; width:400px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.h200 { margin:3px 2px 12px 2px;color:#888}
+.h200 li{ height:200px;  padding:14px 10px; overflow:hidden}
+.h200 li img{border:0px; }
+.info { line-height:24px;color: #999}
+.des { color:#666; padding:6px 0 0 0}
+.read_btn { position:absolute; width:70px; height:28px; display:block; background:url(../images/read.jpg); top:16px; left:600px; text-align:center; font-weight:bold; line-height:26px; color:#FFF}
+a:hover.read_btn { background-position:0 -28px; color:#FFF; text-decoration:none}
+.article_list li:hover{ background-color:#FCFDD7}
+.list_img img{ padding:1px; height:120px; margin:16px 20px 6px; float:left;border:3px solid #E6E6E6;}
+.pagelist{list-style: none;}
+.pagelist li{ float: left;}
