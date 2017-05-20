@@ -203,7 +203,6 @@ class content_tag {
 		$array = array();
 		$siteid = $data['siteid'] && intval($data['siteid']) ? intval($data['siteid']) : get_siteid();
 		$categorys = getcache('category_content_'.$siteid,'commons');
-		
 		$site = siteinfo($siteid);
 		$i = 1;
 		is_array($categorys)?null:$categorys= array();

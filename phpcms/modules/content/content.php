@@ -601,7 +601,6 @@ class content extends admin {
 			showmessage(L('please_select_modelid'));
 		} else {
 			$page = intval($_GET['page']);
-			
 			$modelid = intval($_GET['modelid']);
 			$this->db->set_model($modelid);
 			$where = '';

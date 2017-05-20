@@ -1,6 +1,5 @@
 <?php
 return array (
-  'yp' => '企业黄页',
   'member' => '会员',
   'special' => '专题',
   'content' => '内容模块',
