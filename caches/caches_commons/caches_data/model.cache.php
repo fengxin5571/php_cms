@@ -115,5 +115,28 @@ return array (
     'sort' => '0',
     'type' => '0',
   ),
+  26 => 
+  array (
+    'modelid' => '26',
+    'siteid' => '1',
+    'name' => '门店模型',
+    'description' => '',
+    'tablename' => 'store',
+    'setting' => '',
+    'addtime' => '0',
+    'items' => '0',
+    'enablesearch' => '1',
+    'disabled' => '0',
+    'default_style' => 'default',
+    'category_template' => 'category_store',
+    'list_template' => 'list_store',
+    'show_template' => 'show_store',
+    'js_template' => '',
+    'admin_list_template' => '',
+    'member_add_template' => '',
+    'member_list_template' => '',
+    'sort' => '0',
+    'type' => '0',
+  ),
 );
 ?>
