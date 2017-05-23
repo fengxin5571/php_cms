@@ -42,3 +42,5 @@
 <?php exit;?>05-23 15:50:58 | 2 | Invalid argument supplied for foreach() | phpcms\libs\functions\global.func.php | 1092
 <?php exit;?>05-23 15:50:59 | 2 | Invalid argument supplied for foreach() | phpcms\libs\functions\global.func.php | 1092
 <?php exit;?>05-23 16:21:32 | 2 | extract() expects parameter 1 to be array, string given | phpcms\modules\poster\space.php | 165
+<?php exit;?>05-23 18:05:28 | 2 | Missing argument 2 for category::delete_child(), called in G:\wamp64\www\php_cms\phpcms\modules\admin\category.php on line 351 and defined | phpcms\modules\admin\category.php | 346
+<?php exit;?>05-23 18:05:28 | 2 | Missing argument 2 for category::delete_child(), called in G:\wamp64\www\php_cms\phpcms\modules\admin\category.php on line 351 and defined | phpcms\modules\admin\category.php | 346
