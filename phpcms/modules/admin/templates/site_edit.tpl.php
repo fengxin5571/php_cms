@@ -15,6 +15,8 @@ include $this->admin_tpl('header');
 	})
 //-->
 </script>
+<script type="text/javascript" src="<?php echo JS_PATH?>content_addtop.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH?>swfupload/swf2ckeditor.js"></script>
 <style type="text/css">
 .radio-label{ border-top:1px solid #e4e2e2; border-left:1px solid #e4e2e2}
 .radio-label td{ border-right:1px solid #e4e2e2; border-bottom:1px solid #e4e2e2;background:#f6f9fd}
@@ -35,6 +37,36 @@ include $this->admin_tpl('header');
     <tr>
     <th><?php echo L('site_domain')?>：</th>
     <td class="y-bg"><input type="text" class="input-text" name="domain" id="domain"  size="30" value="<?php echo $data['domain']?>" /></td>
+  </tr>
+</table>
+</fieldset>
+<fieldset>
+	<legend><?php echo L('company_info')?></legend>
+	<table width="100%"  class="table_form">
+  <tr>
+    <th width="80"><?php echo L('company_phone')?>：</th>
+    <td class="y-bg"><input type="text" class="input-text" name=company_phone id="company_phone" size="30" value="<?php  echo $data['company_phone']; ?>"/></td>
+  </tr>
+  <tr>
+    <th><?php echo L('company_address')?>：</th>
+    <td class="y-bg"><input type="text" class="input-text" name="company_address" id="company_address" size="40"  value="<?php  echo $data['company_address']; ?>"/></td>
+  </tr>
+  <tr>
+    <th><?php echo L('investment_phone')?>：</th>
+    <td class="y-bg"><input type="text" class="input-text" name="investment_phone" id="investment_phone"  size="30" value="<?php echo $data['investment_phone']; ?>"/></td>
+  </tr>
+  <tr>
+    <th>二维码：</th>
+    <td class="y-bg">
+    <div class='upload-pic img-wrap' style="width:135px"><input type='hidden' name='qccode' id='head_img' value='<?php echo $data['qccode']?>'>
+		<a href='javascript:void(0);' onclick="flashupload('head_img_images', '图片上传','head_img',thumb_images,'1,gif|jpg|jpeg|png|bmp,1,120,120,0','content','0','7c1424089e1f9162e3dc97cae4849448');return false;">
+		<?php if($data['qccode']) {?>
+		<img src='<?php echo  $data['qccode']?>' width='135' height='135' style='cursor:hand' />
+		<?php }else {?>
+		<img src='<?php echo IMG_PATH?>/icon/upload-pic.png' id='head_img_preview' width='135' height='135' style='cursor:hand' /></a>
+        <?php }?>
+    </div>
+    </td>
   </tr>
 </table>
 </fieldset>

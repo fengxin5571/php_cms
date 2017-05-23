@@ -63,22 +63,10 @@ $(function(){
     <div class="bk3"></div>
     <div class="nav-bar" style="height:100%">
     	<map>
-    	<ul>  
+    	<ul class="nav-site">  
 		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=96ed926112f95b90d9fe2f193a17abe6&action=category&catid=0&num=12&siteid=%24siteid&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'category')) {$data = $content_tag->category(array('catid'=>'0','siteid'=>$siteid,'order'=>'listorder ASC','limit'=>'12',));}?>  
 		<?php $n=1;if(is_array($data)) foreach($data AS $c) { ?>  
-		    <li><a href="<?php echo $c['url'];?>"><?php echo $c['catname'];?></a>  
-		       <ul>  
-		  <?php $n=1;if(is_array(subcat($c['catid']))) foreach(subcat($c['catid']) AS $c2) { ?>  
-		     <li><a href="<?php echo $c2['url'];?>"><?php echo $c2['catname'];?></a>  
-		      <ul>  
-		       <?php $n=1;if(is_array(subcat($c2['catid']))) foreach(subcat($c2['catid']) AS $c3) { ?>  
-		           <li><a href="<?php echo $c3['url'];?>"><?php echo $c3['catname'];?></a></li>  
-		           <?php $n++;}unset($n); ?>  
-		      </ul>  
-		     </li>  
-		      <?php $n++;}unset($n); ?>  
-		  </ul>  
-		   </li>  
+		    <li><a href="<?php echo $c['url'];?>"><?php echo $c['catname'];?></a></li>  
 		<?php $n++;}unset($n); ?>  
 		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>  
 		</ul>  

@@ -28,6 +28,10 @@ class index {
 		$sitelist  = getcache('sitelist','commons');
 		$default_style = $sitelist[$siteid]['default_style'];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+		$ip_area = pc_base::load_sys_class('ip_area');//引入ip获取地区类
+		//var_dump($ip_area->get('118.81.242.108'));
+		$ip=ip();//获取本机ip
+		
 		include template('content','index',$default_style);
 	}
 	//内容页

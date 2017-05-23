@@ -33,6 +33,10 @@ class site extends admin {
 			$release_point = isset($_POST['release_point']) ? $_POST['release_point'] : '';
 			$template = isset($_POST['template']) && !empty($_POST['template']) ? $_POST['template'] : showmessage(L('please_select_a_style'));
 			$default_style = isset($_POST['default_style']) && !empty($_POST['default_style']) ? $_POST['default_style'] : showmessage(L('please_choose_the_default_style'));			   
+			$company_phone = isset($_POST['company_phone']) && !empty($_POST['company_phone']) ? $_POST['company_phone'] : showmessage('请填写公司电话');
+			$company_address = isset($_POST['company_address']) && !empty($_POST['company_address']) ? $_POST['company_address'] : showmessage('请填写公司地址');
+			$investment_phone = isset($_POST['investment_phone']) && !empty($_POST['investment_phone']) ? $_POST['investment_phone'] :'';
+			$qccode= isset($_POST['qccode']) && !empty($_POST['qccode']) ? $_POST['qccode'] :'';
 			if ($this->db->get_one(array('name'=>$name), 'siteid')) {
 				showmessage(L('site_name').L('exists'));
 			} 
@@ -68,7 +72,7 @@ class site extends admin {
 			}
 			$_POST['setting']['watermark_img'] = IMG_PATH.'water/'.$_POST['setting']['watermark_img'];
 			$setting = trim(array2string($_POST['setting']));
-			if ($this->db->insert(array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template,'setting'=>$setting, 'default_style'=>$default_style))) {
+			if ($this->db->insert(array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template,'setting'=>$setting, 'default_style'=>$default_style,'company_phone'=>$company_phone,'company_address'=>$company_address,'investment_phone'=>$investment_phone,'qccode'=>$qccode))) {
 				$class_site = pc_base::load_app_class('sites');
 				$class_site->set_cache();
 				showmessage(L('operation_success'), '?m=admin&c=site&a=init', '', 'add');
@@ -113,6 +117,10 @@ class site extends admin {
 				$release_point = isset($_POST['release_point']) ? $_POST['release_point'] : '';
 				$template = isset($_POST['template']) && !empty($_POST['template']) ? $_POST['template'] : showmessage(L('please_select_a_style'));
 				$default_style = isset($_POST['default_style']) && !empty($_POST['default_style']) ? $_POST['default_style'] : showmessage(L('please_choose_the_default_style'));	
+				$company_phone = isset($_POST['company_phone']) && !empty($_POST['company_phone']) ? $_POST['company_phone'] : '';//公司电话
+				$company_address = isset($_POST['company_address']) && !empty($_POST['company_address']) ? $_POST['company_address'] : '';//公司地址
+				$investment_phone = isset($_POST['investment_phone']) && !empty($_POST['investment_phone']) ? $_POST['investment_phone'] :'';//招商电话
+				$qccode= isset($_POST['qccode']) && !empty($_POST['qccode']) ? $_POST['qccode'] :'';//二维码
 				if ($data['name'] != $name && $this->db->get_one(array('name'=>$name), 'siteid')) {
 					showmessage(L('site_name').L('exists'));
 				}
@@ -151,7 +159,7 @@ class site extends admin {
 				}
 				$_POST['setting']['watermark_img'] = 'statics/images/water/'.$_POST['setting']['watermark_img'];
 				$setting = trim(array2string($_POST['setting']));
-				$sql = array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template, 'setting'=>$setting, 'default_style'=>$default_style);
+				$sql = array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template, 'setting'=>$setting, 'default_style'=>$default_style,'company_phone'=>$company_phone,'company_address'=>$company_address,'investment_phone'=>$investment_phone,'qccode'=>$qccode);
 				if ($siteid == 1) unset($sql['dirname']);
 				if ($this->db->update($sql, array('siteid'=>$siteid))) {
 					$class_site = pc_base::load_app_class('sites');

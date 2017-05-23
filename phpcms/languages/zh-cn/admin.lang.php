@@ -532,6 +532,11 @@ $LANG['not_use_the_publishers_some'] = '不使用发布点';
 $LANG['publishing_sites_to_other_servers'] = '将站点发布到别的服务器上';
 $LANG['choose_release_point'] = '请选择发布点';
 $LANG['please_select_a_site'] = '请选择站点';
+$LANG['company_info'] = '公司信息';
+$LANG['company_phone'] ='公司热线';
+$LANG['company_address'] ='公司地址';
+$LANG['investment_phone'] = '招商电话';
+
 
 $LANG['site_att_config'] = '附件配置';
 $LANG['site_att_upload_maxsize'] = '允许上传附件大小';

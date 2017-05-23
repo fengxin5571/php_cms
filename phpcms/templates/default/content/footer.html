@@ -2,7 +2,9 @@
 <p class="info">
 {pc:content action="category"  num="15" siteid="$siteid" order="listorder ASC"}
 {loop $data $r}
+{if $r[type] == 1}
 <a href="{$r[url]}" target="_blank">{$r[catname]}</a> |  
+{/if}
 {/loop}
 {/pc}
 <a href="{APP_PATH}index.php?m=link" target="_blank">友情链接</a>
