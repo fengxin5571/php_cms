@@ -1,7 +1,7 @@
 <?php
 return array (
   'title' => '中国',
-  'style' => '1',
+  'style' => '0',
   'setting' => 
   array (
     'level' => '2',

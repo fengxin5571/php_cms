@@ -95,14 +95,11 @@ function addtext(data) {
 	<?php echo L('main_copyright')?><?php echo $product_copyright?><br />
 	<?php echo L('main_product_dev')?><?php echo $programmer;?><br />
 	<?php echo L('main_product_ui')?><?php echo $designer;?><br />
-	<?php echo L('main_product_site')?><a href="http://www.phpcms.cn/" target="_blank">http://www.phpcms.cn/</a> <br />
-	<?php echo L('main_product_bbs')?><a href="http://bbs.phpcms.cn/" target="_blank">http://bbs.phpcms.cn/</a> <br />
-	<?php echo L('main_product_qq')?>7634000 <br />
-	<?php echo L('main_product_sales')?>1561683312
+	<?php echo L('main_product_site')?><a href="http://www.duyiwang.cn/" target="_blank">http://www.duyiwang.cn/</a> <br />
+	
 	</div>
 </div>
-
-<div class="col-2 col-auto">
+<!--  <div class="col-2 col-auto">
 	<h6><?php echo L('main_license')?></h6>
 	<div class="content">
 	<?php echo L('main_version')?>Phpcms <?php echo PC_VERSION?>  Release <?php echo PC_RELEASE?> [<a href="http://buy.phpcms.cn" target="_blank"><?php echo L('main_support')?></a>]<br />
@@ -110,6 +107,7 @@ function addtext(data) {
 	<?php echo L('main_serial_number')?><span id="phpcms_sn"></span> <br />
 	</div>
 </div>
+-->
     <div class="bk10"></div>
 </div>
 </body></html>

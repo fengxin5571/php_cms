@@ -7,7 +7,7 @@ return array (
 		'database' => 'phpcmsv9',
 		'username' => 'root',
 		'password' => 'root',
-		'tablepre' => 'v9_sso_',
+		'tablepre' => 'dyw_sso_',
 		'charset' => 'utf8',
 		'type' => 'mysqli',
 		'debug' => true,

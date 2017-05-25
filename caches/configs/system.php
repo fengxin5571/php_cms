@@ -21,12 +21,12 @@ return array(
 
 //附件相关配置
 'upload_path' => PHPCMS_PATH.'uploadfile/',
-'upload_url' => 'http://localhost/php_cms/uploadfile/', //附件路径
+'upload_url' => 'http://192.168.2.143/php_cms/uploadfile/', //附件路径
 'attachment_stat' => '1',//是否记录附件使用状态 0 统计 1 统计， 注意: 本功能会加重服务器负担
 
-'js_path' => 'http://localhost/php_cms/statics/js/', //CDN JS
-'css_path' => 'http://localhost/php_cms/statics/css/', //CDN CSS
-'img_path' => 'http://localhost/php_cms/statics/images/', //CDN img
+'js_path' => 'http://192.168.2.143/php_cms/statics/js/', //CDN JS
+'css_path' => 'http://192.168.2.143/php_cms/statics/css/', //CDN CSS
+'img_path' => 'http://192.168.2.143/php_cms/statics/images/', //CDN img
 'app_path' => 'http://localhost/php_cms/',//动态域名配置地址
 
 'charset' => 'utf-8', //网站字符集

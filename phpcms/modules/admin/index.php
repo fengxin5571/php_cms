@@ -218,9 +218,9 @@ class index extends admin {
 		$common_cache = getcache('common','commons');
 		$logsize_warning = errorlog_size() > $common_cache['errorlog_size'] ? '1' : '0';
 		$adminpanel = $this->panel_db->select(array('userid'=>$userid), '*',20 , 'datetime');
-		$product_copyright = '酷溜网(北京)科技有限公司';
-		$programmer = '马玉辉、张明雪、李天会、潘兆志';
- 		$designer = '张二强';
+		$product_copyright = '山西独易网络科技有限公司';
+		$programmer = '高彦、冯鑫、闫永涛、康振华、李勇';
+ 		$designer = '王晶晶、薛俊霞';
 		ob_start();
 		include $this->admin_tpl('main');
 		$data = ob_get_contents();

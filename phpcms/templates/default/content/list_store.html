@@ -3,7 +3,14 @@
 <div class="main photo-channel">
 <div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
 <div class="bk10"></div>
-	{pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+
+{loop show_linkage(1,0,$modelid,'region') $r}
+<li>{$r[menu]}</li>
+{/loop}
+
+    {php $sql = structure_filters_sql($modelid)}  
+    {php $urlrule = makeurlrule()}  
+	{pc:content action="lists" where="$sql" catid="$catid" num="10" order="id DESC" page="$page"  urlrule="$urlrule"}
 		<ul class="photo-list picbig">
 			{loop $data $r}
 			<li>
