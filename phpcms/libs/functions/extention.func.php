@@ -13,7 +13,7 @@
  * @param  $modelid 模型id
  * @param  $fieldname  字段名称
  */
-function show_linkage($keyid, $linkageid = 0, $modelid = '', $fieldname='zone') {
+function show_linkage($keyid, $linkageid = 0, $modelid = '', $fieldname='zone', $is_ajax= "0") {
     $datas = $infos = $array = array();
     $keyid = intval($keyid);
     $linkageid = intval($linkageid);
@@ -30,6 +30,10 @@ function show_linkage($keyid, $linkageid = 0, $modelid = '', $fieldname='zone') 
             $array[$k]['url'] = str_replace('{'.$fieldname.'}',$k,$urlrule);
             $array[$k]['menu'] = $field_value == $k ? '<em>'.$v['name'].'</em>' : '<a href='.$array[$k]['url'].'>'.$v['name'].'</a>' ;
         }
+    }
+    if($is_ajax){
+        $areas=array('code'=>'200','areas'=>$array);
+        $array=json_encode($areas);
     }
     return $array;
 }
@@ -163,6 +167,7 @@ function structure_filters_sql($modelid) {
                 if($infos[$r]['arrchildid']) {
                     $sql .=  ' AND `'.$k.'` in('.$infos[$r]['arrchildid'].')';
                 }
+
             } elseif($fields[$k]['rangetype']) {
                 if(is_numeric($r)) {
                     $sql .=" AND `$k` = '$r'";

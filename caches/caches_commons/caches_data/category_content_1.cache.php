@@ -52,7 +52,7 @@ return array (
     'parentdir' => '',
     'catdir' => 'store',
     'url' => 'http://localhost/php_cms/index.php?m=content&c=index&a=lists&catid=8',
-    'items' => '2',
+    'items' => '4',
     'hits' => '0',
     'setting' => '{"workflowid":"","ishtml":"0","content_ishtml":"0","create_to_html_root":"0","template_list":"default","category_template":"category_store","list_template":"list_store","show_template":"show_store","meta_title":"","meta_keywords":"","meta_description":"","presentpoint":"1","defaultchargepoint":"0","paytype":"0","repeatchargedays":"1","category_ruleid":"6","show_ruleid":"16"}',
     'listorder' => '8',

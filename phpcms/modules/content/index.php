@@ -10,7 +10,10 @@ class index {
 		$this->_userid = param::get_cookie('_userid');
 		$this->_username = param::get_cookie('_username');
 		$this->_groupid = param::get_cookie('_groupid');
+		$this->_ip_area = pc_base::load_sys_class('ip_area');//引入ip获取地区类
+		$this->_city = $this->_ip_area->getcity(ip());
 	}
+	
 	//首页
 	public function init() {
 		if(isset($_GET['siteid'])) {
@@ -23,22 +26,32 @@ class index {
 		$_userid = $this->_userid;
 		$_username = $this->_username;
 		$_groupid = $this->_groupid;
+		$region_id= 141;//默认未太原的id
 		//SEO
 		$SEO = seo($siteid);
 		$sitelist  = getcache('sitelist','commons');
 		$default_style = $sitelist[$siteid]['default_style'];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
-		$ip_area = pc_base::load_sys_class('ip_area');//引入ip获取地区类
-		//var_dump($ip_area->get('118.81.242.108'));
 		$ip=ip();//获取本机ip
-		
+		$_city = $this->_city[city]?$this->_city[city]:'太原';
+		if($_city){//如果城市不为空去数据库查询相应的地区id
+    		$linkge_model=pc_base::load_model('linkage_model');//创建地区模型
+    		$city_info=$linkge_model->get_one("name like '%$_city%'");//获取ip所对应的地区信息
+    		if($city_info[linkageid]){
+    		    $region_id = $city_info[linkageid];
+    		}
+		}
+		$store_url = $CATEGORYS[8][url].'&region='.$region_id;//取得首页找门店链接地址
 		include template('content','index',$default_style);
+	}
+	//ajax获取省级联动数据
+	public function ajax_linkage(){
+	    echo show_linkage(1,0,$modelid,'region_id',1);
 	}
 	//内容页
 	public function show() {
 		$catid = intval($_GET['catid']);
 		$id = intval($_GET['id']);
-
 		if(!$catid || !$id) showmessage(L('information_does_not_exist'),'blank');
 		$_userid = $this->_userid;
 		$_username = $this->_username;
@@ -219,7 +232,7 @@ class index {
 		$_userid = $this->_userid;
 		$_username = $this->_username;
 		$_groupid = $this->_groupid;
-
+		$_city = $this->_city[city]?$this->_city[city]:'太原';
 		if(!$catid) showmessage(L('category_not_exists'),'blank');
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
@@ -359,5 +372,6 @@ class index {
 			return '1';
 		}
 	 }
+	 
 }
 ?>

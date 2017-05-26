@@ -91,3 +91,26 @@
 <?php exit;?>05-25 17:26:32 | 2 | Missing argument 2 for get_linkage_level(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\list_store.php on line 10 and defined | phpcms\libs\functions\extention.func.php | 107
 <?php exit;?>05-25 17:26:33 | 2 | Missing argument 2 for get_linkage_level(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\list_store.php on line 10 and defined | phpcms\libs\functions\extention.func.php | 107
 <?php exit;?>05-25 17:32:07 | 2 | Missing argument 2 for get_linkage_level(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\list_store.php on line 10 and defined | phpcms\libs\functions\extention.func.php | 107
+<?php exit;?>05-26 09:22:41 | 8192 | Methods with the same name as their class will not be constructors in a future version of PHP; xml has a deprecated constructor | phpcms\libs\classes\xml.class.php | 14
+<?php exit;?>05-26 09:22:53 | 8192 | Methods with the same name as their class will not be constructors in a future version of PHP; xml has a deprecated constructor | phpcms\libs\classes\xml.class.php | 14
+<?php exit;?>05-26 09:22:41 | 2 | file_get_contents(http://ipquery.sdo.com/getipinfo.php?ip=118.81.242.108): failed to open stream: ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\ip_area.class.php | 65
+<?php exit;?>05-26 09:22:53 | 2 | file_get_contents(http://ipquery.sdo.com/getipinfo.php?ip=118.81.242.108): failed to open stream: ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\ip_area.class.php | 65
+<?php exit;?>05-26 11:30:44 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\index.php | 44
+<?php exit;?>05-26 12:06:01 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\extention.func.php | 155
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:06:01 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\extention.func.php | 159
+<?php exit;?>05-26 12:12:08 | 2 | require(G:\wamp64\www\php_cms\phpcms\modules\formguide\fields\\config.inc.php): failed to open stream: No such file or directory | phpcms\modules\formguide\formguide_field.php | 300
+<?php exit;?>05-26 17:21:12 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94
+<?php exit;?>05-26 17:21:16 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94
+<?php exit;?>05-26 17:22:24 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94
+<?php exit;?>05-26 17:22:43 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94
+<?php exit;?>05-26 17:23:38 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94
+<?php exit;?>05-26 17:23:40 | 2 | Illegal string offset 'hot_city' | caches\caches_model\caches_data\formguide_input.class.php | 29
+<?php exit;?>05-26 17:25:41 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 94

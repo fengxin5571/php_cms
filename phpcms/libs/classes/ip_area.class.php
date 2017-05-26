@@ -92,7 +92,8 @@ class ip_area {
 		$localinfo['city']= trim($address);
 		$name = CHARSET == 'gbk' ? $localinfo['city'] : iconv('utf-8','gbk',$localinfo['city']);
 		$name = str_replace(L('city'),'',$name);
-		$letters = gbk_to_pinyin($name);	
+		pc_base::load_sys_func('iconv');
+		$letters = gbk_to_pinyin($name);
 		$localinfo['pinyin'] =strtolower(implode('', $letters));
 		return $localinfo;
 	}

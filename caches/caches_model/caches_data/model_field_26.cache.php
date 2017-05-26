@@ -7,7 +7,7 @@ return array (
     'siteid' => '1',
     'field' => 'region',
     'name' => '门店所属地区',
-    'tips' => '',
+    'tips' => '直辖市，自治区，经济特区，香港，澳门请选择到所属的地区，其他则选择到地级市',
     'css' => '',
     'minlength' => '0',
     'maxlength' => '0',

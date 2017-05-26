@@ -3,11 +3,28 @@
 <div class="main photo-channel">
 <div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
 <div class="bk10"></div>
-
-{loop show_linkage(1,0,$modelid,'region') $r}
-<li>{$r[menu]}</li>
-{/loop}
-
+<div style="margin-bottom:10px">
+	<span>位置:{$_city}</span> <button onclick="show_area()">点击切换</button>
+</div>
+<script type="text/javascript">
+function show_area(){
+	var area_div=document.getElementById('area_div');
+	if(area_div.style.display == "block"){
+		area_div.style.display ='none';
+	}else{
+		area_div.style.display ='block';
+	}
+	
+}
+</script>
+<div style="display:none;margin-bottom:10px" id="area_div">
+	<select  id="province" onchange="region.changed(this,'selCities',1)">
+	<option value='0'>请选择</option>
+	{loop show_linkage(1,0,$modelid,'zone',0) $r}
+	<option value="{$r[value]}">{$r[name]}</option>
+	{/loop}
+	</select>
+</div>
     {php $sql = structure_filters_sql($modelid)}  
     {php $urlrule = makeurlrule()}  
 	{pc:content action="lists" where="$sql" catid="$catid" num="10" order="id DESC" page="$page"  urlrule="$urlrule"}
