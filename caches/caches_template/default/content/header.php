@@ -8,10 +8,14 @@
 <meta name="description" content="<?php echo $SEO['description'];?>">
 <link href="<?php echo CSS_PATH;?>reset.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo CSS_PATH;?>default_blue.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/public.css">
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/detail_qty.css">
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/footer.css">
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.sgallery.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>search_common.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>region.js"></script>
+
 </head>
 <body>
 <div class="body-top">

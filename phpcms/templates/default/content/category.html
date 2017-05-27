@@ -1,52 +1,143 @@
 {template "content","header"}
-<!--main-->
-<div class="main">
-	<div class="col-left channel-hot">
-    	<div class="news-hot">
-        <div class="icon"></div>
-        	<div class="content">
-        	{pc:content  action="position" posid="10" catid="$catid" thumb="1" order="listorder DESC" num="2"}
-				{loop $data $v}
-				  <h4 class="blue"><a href="{$v[url]}" target="_blank"{title_style($v[style])}>{$v[title]}</a></h4>
-                <p><img src="{thumb($v[thumb],90,60)}" width="90" height="60" />{str_cut(strip_tags($v[description]), 150)}</p>
-                <div class="bk20 hr"><hr /></div>
+<!-- 文章频道页  begin -->
+<div class="detailBox_qty">
+	<div class="detailSmallBox_qty">
+		<!--小健康资讯开始-->
+		<div class="detailHome_qty">
+			<div class="homeFont">首页<span>&nbsp;&nbsp;{catpos($catid)}</span></div>
+		</div>
+		<!--小健康资讯结束-->
+		<!--健康咨询开始-->
+		<div class="healthBox_qty">
+			<div class="healthImgBox_qty">
+				<img src="{IMG_PATH}/dyw/store_qty.png"/>
+			</div>
+			<div class="healthRightBox_qty">
+				<div class="healthTopFont_qty">
+					健康<span>资讯</span>
+				</div>
+				<div class="healthBottomFont_qty">
+					HEALTH<span>INFORMATION</span>
+				</div>
+			</div>
+		</div>
+		<!--健康资讯结束-->
+		<!--健康养生四个开始-->
+		<div class="healthDis_qty">
+			<ul class="list_qty">
+			    {php $j=1;}
+			    {loop subcat($catid) $v}
+				<li  {if $j==1 }class="color_qty"{/if}><a href="{$v[url]}">{$v[catname]}</a></li>
+				{php $j++;}
 				{/loop}
-			{/pc}
-			{pc:content  action="lists" catid="$catid" order="id DESC" num="3"}
-                <ul class="list">
-                {loop $data $k $v}
-                	<li>·<a href="{$v[url]}" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 60)}</a></li>
-                {/loop}
-                </ul>
-             {/pc}
-            </div>
-        </div>
-    </div>
+				
+			</ul>
+		</div>
+			<!--banner列表开始-->
+			<div class="healthBannerBox_qty">
+			    {loop subcat($catid) $v}
+			    {pc:content action="lists" catid="$v[catid]"  num="3" order="id DESC"}
+				<div class="healthBanner_qty">
+				    <!-- 左侧广告位 begin-->
+					<div class="healthBannerLeft_qty">
+						<script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=12"></script>
+					</div>
+					<!-- 左侧广告位  end-->
+					<div class="healthBannerRight_qty">
+					    {php $i=1;}
+					    {loop $data $k $cv}
+						<div class="healthRightSmall_qty">
+						    <a href="{$cv[url]}">
+							<div class="healthSmall_qty">
+								<h4>&nbsp;<span>{$i}</span>{$cv[title]}</h4>
+								<div class="time_qty">{date("Y-m-d",$cv[inputtime])}</div>
+							</div>
+							<div class="healthBottomSmall_qty">
+								{$cv[description]}
+							</div>
+							<div class="jiantouBox_qty"> <a href="{$cv[url]}"><span>&gt</span></a></div>
+							</a>
+						</div>
+						{php $i++;}
+						{/loop}
+					</div>
+			    <div class="moreBox"><a href="{$v[url]}">更多</a></div>
+				</div>
+				{/pc}
+				{/loop}
+		</div>
+		<!--banner列表结束-->
+		<!--健康养生四个结束-->
+
+		
+		<!--热点咨询开始-->
+		<div class="healthBox_qty">
+			<div class="healthImgBox_qty">
+				<img src="{IMG_PATH}/dyw/store_qty.png"/>
+			</div>
+			<div class="healthRightBox_qty">
+				<div class="healthTopFont_qty">
+					热点<span>资讯</span>
+				</div>
+				<div class="healthBottomFont_qty">
+					HOT&nbsp;<span>SPOT INFORMATION</span>
+				</div>
+			</div>
+		</div>
+		<!--热点资讯结束-->
+		<!--热点资讯列表开始-->
+		
+		<ul class="hotBigBox_qty">
+		{pc:content  action="position" posid="18" thumb="1" order="id" num="6" cache="3600"}
+		    {loop $data $v}
+			<li class="hotSmallBox_qty">
+				<a href="{$v[url]}">
+					<div class="hotSmall_qty">
+						<div class="hotTopFontBox_qty">
+							<span class="bTime_qty">{date("Y-m-d",$v[inputtime])}</span>
+							<span class="bFont_qty">{$CATEGORYS[$v[catid]][catname]}</span>
+						</div>
+						<div class="hotImgBox_qty">
+							<img src="{$v[thumb]}" width='330' height='132'/>
+						</div>
+						<div class="hotFont_qty">
+							<h5>{$v[title]}</h5>
+						</div>
+						<div class="hotFontCenter_qty">
+							{$cv[description]}
+						</div>
+						<div class="rItBox_qty">
+							<div href="{$v[url]}">&lt</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			{/loop}
+	    {/pc}
+		</ul>
+		<!--热点资讯列表结束-->
+		<div class="moreBox"><a href="{$CATEGORYS[11]['url']}">更多</a></div>
+	</div>
+</div>
+<script type="text/javascript">
+   
+	$(document).ready(function(){
+		$(".healthBanner_qty").hide().eq(0).show();
+		$(".list_qty li").mouseover(function(){
+			$(".list_qty li").eq($(this).index()).addClass("color_qty").siblings().removeClass('color_qty');
+			$(".healthBanner_qty").hide().eq($(this).index()).show();
+		});
+	});
+</script>
+
+<!-- 文章频道页 end --> 
+
+
+	
     
-    
-    <div class="col-auto channel-slide">
-    {pc:content  action="lists" catid="$catid" order="listorder ASC" thumb="1" num="5"}
-  		<ul class="thumb">
-  		{loop $data $k $v}
-        	<li {if $n==1}class="on" style="margin:0"{/if}><a href="{$v[url]}"><img src="{thumb($v[thumb], 82, 50)}"  alt="{$v[title]}" width="82" height="50" /><div class="icon"></div></a></li>
-        {/loop}
-        </ul>
-        <div class="col-auto">
-            <ul class="photo">
-            {loop $data $k $v}
-                <li><a href="{$v[url]}" title="{$v[title]}"><img src="{thumb($v[thumb], 398, 234)}" width="398" height="234" alt="{$v[title]}" /></a></li>
-            {/loop}
-            </ul>
-            <div class="title">
-            {loop $data $k $v}
-              <p  {if $n==1}style="display:block"{/if}><strong><a href="{$v[url]}" title="{$v[title]}" class="blue"{title_style($v[style])}>{str_cut($v[title], 36)}</a></strong><br />{str_cut(strip_tags($v[description]), 62)}</p>
-            {/loop}
-          </div>
-        </div>
-         {/pc}
-    </div>
+
  <!--下面这部分代码是广告代码，可通过删除注释的方法显示出来-->
- <!-- 
+ <!--  
     <div class="ads">
     	<div class="col-left"><script language="javascript" src="{APP_PATH}caches/poster_js/4.js"></script></div>
         <div class="col-auto">
@@ -54,64 +145,11 @@
             <div class="right">这里放广告</div>
         </div>
   </div>
-  -->
-  <div class="bk10"></div>
-	<div class="col-left">
-	{php $j=1;}
-	{loop subcat($catid) $v}
-	{php if($v['type']!=0) continue;}
-        <div class="box cat-area" {if $j%2==1}style="margin-right:10px"{/if}>
-        		<h5 class="title-1">{$v[catname]}<a href="{$v[url]}" class="more">更多>></a></h5>
-             <div class="content">
-             	
-				{pc:content action="lists" catid="$v[catid]" thumb="1" num="1" order="id DESC"}
-				<p>
-					{loop $data $v}
-						<a href="{$v[url]}" target="_blank"><img src="{thumb($v[thumb],70,60)}" width="70" height="60"/></a>
-						<strong><a href="{$v[url]}" target="_blank" title="{$v[title]}"{title_style($v[style])}>{str_cut($v[title], 30)}</a></strong><br />{str_cut($v[description],116,'..')}
-					{/loop}
-					</p>
-				{/pc}
-                
-                <div class="bk15 hr"></div>
-                <ul class="list  lh24 f14">
-                {pc:content action="lists" catid="$v[catid]" num="5" order="id DESC"}
-					{loop $data $v}
-						<li><a href="{$v[url]}" target="_blank"{title_style($v[style])}>{$v[title]}</a></li>
-					{/loop}
-				{/pc}
-                </ul>
-            </div>
-        </div>
-        {if $j%2==0}<div class="bk10"></div>{/if}
-	{$j++}
-	{/loop}
-  </div>
-    <div class="col-auto">
-        <div class="box">
-            <h5 class="title-2">频道总排行</h5>
-            <ul class="content digg">
-            {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
-				{loop $data $v}
-					<li><a href="{$v[url]}" target="_blank"{title_style($v[style])}>{$v[title]}</a></li>
-				{/loop}
-			{/pc}
-            </ul>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">频道本月排行</h5>
-            <ul class="content rank">
-            {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
-				{loop $data $v}
-				<li><span>{number_format($v[monthviews])}</span><a href="{$v[url]}"{title_style($v[style])} class="title" title="{$v[title]}">{str_cut($v[title],56,'...')}</a></li>
-				{/loop}
-			{/pc}
-            </ul>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
+ -->
+ 
+    
+
+<!--  <script type="text/javascript">
 function ChannelSlide(Name,Class){
 	$(Name+' ul.photo li').sGallery({
 		titleObj:Name+' div.title p',
@@ -120,5 +158,5 @@ function ChannelSlide(Name,Class){
 	});
 }
 new ChannelSlide(".channel-slide","on",311,260);
-</script>
+</script>  -->
 {template "content","footer"}

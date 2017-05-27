@@ -27,7 +27,7 @@ return array(
 'js_path' => 'http://192.168.2.143/php_cms/statics/js/', //CDN JS
 'css_path' => 'http://192.168.2.143/php_cms/statics/css/', //CDN CSS
 'img_path' => 'http://192.168.2.143/php_cms/statics/images/', //CDN img
-'app_path' => 'http://localhost/php_cms/',//动态域名配置地址
+'app_path' => 'http://192.168.2.143/php_cms/',//动态域名配置地址
 
 'charset' => 'utf-8', //网站字符集
 'timezone' => 'Etc/GMT-8', //网站时区（只对php 5.1以上版本有效），Etc/GMT-8 实际表示的是 GMT+8

@@ -1,6 +1,6 @@
-body{color:#444;background: #eee url(../images/v9/body-bg.png) repeat-y center}
+body{color:#444;font-family: "微软雅黑",sans-serif;}
 a{text-decoration:none; color:#444}
-a:hover{text-decoration:underline; color:#1E50A2}
+a:hover {text-decoration:none;}
 .blue,blue a,.box h5 a,.box h6 a,.box a.more,.crumbs a{ color:#004499}
 .keylink,.keylink:link,.keylink:hover,.keylink:active {text-decoration:underline;width:26px; height:22px; line-height:22px; background:#fff; border:1px dotted #aaa;  text-align:center}
 textarea{border:1px solid #DCDDDD; background:#fff;clear:both;color:#555;font-size:14px;height:130px;padding:5px 0 0 5px;text-align:left;width:99%; margin-bottom:8px}
@@ -35,7 +35,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 .submit,.submit input{ background: url(../images/member/but.png) no-repeat; height:29px;width:auto;_width:0;overflow:visible !ie}
 .submit input{background-position: right top; border:none; padding:0 10px 0 7px; font-size:14px}
 /* 页面宽度 （更改页面宽度后，需要更改“images/v9/body-bg.png”图片的宽度） */
-.header,.main,.footer{width:960px;margin:0 auto;}
+.header,.main{width:960px;margin:0 auto;}
 /* 头部 */
 .header{padding:10px 7px;background-position: left -142px}
 .header .logo{float:left;background-position: right -10px;background-repeat: no-repeat; padding:0 20px 0 10px; height:70px; text-align:center;*font-size:40px;}

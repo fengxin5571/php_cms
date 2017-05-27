@@ -144,5 +144,17 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  18 => 
+  array (
+    'posid' => '18',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '文章频道页推荐',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '0',
+    'thumb' => '',
+  ),
 );
 ?>

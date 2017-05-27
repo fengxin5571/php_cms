@@ -261,6 +261,7 @@ class content_tag {
 				$array[$key]['listorder'] = $info['listorder'];
 			}
 		}
+		
 		return $array;
 	}
 	/**

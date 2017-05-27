@@ -1,16 +1,34 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><div class="footer">
-<p class="info">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=c93f67db6a88961c8bd697670c307e8e&action=category&num=15&siteid=%24siteid&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'category')) {$data = $content_tag->category(array('siteid'=>$siteid,'order'=>'listorder ASC','limit'=>'15',));}?>
-<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-<?php if($r[type] == 1) { ?>
-<a href="<?php echo $r['url'];?>" target="_blank"><?php echo $r['catname'];?></a> |  
-<?php } ?>
-<?php $n++;}unset($n); ?>
-<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-<a href="<?php echo APP_PATH;?>index.php?m=link" target="_blank">友情链接</a>
-<br />
-Powered by <strong><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a></strong> <em><?php echo get_pc_version(1);?></em> &copy; 2017 <img src="<?php echo IMG_PATH;?>copyright.gif"/><?php echo tjcode();?><?php echo runhook('glogal_footer')?>
-</p>
+	<div class="footer_con">
+        <div class="footer_one">
+            <div class="contact_us">
+                <div class="contact_a">联系我们</div>
+                <div class="contact_b">CONTACT US</div>
+            </div>
+            <div class="our_tell">公司热线:  <?php echo siteinfo_d($siteid,'company_phone');?></div>
+            <div class="our_adress">公司地址: <?php echo siteinfo_d($siteid,'company_address');?></div>
+        </div>
+        <div class="footer_one footer_two">
+            <div class="contact_us">
+                <div class="contact_a">关于我们</div>
+                <div class="contact_b">ABOUT US</div>
+            </div>
+            <a href="<?php echo $CATEGORYS['7']['url'];?>" class="our_tell">公司介绍</a>
+            <a href="" class="our_adress">媒体报道</a>
+        </div>
+        <div class="footer_one footer_two">
+            <div class="contact_us">
+                <div class="contact_a">招商加盟</div>
+                <div class="contact_b">CHINA MERCHANTS</div>
+            </div>
+            <div class="our_tell">市场合作: <?php echo siteinfo_d($siteid,'investment_phone');?></div>
+            <a href="<?php echo $CATEGORYS['15']['url'];?>" class="our_adress">招商须知</a>
+        </div>
+        <div class="look_at">
+            <div class="look_me">扫我关注</div>
+            <img class="erWeiMa" src="<?php echo siteinfo_d($siteid,'qccode');?>" alt="">
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
 $(function(){

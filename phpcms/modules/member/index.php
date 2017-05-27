@@ -18,6 +18,13 @@ class index extends foreground {
 	}
 
 	public function init() {
+	    if(isset($_GET['siteid'])) {
+	        $siteid = intval($_GET['siteid']);
+	    } else {
+	        $siteid = 1;
+	    }
+	    $siteid = $GLOBALS['siteid'] = max($siteid,1);
+	    $SEO = seo($siteid);
 		$memberinfo = $this->memberinfo;
 		
 		//初始化phpsso

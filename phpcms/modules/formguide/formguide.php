@@ -65,6 +65,7 @@ class formguide extends admin {
 				$template_list[$v['dirname']] = $v['name'] ? $v['name'] : $v['dirname'];
 				unset($template_list[$k]);
 			}
+			
 			$formid = intval($_GET['formid']);
 			pc_base::load_sys_class('form', '', false);
 			$show_header = $show_validator = $show_scroll = 1;
@@ -103,6 +104,7 @@ class formguide extends admin {
 				unset($template_list[$k]);
 			}
 			$data = $this->db->get_one(array('modelid'=>$formid));
+			
 			$data['setting'] = string2array($data['setting']);
 			pc_base::load_sys_class('form', '', false);
 			$show_header = $show_validator = $show_scroll = 1;

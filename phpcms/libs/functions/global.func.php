@@ -1542,6 +1542,15 @@ function siteinfo($siteid) {
 	if (empty($sitelist)) $sitelist  = getcache('sitelist','commons');
 	return isset($sitelist[$siteid]) ? $sitelist[$siteid] : '';
 }
+/**
+ * 获取站点的信息
+ * @param $siteid   站点ID
+ */
+function siteinfo_d($siteid,$key) {
+    static $sitelist;
+    if (empty($sitelist)) $sitelist  = getcache('sitelist','commons');
+    return isset($sitelist[$siteid]) ? $sitelist[$siteid][$key] : '';
+}
 
 /**
  * 生成CNZZ统计代码

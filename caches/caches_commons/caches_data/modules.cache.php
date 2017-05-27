@@ -464,5 +464,19 @@ return array (
     'installdate' => '2017-05-15',
     'updatedate' => '2017-05-15',
   ),
+  'sms' => 
+  array (
+    'module' => 'sms',
+    'name' => '短信平台',
+    'url' => 'sms/',
+    'iscore' => '0',
+    'version' => '1.0',
+    'description' => '短信平台',
+    'setting' => '',
+    'listorder' => '0',
+    'disabled' => '0',
+    'installdate' => '2011-09-02',
+    'updatedate' => '2011-09-02',
+  ),
 );
 ?>
