@@ -1,7 +1,6 @@
 {template "content","header"}
 <link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
 <link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
-
 <div class="main">
 	<div class="col-left">
     	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span> {$name}</div>
@@ -25,6 +24,17 @@
       <td>{$info['form']}  {$info['tips']}</td>
     </tr>
 {/loop}
+     <tr>
+      <th width="80">预约门店
+	  </th>
+      <td>
+      <select name="info[ex_store]">
+      {loop $areo_stores $r}
+      <option value="{$r[title]}">{$r[title]}</option>
+      {/loop}
+      </select>
+      </td>
+    </tr>
 	</tbody>
 </table>
 <input type="submit" name="dosubmit" id="dosubmit" value=" 提交 ">&nbsp;<input type="reset" value=" 取消 ">

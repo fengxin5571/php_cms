@@ -1146,5 +1146,6 @@ class content extends admin {
 		}
 		return true;
 	}
+	
 }
 ?>

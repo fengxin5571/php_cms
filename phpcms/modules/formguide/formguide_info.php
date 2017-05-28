@@ -54,6 +54,9 @@ class formguide_info extends admin {
 		require CACHE_MODEL_PATH.'formguide_output.class.php';
 		$formguide_output = new formguide_output($formid);
 		$forminfos_data = $formguide_output->get($info);
+		if($formid == '31'){//如果表单为预约体验，则添加新增的自定义预约门店字段
+		    $forminfos_data['ex_store']=$info['ex_store'];
+		}
 		$fields = $formguide_output->fields;
 		include $this->admin_tpl('formguide_info_view');
 	}

@@ -441,7 +441,7 @@ function L($language = 'no_language',$pars = array(), $modules = '') {
 	static $LANG = array();
 	static $LANG_MODULES = array();
 	static $lang = '';
-	if(defined('IN_ADMIN')) {
+	if(defined('IN_ADMIN')) {//
 		$lang = SYS_STYLE ? SYS_STYLE : 'zh-cn';
 	} else {
 		$lang = pc_base::load_config('system','lang');

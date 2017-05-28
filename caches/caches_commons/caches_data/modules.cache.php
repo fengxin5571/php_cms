@@ -472,7 +472,7 @@ return array (
     'iscore' => '0',
     'version' => '1.0',
     'description' => '短信平台',
-    'setting' => '',
+    'setting' => '{"userid":"","productid":"","sms_key":""}',
     'listorder' => '0',
     'disabled' => '0',
     'installdate' => '2011-09-02',

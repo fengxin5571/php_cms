@@ -1,4 +1,5 @@
 {template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}themes/css/detail_qty.css">
 <!-- 文章频道页  begin -->
 <div class="detailBox_qty">
 	<div class="detailSmallBox_qty">
@@ -26,7 +27,7 @@
 		<div class="healthDis_qty">
 			<ul class="list_qty">
 			    {php $j=1;}
-			    {loop subcat($catid) $v}
+			    {loop subcat($catid) $v} 
 				<li  {if $j==1 }class="color_qty"{/if}><a href="{$v[url]}">{$v[catname]}</a></li>
 				{php $j++;}
 				{/loop}
@@ -49,7 +50,7 @@
 						<div class="healthRightSmall_qty">
 						    <a href="{$cv[url]}">
 							<div class="healthSmall_qty">
-								<h4>&nbsp;<span>{$i}</span>{$cv[title]}</h4>
+								<h4>&nbsp;<span>{sprintf("%02d", $i)}</span>{$cv[title]}</h4>
 								<div class="time_qty">{date("Y-m-d",$cv[inputtime])}</div>
 							</div>
 							<div class="healthBottomSmall_qty">

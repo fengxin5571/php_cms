@@ -296,7 +296,7 @@ return array (
     'siteid' => '1',
     'field' => 'thumb',
     'name' => '缩略图',
-    'tips' => '建议尺寸330* 132',
+    'tips' => '建议尺寸418* 169',
     'css' => '',
     'minlength' => '0',
     'maxlength' => '100',

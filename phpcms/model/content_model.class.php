@@ -471,5 +471,14 @@ class content_model extends model {
 		}
 		setcache('category_items_'.$this->modelid, $array,'commons');
 	}
+	/**
+	 * 改变数据表
+	 */
+	public function change_table($tablename = '') {
+	    if (!$tablename) return false;
+	
+	    $this->table_name = $this->db_tablepre.$tablename;
+	    return true;
+	}
 }
 ?>

@@ -1,4 +1,5 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/detail_qty.css">
 <!-- 文章频道页  begin -->
 <div class="detailBox_qty">
 	<div class="detailSmallBox_qty">
@@ -26,7 +27,7 @@
 		<div class="healthDis_qty">
 			<ul class="list_qty">
 			    <?php $j=1;?>
-			    <?php $n=1;if(is_array(subcat($catid))) foreach(subcat($catid) AS $v) { ?>
+			    <?php $n=1;if(is_array(subcat($catid))) foreach(subcat($catid) AS $v) { ?> 
 				<li  <?php if($j==1 ) { ?>class="color_qty"<?php } ?>><a href="<?php echo $v['url'];?>"><?php echo $v['catname'];?></a></li>
 				<?php $j++;?>
 				<?php $n++;}unset($n); ?>
@@ -49,7 +50,7 @@
 						<div class="healthRightSmall_qty">
 						    <a href="<?php echo $cv['url'];?>">
 							<div class="healthSmall_qty">
-								<h4>&nbsp;<span><?php echo $i;?></span><?php echo $cv['title'];?></h4>
+								<h4>&nbsp;<span><?php echo sprintf("%02d", $i);?></span><?php echo $cv['title'];?></h4>
 								<div class="time_qty"><?php echo date("Y-m-d",$cv[inputtime]);?></div>
 							</div>
 							<div class="healthBottomSmall_qty">
