@@ -916,9 +916,9 @@ function get_nickname($userid='', $field='') {
 		}
 	} else {
 		if (param::get_cookie('_nickname')) {
-			$return .= '('.param::get_cookie('_nickname').')';
+			$return .= param::get_cookie('_nickname');
 		} else {
-			$return .= '('.param::get_cookie('_username').')';
+			$return .= param::get_cookie('_username');
 		}
 	}
 	return $return;
