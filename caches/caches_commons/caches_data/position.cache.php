@@ -3,35 +3,35 @@ return array (
   2 => 
   array (
     'posid' => '2',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '首页头条推荐',
+    'modelid' => '1',
+    'catid' => '10',
+    'name' => '首页健康知识推荐',
     'maxnum' => '20',
-    'extention' => '',
+    'extention' => 'typeid',
     'listorder' => '4',
-    'siteid' => '0',
+    'siteid' => '1',
     'thumb' => '',
   ),
   1 => 
   array (
     'posid' => '1',
-    'modelid' => '0',
+    'modelid' => '28',
     'catid' => '0',
-    'name' => '首页焦点图推荐',
+    'name' => '首页商品推荐',
     'maxnum' => '20',
     'extention' => '',
     'listorder' => '1',
-    'siteid' => '0',
+    'siteid' => '1',
     'thumb' => '',
   ),
   13 => 
   array (
     'posid' => '13',
-    'modelid' => '82',
-    'catid' => '0',
-    'name' => '栏目页焦点图',
+    'modelid' => '28',
+    'catid' => '18',
+    'name' => '预约体验商品推荐',
     'maxnum' => '20',
-    'extention' => NULL,
+    'extention' => '',
     'listorder' => '0',
     'siteid' => '1',
     'thumb' => '',
@@ -71,18 +71,6 @@ return array (
     'listorder' => '0',
     'siteid' => '1',
     'thumb' => '',
-  ),
-  12 => 
-  array (
-    'posid' => '12',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '首页图片推荐',
-    'maxnum' => '20',
-    'extention' => '',
-    'listorder' => '0',
-    'siteid' => '0',
-    'thumb' => 'http://localhost/phpcms/uploadfile/2017/0519/20170519094153564.png',
   ),
   14 => 
   array (
@@ -135,13 +123,13 @@ return array (
   18 => 
   array (
     'posid' => '18',
-    'modelid' => '0',
+    'modelid' => '1',
     'catid' => '0',
     'name' => '文章频道页推荐',
     'maxnum' => '20',
     'extention' => '',
     'listorder' => '0',
-    'siteid' => '0',
+    'siteid' => '1',
     'thumb' => '',
   ),
 );

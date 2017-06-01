@@ -35,7 +35,11 @@
 						<div class="listSmall_qty">
 							<h3><?php echo sprintf("%02d", $j);?></h3>
 							<div class="listImgBox_qty">
+							    <?php if($r[thumb]) { ?>
 								<img src="<?php echo $r['thumb'];?>" width="418" height='169'/>
+								<?php } else { ?>
+								<img src="<?php echo CSS_PATH;?>themes/image/dybg3_qty.jpg" width="418" height='169'/>
+								<?php } ?>
 							</div>
 							<div class="detailRightBox_qty">
 								<h5><?php echo $r['title'];?></h5>

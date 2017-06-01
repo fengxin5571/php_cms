@@ -10,6 +10,7 @@
 <link href="http://192.168.2.143/php_cms/statics/css/reset.css" rel="stylesheet" type="text/css" />
 <link href="http://192.168.2.143/php_cms/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="http://192.168.2.143/php_cms/statics/css/themes/css/public.css">
+<link rel="stylesheet" href="http://192.168.2.143/php_cms/statics/css/themes/css/header.css">
 <link rel="stylesheet" href="http://192.168.2.143/php_cms/statics/css/themes/css/footer.css">
 <script type="text/javascript" src="http://192.168.2.143/php_cms/statics/js/jquery.min.js"></script>
 <script type="text/javascript" src="http://192.168.2.143/php_cms/statics/js/jquery.sgallery.js"></script>
@@ -18,166 +19,334 @@
 
 </head>
 <body>
-<div class="body-top">
-    <div class="content">
-        		<div id="announ">
-                 <ul>
-                                  </ul>
-            </div>
-     	 <script type="text/javascript">
-$(function(){
-	startmarquee('announ',22,1,500,3000);
-})
-</script>
-            <div class="login lh24 blue"><span>位置:</span><a href="http://192.168.2.143/php_cms/index.php?m=content&c=rss&siteid=1" class="rss ib">rss</a><span class="rt"><script type="text/javascript">document.write('<iframe src="http://192.168.2.143/php_cms/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script></span></div>
-    </div>
-</div>
-<div class="header">
-	<div class="logo"><a href="http://192.168.2.143/php_cms/"><img src="http://192.168.2.143/php_cms/statics/images/v9/logo.jpg" /></a></div>
-
-    <div class="search">
-    	<div class="tab" id="search">
-																<a href="javascript:;" onclick="setmodel(1, $(this));" style="outline:medium none;" hidefocus="true"  class="on" >新闻</a><span> | </span>										<a href="javascript:;" onclick="setmodel(3, $(this));" style="outline:medium none;" hidefocus="true" >图片</a><span> | </span>										<a href="javascript:;" onclick="setmodel(2, $(this));" style="outline:medium none;" hidefocus="true" >下载</a><span> | </span>										<a href="javascript:;" onclick="setmodel(52, $(this));" style="outline:medium none;" hidefocus="true" >专题</a>								</div>
-
-        <div class="bd">
-            <form action="http://192.168.2.143/php_cms/index.php" method="get" target="_blank">
-				<input type="hidden" name="m" value="search"/>
-				<input type="hidden" name="c" value="index"/>
-				<input type="hidden" name="a" value="init"/>
-				<input type="hidden" name="typeid" value="1" id="typeid"/>
-				<input type="hidden" name="siteid" value="1" id="siteid"/>
-                <input type="text" class="text" name="q" id="q"/><input type="submit" value="搜 索" class="button" />
-            </form>
+<div class="header_yyt">
+    <div class="header_con">
+    	<script type="text/javascript">document.write('<iframe src="http://192.168.2.143/php_cms/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="500" height="50" frameborder="0" scrolling="no"></iframe>')</script>
+        <a class="help_" href="">帮助中心</a>
+        <div class="city_">
+                        
         </div>
     </div>
-
-    <div class="banner"><script language="javascript" src="http://192.168.2.143/php_cms/index.php?m=poster&c=index&a=show_poster&id=1"></script></div>
-    <div class="bk3"></div>
-    <div class="nav-bar" style="height:100%">
-    	<map>
-    	<ul class="nav-site">  
-		  
-		  
-		    <li><a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=10">健康资讯</a></li>  
-		  
-		    <li><a href="http://192.168.2.143/php_cms/index.php?m=formguide&c=index&a=show&formid=31&siteid=1">预约体验</a></li>  
-		  
-		    <li><a href="http://shop.duyiwang.cn">健康商城</a></li>  
-		  
-		  
-		</ul>  
-		        </map>
-    </div> 
-	
-	
 </div>
-</div><!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	        	   
-                
+
+<div class="nav_yyt">
+    <div class="nav_con">
+        <a class="logo_" href="http://cmstest.duyiwang.cn/"></a>
+        <form action="http://192.168.2.143/php_cms/index.php" method="get" target="_blank" onsubmit="return false">
+        <div class="search">
+        <input type="hidden" name="m" value="search"/>
+		<input type="hidden" name="c" value="index"/>
+		<input type="hidden" name="a" value="init"/>
+		<input type="hidden" name="typeid" value="1" id="typeid"/>
+		<input type="hidden" name="siteid" value="1" id="siteid"/>
+        <input clstag="h|keycount|2016|03a" type="text" onKeyDown="" autocomplete="off" id="key" accesskey="s" class="search_add" placeholder="" value name="q">
+        <input type="submit" value="搜 索" class="search_go" />
+            
+        </div>
+        </form>
+        <ul class="nav_list">
+                           <li class="list_one">
+               <a class="list_a" href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=10">
+                   <div class="list_icon">
+                   
+                   </div>
+                   <div class="list_world">
+                       <div class="LW_a">健康资讯</div>
+                       <div class="LW_b">ADVISORY</div>
+                   </div>
+               </a>
+           </li>
+                   <li class="list_one">
+               <a class="list_a" href="http://cmstest.duyiwang.cn/index.php?m=formguide&c=index&a=show&formid=31&siteid=1">
+                   <div class="list_icon">
+                   
+                   </div>
+                   <div class="list_world">
+                       <div class="LW_a">预约体验</div>
+                       <div class="LW_b">ADVISORY</div>
+                   </div>
+               </a>
+           </li>
+                   <li class="list_one">
+               <a class="list_a" href="http://shop.duyiwang.cn">
+                   <div class="list_icon">
+                   
+                   </div>
+                   <div class="list_world">
+                       <div class="LW_a">健康商城</div>
+                       <div class="LW_b">ADVISORY</div>
+                   </div>
+               </a>
+           </li>
+                        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="http://192.168.2.143/php_cms/statics/css/themes/css/index.css">
+<script src="http://192.168.2.143/php_cms/statics/css/themes/js/index.js"></script>
+<!-- banner begin -->
+<div class="banner_yyt">
+    <ul class="banner_con">
+          
+                        <li class="banner_b">
+            <div class="banner_s">
+                <a class="banner_link" href="">
+                    <img src="http://192.168.2.143/php_cms/uploadfile/2017/0601/20170601085241714.png" alt="">
+                </a>
+            </div>
+        </li>
+                        <div class="banner_btn">
+              
+	        	                    <div class="btn_one"></div>
+                    	        </div>
+        <div class="btn_left"></div>
+        <div class="btn_right"></div>
+    </ul>
+</div>
+<!-- banner end -->
+
+<!-- 健康/问答 bengin-->
+<div class="health_area">
+    <div class="area_title"></div>
+    <div class="area_con">
+        <div class="area_left">
+            <ul class="find_dct">
+                <li class="find_dct_a">
+                    <span class="dct_a_a"></span>
+                    <span class="dct_a_b">找门店</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_one_yyt"></span>
+                    <span class="dct_a_b">找医师</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_two_yyt"></span>
+                    <span class="dct_a_b">找产品</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_three_yyt"></span>
+                    <span class="dct_a_b">找视频</span>
+                </li>
+
+            </ul>
+            <div class="area_left_con">
+                <ul class="find_md">
+                    <div class="find_md_title">热门城市</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=141">太原市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=2">北京市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=3">上海市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=187">哈尔滨</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=178">长春市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=200">南京市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=304">黄冈市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=151">吕梁市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8&region=130">石家庄</a>
+                        </li>
+                    </ul>
+                    <a href="" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">推荐医师</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                    </ul>
+                    <a href="doctorList_yyt.html" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">热门产品</div>
+                    <ul class="find_md_con">
+                        <li class="find_product">
+                            <a href="">独一张 · 温泉</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 老膏药</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 仪年堂</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 炙骨宁</a>
+                        </li>
+                    </ul>
+                    <a href="" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">热门视频</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                    </ul>
+                    <a href="" class="find_md_more">查看更多</a>
+                </ul>
+
             </div>
         </div>
-        <div class="slide">
-            <div class="FocusPic">
-                        	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                                        </div>
-                </div>
-                        </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-								</div>
-                <script language="javascript" src="http://192.168.2.143/php_cms/caches/poster_js/10.js"></script>
+        <div class="area_cut_off"></div>
+        <!--*************************************************************************************-->
+        <div class="area_right">
+            <div class="health_select">
+                <div class="health_k_q">健康知识</div>
+                <div class="health_k_q">健康问答</div>
             </div>
-        </div>
-        <div class="bk10"></div>
-        <div><a href="">找门店</a></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-                      <ul class="content news-photo picbig">
-                         </ul>
-                    </div>
-        <div class="bk10"></div>
-                        <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">健康资讯<a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=10" class="more">更多>></a></h5>
-             <div class="content">
-                                       	<p>
-             		<img src="http://192.168.2.143/php_cms/uploadfile/2017/0527/thumb_90_0_20170527105257599.jpg" width="90" height="60"/>
-                    <strong><a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=4" target="_blank" title="慢性支气管炎患者的饮食有什么原则？">慢性支气管炎患...</a></strong><br />对于慢性支气管炎的治疗，如果一旦患病的话对人们的身体健康会有很...                </p>
-                                            
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                	<li>·<a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=6" target="_blank" title="慢性支气管炎患者的饮食原则是什么">慢性支气管炎患者的饮食...</a></li>
-                                	<li>·<a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=5" target="_blank" title="慢性支气管炎患者的饮食有什么原则？">慢性支气管炎患者的饮食...</a></li>
-                                	<li>·<a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=4" target="_blank" title="慢性支气管炎患者的饮食有什么原则？">慢性支气管炎患者的饮食...</a></li>
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">门店<a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=8" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                	<li>·<a href="http://localhost/php_cms/index.php?m=content&c=index&a=show&catid=8&id=5" target="_blank" title="寇庄西路店">寇庄西路店</a></li>
-                                	<li>·<a href="http://localhost/php_cms/index.php?m=content&c=index&a=show&catid=8&id=4" target="_blank" title="呼和浩特市新城区旗舰店">呼和浩特市新城区旗舰店</a></li>
-                                	<li>·<a href="http://localhost/php_cms/index.php?m=content&c=index&a=show&catid=8&id=2" target="_blank" title="义井店">义井店</a></li>
-                                	<li>·<a href="http://localhost/php_cms/index.php?m=content&c=index&a=show&catid=8&id=1" target="_blank" title="123">123</a></li>
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                                <ul class="list lh24 f14">
-                                   </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="http://192.168.2.143/php_cms/index.php?m=special&c=index&a=special&siteid=1" class="more">更多>></a></h5>
-            <div class="content special">
-                                                </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="http://192.168.2.143/php_cms/index.php?m=vote&c=index&siteid=1" class="more">更多>></a></h5>
- 
-<script language="javascript" src="http://192.168.2.143/php_cms/index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
+            <ul class="health_zs">
+                                                                <li class="health_zs_one">
+                    <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=9" class="zs_one_a"> · 诊疗</a>
+                    <span class="zs_one_b">|</span>
+                    <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=9" class="zs_one_c">肠胃炎夏季高发预防记住这几点</a>
+                    <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=11&id=9" class="zs_one_d">春夏交替5条原则养好肠胃1</a>
+                </li>
+                                            </ul>
+            <ul class="health_zs health_zs_">
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+
+            </ul>
         </div>
     </div>
-    <div class="bk10"></div>
-	
-	<div class="box blogroll ylink">
-    	<h5><a href="http://192.168.2.143/php_cms/index.php?m=link&siteid=1" hidefocus="true" class="rt">更多>></a>友情链接<a href="http://192.168.2.143/php_cms/index.php?m=link&c=index&a=register&siteid=1" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-                            </ul>
-          <div class="bk10"></div>
-	<div class="linka">
-		 	</div>
-	</div>
 </div>
+<!-- 健康/问答 end -->
+<!-- 健康讲堂  begin -->
+<div class="health_jt">
+    <div class="health_jt_title"></div>
+    <div class="health_jt_con">
+        <a href="" class="health_jt_a">
+        <script language="javascript" src="http://192.168.2.143/php_cms/index.php?m=poster&c=index&a=show_poster&id=10"></script>
+        </a>
+        <a href="" class="health_jt_b">
+            <span class="health_jt_one">
+                <i>太常·视频</i>
+                <i>18</i>
+                <i></i>
+            </span>
+        </a>
+        <a href="" class="health_jt_b">
+            <span class="health_jt_one">
+                <i>太常·视频</i>
+                <i>18</i>
+                <i></i>
+            </span>
+        </a>
+        <ul class="health_jt_circle">
+            <!--228-->
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+        </ul>
+    </div>
+</div>
+<!-- 健康讲堂 end -->
+
+<!-- 商品推荐 begin -->
+<div class="goods_for">
+    <div class="goods_for_tirle"></div>
+    <ul class="goods_for_con">
+                <li class="goods_for_one">
+            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=19&id=1" class="goods_for_img">
+                        <img src="http://192.168.2.143/php_cms/statics/images/nopic.gif" alt="$r[title]" title="独一张·温泉">
+                        </a>
+            <div class="goods_for_name">
+                <span></span>
+                <span>独一张·温泉</span>
+                <span></span>
+            </div>
+            <a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=show&catid=19&id=1" class="goods_for_more">查看详情</a>
+        </li>
+        
+    </ul>
+    <div class="goods_forMore" ><a href="http://192.168.2.143/php_cms/index.php?m=content&c=index&a=lists&catid=18" style="color: #fff">更多</a></div>
+    <div class="goods_forME">TRADITIONAL NOURISHING</div>
+</div>
+<!-- 商品推荐 end -->
 <script type="text/javascript"> 
 $(function(){
 	new slide("#main-slide","cur",310,260,1);//焦点图

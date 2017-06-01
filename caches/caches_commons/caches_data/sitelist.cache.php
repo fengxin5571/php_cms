@@ -5,7 +5,7 @@ return array (
     'siteid' => '1',
     'name' => '默认站点',
     'dirname' => '',
-    'domain' => 'http://192.168.2.143/php_cms/',
+    'domain' => 'http://cmstest.duyiwang.cn/',
     'site_title' => '独易网',
     'keywords' => '独易网',
     'description' => '独易网',
@@ -18,7 +18,7 @@ return array (
     'company_address' => '山西省太原市小店区电子商务产业园区B座2层',
     'investment_phone' => '0351-2351212',
     'qccode' => 'http://localhost/php_cms/uploadfile/2017/0523/20170523110358475.png',
-    'url' => 'http://192.168.2.143/php_cms/',
+    'url' => 'http://cmstest.duyiwang.cn/',
   ),
 );
 ?>

@@ -193,20 +193,9 @@ return array (
     'pattern' => '',
     'errortips' => '',
     'formtype' => 'omnipotent',
-    'setting' => 'array (
-  \'formtext\' => \'<input type=\\\'hidden\\\' name=\\\'info[relation]\\\' id=\\\'relation\\\' value=\\\'{FIELD_VALUE}\\\' style=\\\'50\\\' >
-<ul class="list-dot" id="relation_text"></ul>
-<div>
-<input type=\\\'button\\\' value="添加相关" onclick="omnipotent(\\\'selectid\\\',\\\'?m=content&c=content&a=public_relationlist&modelid={MODELID}\\\',\\\'添加相关文章\\\',1)" class="button" style="width:66px;">
-<span class="edit_content">
-<input type=\\\'button\\\' value="显示已有" onclick="show_relation({MODELID},{ID})" class="button" style="width:66px;">
-</span>
-</div>\',
-  \'fieldtype\' => \'varchar\',
-  \'minnumber\' => \'1\',
-)',
+    'setting' => '{"formtext":"<input type=\'hidden\' name=\'info[relation]\' id=\'relation\' value=\'{FIELD_VALUE}\' style=\'50\' >\\r\\n<ul class=\\"list-dot\\" id=\\"relation_text\\"><\\/ul>\\r\\n<div>\\r\\n<input type=\'button\' value=\\"\\u6dfb\\u52a0\\u76f8\\u5173\\" onclick=\\"omnipotent(\'selectid\',\'?m=content&c=content&a=public_relationlist&modelid=1\',\'\\u6dfb\\u52a0\\u76f8\\u5173\\u6587\\u7ae0\',1)\\" class=\\"button\\" style=\\"width:66px;\\">\\r\\n<span class=\\"edit_content\\">\\r\\n<input type=\'button\' value=\\"\\u663e\\u793a\\u5df2\\u6709\\" onclick=\\"show_relation(1,{ID})\\" class=\\"button\\" style=\\"width:66px;\\">\\r\\n<\\/span>\\r\\n<\\/div>","fieldtype":"varchar","minnumber":"1"}',
     'formattribute' => '',
-    'unsetgroupids' => '2,6,4,5,1,17,18,7',
+    'unsetgroupids' => '2,6,4,5,1,7',
     'unsetroleids' => '',
     'iscore' => '0',
     'issystem' => '0',
@@ -222,13 +211,85 @@ return array (
     'formtext' => '<input type=\'hidden\' name=\'info[relation]\' id=\'relation\' value=\'{FIELD_VALUE}\' style=\'50\' >
 <ul class="list-dot" id="relation_text"></ul>
 <div>
-<input type=\'button\' value="添加相关" onclick="omnipotent(\'selectid\',\'?m=content&c=content&a=public_relationlist&modelid={MODELID}\',\'添加相关文章\',1)" class="button" style="width:66px;">
+<input type=\'button\' value="添加相关" onclick="omnipotent(\'selectid\',\'?m=content&c=content&a=public_relationlist&modelid=1\',\'添加相关文章\',1)" class="button" style="width:66px;">
 <span class="edit_content">
-<input type=\'button\' value="显示已有" onclick="show_relation({MODELID},{ID})" class="button" style="width:66px;">
+<input type=\'button\' value="显示已有" onclick="show_relation(1,{ID})" class="button" style="width:66px;">
 </span>
 </div>',
     'fieldtype' => 'varchar',
     'minnumber' => '1',
+  ),
+  'service' => 
+  array (
+    'fieldid' => '408',
+    'modelid' => '28',
+    'siteid' => '1',
+    'field' => 'service',
+    'name' => '售后保障',
+    'tips' => '',
+    'css' => '',
+    'minlength' => '0',
+    'maxlength' => '0',
+    'pattern' => '',
+    'errortips' => '',
+    'formtype' => 'textarea',
+    'setting' => '{"width":"100","height":"46","defaultvalue":"","enablehtml":"1"}',
+    'formattribute' => '',
+    'unsetgroupids' => '',
+    'unsetroleids' => '',
+    'iscore' => '0',
+    'issystem' => '0',
+    'isunique' => '0',
+    'isbase' => '1',
+    'issearch' => '0',
+    'isadd' => '1',
+    'isfulltext' => '1',
+    'isposition' => '0',
+    'listorder' => '15',
+    'disabled' => '0',
+    'isomnipotent' => '0',
+    'width' => '100',
+    'height' => '46',
+    'defaultvalue' => '',
+    'enablehtml' => '1',
+  ),
+  'product_info' => 
+  array (
+    'fieldid' => '409',
+    'modelid' => '28',
+    'siteid' => '1',
+    'field' => 'product_info',
+    'name' => '产品资料',
+    'tips' => '',
+    'css' => '',
+    'minlength' => '0',
+    'maxlength' => '0',
+    'pattern' => '',
+    'errortips' => '',
+    'formtype' => 'editor',
+    'setting' => '{"toolbar":"basic","defaultvalue":"","enablekeylink":"0","replacenum":"1","link_mode":"0","enablesaveimage":"1","height":"200","disabled_page":"1"}',
+    'formattribute' => '',
+    'unsetgroupids' => '',
+    'unsetroleids' => '',
+    'iscore' => '0',
+    'issystem' => '0',
+    'isunique' => '0',
+    'isbase' => '1',
+    'issearch' => '0',
+    'isadd' => '1',
+    'isfulltext' => '1',
+    'isposition' => '0',
+    'listorder' => '16',
+    'disabled' => '0',
+    'isomnipotent' => '0',
+    'toolbar' => 'basic',
+    'defaultvalue' => '',
+    'enablekeylink' => '0',
+    'replacenum' => '1',
+    'link_mode' => '0',
+    'enablesaveimage' => '1',
+    'height' => '200',
+    'disabled_page' => '1',
   ),
   'inputtime' => 
   array (

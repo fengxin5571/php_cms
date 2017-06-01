@@ -4,6 +4,7 @@ class content_tag {
 	public function __construct() {
 		$this->db = pc_base::load_model('content_model');
 		$this->position = pc_base::load_model('position_data_model');
+		
 	}
 	/**
 	 * 初始化模型
@@ -259,6 +260,7 @@ class content_tag {
 				$array[$key]['id'] = $info['id'];
 				$array[$key]['catid'] = $info['catid'];
 				$array[$key]['listorder'] = $info['listorder'];
+				
 			}
 		}
 		

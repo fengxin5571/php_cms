@@ -1,72 +1,166 @@
 {template "content","header"}
 <link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
 <link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
-<div class="main">
-	<div class="col-left">
-    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span> {$name}</div>
-        <div id="Article">
-        	<h1>{$name}</h1>
-			<div class="content">
-				<form method="post" action="?m=formguide&c=index&a=show&formid={$formid}" name="myform" id="myform">
-<table class="table_form" width="100%" cellspacing="0">
-<tbody>
- {loop $forminfos_data $field $info}
-	{if $info['formtype']=='omnipotent'}
-		{loop $forminfos_data $_fm $_fm_value}
-			{if $_fm_value['iscomnipotent']}
-				{php $info['form'] = str_replace('{'.$_fm.'}',$_fm_value['form'],$info['form']);}
-			{/if}
-		{/loop}
-	{/if}
-	<tr>
-      <th width="80">{if $info['star']} <font color="red">*</font>{/if} {$info['name']}
-	  </th>
-      <td>{$info['form']}  {$info['tips']}</td>
-    </tr>
-{/loop}
-     <tr>
-      <th width="80">预约门店
-	  </th>
-      <td>
-      <select name="info[ex_store]">
-      {loop $areo_stores $r}
-      <option value="{$r[title]}">{$r[title]}</option>
-      {/loop}
-      </select>
-      </td>
-    </tr>
-	</tbody>
-</table>
-<input type="submit" name="dosubmit" id="dosubmit" value=" 提交 ">&nbsp;<input type="reset" value=" 取消 ">
-</form>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/public_qty.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/appoint_qty.css"/>
+<!-- 预约体验 begin -->
+		<div class="appointBox_qty">
+			<div class="appointSmallBox_qty">
+				<!--小预约体验开始-->
+				<div class="detailHome_qty">
+					<div class="homeFont">首页<span>&gt {$name}</span></div>
+				</div>
+				<!--小预约体验结束-->
+				<!--预约体验立即预约开始-->
+				    {pc:content  action="position" posid="13" order="listorder DESC" num="4"}
+				    {if $data}
+					<div class="appointImgBox_qty">
+						<ul>
+						    {loop $data $r}
+							<li>
+								<a href="index.php?m=formguide&c=index&a=show&formid={$formid}&siteid=1">
+								    {if $r[thumb]}
+									<img src="{$r[thumb]}" alt="$r[title]" title="{$r[title]}" width="290"/>
+									{else}
+									<img src="{IMG_PATH}nopic.gif" alt="$r[title]" title="{$r[title]}" width="290"/>
+									{/if}
+									<div class="hotBox_qty">
+										<p>-{str_cut($r[title],17,'')}-</p>
+										<div><span>立即预约</span></div>
+									</div>
+								</a>
+							</li>
+						    {/loop}
+						</ul>
+					</div>
+					{/if}
+					{/pc}
+				<!--预约体验立即预约结束-->
+				<!--预约体验介绍开始-->
+					<div class="appointIntroduce_qty">
+						<!--预约体验左边开始-->
+							<div class="appointLeft_qty">
+								<div class="appointSmallLeft_qty">
+									<h2>预约体验介绍</h2>
+									<p> 山西太常生物科技有限公司是一家专业从事骨病调养，并以此为基础综合改善各类慢性病及亚健康症状的健康调理机构，是国内骨病个性化调养的开创者和领导者。</p>
+									<span>请记住我们的网址：<a href="">www.sxtaichang.com</a> </span>
+									<h3>预约填单</h3>
+									<div class="tableBox_qty">
+										<form action="?m=formguide&c=index&a=show&formid={$formid}" method="post">
+											<table border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td>名字</td>
+													<td>预约项目</td>
+												</tr>
+												
+												<tr>
+													<td>
+														<input type="text" name="info[name]" id="" value="" />
+													</td>
+													{loop $forminfos_data $field $info}
+												    {if $info[name] == '预约项目'}
+													<td>
+														 {$info[form]}
+													</td>
+													
+												</tr>
+												{/if}
+												{if $info[name] == '联系电话'}
+												<tr>
+													<td colspan="2">{$info[name]}</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<input type="text" name="info[phone]" id="" value="" class="input_qty"/>
+													</td>
+												</tr>
+												{/if}
+												
+												{/loop}
+												<tr>
+													<td colspan="2">选择门店</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<select name="info[ex_store]" class="input_qty">
+															{loop $areo_stores $r}
+														    <option value="{$r[title]}">{$r[title]}</option>
+														    {/loop}
+														</select>
+													</td>
+												</tr>
+												{if $info[name] == '预约备注'}
+												<tr>
+													<td colspan="2">{$info[name]}</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<textarea name="info[remarks]" rows="4" cols="" class="input_qty"></textarea>
+													</td>
+												</tr>
+												{/if}
+											</table>
+											<div class="sumbit_qty">
+												<input type="submit" name="dosubmit" id="dosubmit" value="提交" />
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						<!--预约体验左边结束-->
+						<!--预约体验右边开始-->
+						<div class="appointRight_qty">
+							<h2>预约须知</h2>
+							<ul>
+								<li>
+									<h5>1.空腹</h5>
+							<p>
+								食物可直接影响餐后血糖，所以测空腹血糖应该禁食至少8小时以上。如果
+早上7点抽血化验空腹血糖，则前一天晚上10点前就不能再吃任何点心、
+水果和饮料了。但这段时间可以少量喝些白开水。最好晚上8点钟之前结束
+晚餐，晚餐后不再吃零食。血糖不稳定，睡前使用胰岛素的糖尿病患者可
+按照往常习惯加餐即可。
+							</p>
+								</li>
+								<li>
+									<h5>2.忌饮酒</h5>
+							<p>
+								酒精可使血流加速、心跳加快，甚至诱发心律不齐或心率失常。因此，做
+心电图检查前24小时内一定要禁酒，以免造成误诊。饮酒后做脑血流图会
+出现脑血流加快，造成血管梗阻的假象。
+							</p>
+								</li>
+								<li>
+									<h5>3.忌辛辣</h5>
+							<p>
+								酒精可使血流加速、心跳加快，甚至诱发心律不齐或心率失常。因此，做
+心电图检查前24小时内一定要禁酒，以免造成误诊。饮酒后做脑血流图会
+出现脑血流加快，造成血管梗阻的假象。
+							</p>
+								</li>
+							</ul>
+							<h1>预约流程</h1>
+							<div class="proces_qty">
+								<ul>
+									<li>
+										<p><span>1</span>&nbsp;&nbsp;心跳加快，甚至诱发心律不齐或心率失常</p>
+									</li>
+									<li>
+										<p><span>2</span>&nbsp;&nbsp;心跳加快，甚至诱发心律不齐或心率失常</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--预约体验右边结束-->
+					</div>
+				<!--预约体验介绍结束-->
 			</div>
-      </div>
-      <div class="bk10"></div>
-  </div>
-    <div class="col-auto">
-        <div class="box">
-            <h5 class="title-2">频道总排行</h5>
-            <ul class="content digg">
-			{pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
-				{loop $data $r}
-					<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title], 28, '')}</a></li>
-				{/loop}
-			{/pc}
-            </ul>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">频道本月排行</h5>
-            <ul class="content rank">
-			{pc:content action="hits" catid="$catid" num="10" order="monthviews DESC" cache="3600"}
-				{loop $data $r}
-				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
-				{/loop}
-			{/pc}
-            </ul>
-        </div>
-    </div>
-</div>
+		</div>
+
+<!-- 预约体验 end -->
+
+
+
 <script type="text/javascript">
 <!--
 	function show_ajax(obj) {

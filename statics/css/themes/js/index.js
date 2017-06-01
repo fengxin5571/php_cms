@@ -1,6 +1,6 @@
 $(function () {
     function lunbotu() {
-        var banner_array = ["red","blue","yellow","#ccc"];
+        var banner_array = ["#fff","#fff","#fff","#fff"];
         var banner_b = $(".banner_b");
         var btn_one = $(".btn_one");
         btn_one[0].style.background="#9cc813";
@@ -54,5 +54,18 @@ $(function () {
         })
     }
     lunbotu()
+	//    *****************************************************************************
+    function find_something() {
+        $(".find_md").hide().eq(0).show();
+        $(".find_dct_a").on("mouseover",function () {
+            $(".find_md").hide().eq($(this).index()).show();
+        });
+        $(".health_k_q").on("mouseover",function () {
+            $(".health_k_q").css({"background":"#dddddd","color":"#717171"});
+            $(this).css({"background":"#fff","color":"#9cc813"});
+            $(".health_zs").hide().eq($(this).index()).show();
+        })
+    }
+    find_something()
 
 })

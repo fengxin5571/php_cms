@@ -4,6 +4,8 @@
     margin: 0 auto;
     background: #faf9f9;
     border-bottom: 1px solid #ccc;
+	font-size: 15px;
+    font-family: 微软雅黑;
 }
 .header_con{
     width: 1200px;

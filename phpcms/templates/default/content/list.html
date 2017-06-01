@@ -35,7 +35,11 @@
 						<div class="listSmall_qty">
 							<h3>{sprintf("%02d", $j)}</h3>
 							<div class="listImgBox_qty">
+							    {if $r[thumb]}
 								<img src="{$r[thumb]}" width="418" height='169'/>
+								{else}
+								<img src="{CSS_PATH}themes/image/dybg3_qty.jpg" width="418" height='169'/>
+								{/if}
 							</div>
 							<div class="detailRightBox_qty">
 								<h5>{$r[title]}</h5>

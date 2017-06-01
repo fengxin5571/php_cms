@@ -374,3 +374,83 @@
 <?php exit;?>05-31 15:04:09 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
 <?php exit;?>05-31 15:14:49 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
 <?php exit;?>05-31 15:31:29 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 08:52:55 | 2 | file_put_contents(G:\wamp64\www\php_cms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-01 08:52:55 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-01 08:57:39 | 2 | file_put_contents(G:\wamp64\www\php_cms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-01 08:57:39 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-01 08:57:37 | 2 | file_put_contents(G:\wamp64\www\php_cms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-01 08:57:37 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-01 11:18:32 | 2 | file_put_contents(G:\wamp64\www\php_cms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-01 11:18:32 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-01 15:29:10 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:31:11 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:31:25 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:33:58 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:35:00 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:35:02 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:35:28 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:37:26 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:39:17 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:41:46 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:43:12 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:43:13 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:44:46 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:45:50 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:46:53 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:46:56 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:47:09 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:48:58 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 15:56:47 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:00:31 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:03:29 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:03:51 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:05:35 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:06:17 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:07:06 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:08:03 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:08:05 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:10:00 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:10:04 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:10:25 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:10:39 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:12:36 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:14:25 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:14:27 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:14:29 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:14:56 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:15:21 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:15:39 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:16:02 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:16:30 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:16:52 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:18:28 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:19:42 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:20:42 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:22:17 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:22:21 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:22:23 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:22:55 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:22:58 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:06 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:08 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:10 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:51 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:52 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:52 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:53 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:53 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:53 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:24:55 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:25:44 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:26:35 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:27:07 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-01 16:28:59 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:00 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:01 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:02 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:02 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:02 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:03 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:01 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:29:06 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
+<?php exit;?>06-01 16:33:13 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99

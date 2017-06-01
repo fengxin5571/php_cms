@@ -1,171 +1,286 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
-<!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=79d92623a8337007f1f3bcdd35d5f304&action=position&posid=2&order=listorder+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'4',));}?>
-        	 <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-                <h4 class="blue"><a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><?php echo str_cut($r[title],36,'');?></a></h4>
-                <p><?php if($n==1) { ?><img src="<?php echo thumb($r[thumb],90,60);?>" width="90" height="60"/><?php } ?><?php echo str_cut($r[description],112);?></p>
-                <div class="bk20 hr"><hr /></div>
-               <?php $n++;}unset($n); ?>  
-             <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>   
-            </div>
-        </div>
-        <div class="slide">
-            <div class="FocusPic">
-            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=dcd1c47627b910509414b85662be50cc&action=position&posid=1&order=listorder+DESC&thumb=1&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','thumb'=>'1','limit'=>'5',));}?>
-            	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                    <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-                        <a href="<?php echo $r['url'];?>" title="<?php echo str_cut($r['title'],30);?>"><img src="<?php echo thumb($r['thumb'],310,260);?>" alt="<?php echo $r['title'];?>" width="310" height="260" /></a>
-                    <?php $n++;}unset($n); ?>
-                    </div>
-                </div>
-            <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"block\" data=\"op=block&tag_md5=62e5ac893abc3866a6bda2553c0a156a&pos=index_block_1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">添加碎片</a>";}$block_tag = pc_base::load_app_class('block_tag', 'block');echo $block_tag->pc_tag(array('pos'=>'index_block_1',));?><?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-				</div>
-                <script language="javascript" src="<?php echo APP_PATH;?>caches/poster_js/10.js"></script>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div><a href="<?php echo $store_url;?>">找门店</a></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-          <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=2d4b9e3c7c2cc4bd0cec8b1fac9ae764&action=position&posid=12&thumb=1&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'12','thumb'=>'1','order'=>'listorder DESC','limit'=>'10',));}?>
-            <ul class="content news-photo picbig">
-             <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-            	<li>
-                    <div class="img-wrap">
-                        <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><img src="<?php echo thumb($r[thumb],110,0);?>" title="<?php echo $r['title'];?>"/></a>
-                    </div>
-                    <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><?php echo str_cut($r[title],20);?></a>
-                </li>
-                <?php $n++;}unset($n); ?>
-            </ul>
-            <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-        </div>
-        <div class="bk10"></div>
-        <?php $n=1;if(is_array(subcat(0,0,0,$siteid))) foreach(subcat(0,0,0,$siteid) AS $r) { ?>
-        <?php $num++?>
-        <div class="box cat-area" <?php if($num%2!=0) { ?>style=" margin-right:10px"<?php } ?>>
-        		<h5 class="title-1"><?php echo $r['catname'];?><a href="<?php echo $r['url'];?>" class="more">更多>></a></h5>
-             <div class="content">
-             <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=ef41dd2190feee94486d0264e7354ef2&action=lists&catid=%24r%5Bcatid%5D&order=updatetime+DESC&thumb=1&num=1&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>$r[catid],'order'=>'updatetime DESC','thumb'=>'1','limit'=>'1',));}?>
-             <?php $n=1;if(is_array($info)) foreach($info AS $v) { ?>
-             	<p>
-             		<img src="<?php echo thumb($v[thumb],90,0);?>" width="90" height="60"/>
-                    <strong><a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>"<?php echo title_style($v[style]);?>><?php echo str_cut($v['title'],28);?></a></strong><br /><?php echo str_cut($v['description'],100);?>
-                </p>
-              <?php $n++;}unset($n); ?>
-              <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>                
-                <div class="bk15 hr"></div>
-                <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=d9a5a0d61f080dbce4b2774d783edd34&action=lists&catid=%24r%5Bcatid%5D&num=5&order=id+DESC&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>$r[catid],'order'=>'id DESC','limit'=>'5',));}?>
 
-                <ul class="list lh24 f14">
-                <?php $n=1;if(is_array($info)) foreach($info AS $v) { ?>
-                	<li>·<a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>"<?php echo title_style($v[style]);?>><?php echo str_cut($v['title'],40);?></a></li>
-                <?php $n++;}unset($n); ?>
-                </ul>
-                <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/index.css">
+<script src="<?php echo CSS_PATH;?>themes/js/index.js"></script>
+<!-- banner begin -->
+<div class="banner_yyt">
+    <ul class="banner_con">
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e790aa3202bc90ba360cc34243008d39&sql=SELECT+setting+FROM+dyw_poster+WHERE+spaceid+%3D+1+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=12\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dyw_poster WHERE spaceid = 1 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 12");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>  
+        <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+        <?php $narry=json_decode($r[setting],TRUE)?>
+        <li class="banner_b">
+            <div class="banner_s">
+                <a class="banner_link" href="<?php echo $narry['1']['linkurl'];?>">
+                    <img src="<?php echo $narry['1']['imageurl'];?>" alt="">
+                </a>
             </div>
-        </div>
-        <?php if($num%2==0) { ?><div class="bk10"></div><?php } ?>
-		<?php $n++;}unset($n); ?>
-    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"announce\" data=\"op=announce&tag_md5=54b0fffbbaac31bf6b88d6a6b5be8f2c&action=lists&siteid=%24siteid&num=2\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$announce_tag = pc_base::load_app_class("announce_tag", "announce");if (method_exists($announce_tag, 'lists')) {$data = $announce_tag->lists(array('siteid'=>$siteid,'limit'=>'2',));}?>
-                <ul class="list lh24 f14">
-                   <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-                     <li> <a href="<?php echo APP_PATH;?>index.php?m=announce&c=index&a=show&aid=<?php echo $r['aid'];?>"><?php echo $r['title'];?></a></li>
-                   <?php $n++;}unset($n); ?>
-                </ul>
-                <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="<?php echo APP_PATH;?>index.php?m=special&c=index&a=special&siteid=<?php echo $siteid;?>" class="more">更多>></a></h5>
-            <div class="content special">
-            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"special\" data=\"op=special&tag_md5=d0da2a95c4fd410d9fde0a59d59f48fc&action=lists&siteid=%24siteid&elite=1&listorder=3&num=2\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$special_tag = pc_base::load_app_class("special_tag", "special");if (method_exists($special_tag, 'lists')) {$data = $special_tag->lists(array('siteid'=>$siteid,'elite'=>'1','listorder'=>'3','limit'=>'2',));}?>
-            <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-            	<?php if($n!=1) { ?><div class="hr bk15"></div><?php } ?>
-                <p style="margin:0">
-             		<a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" width="90" height="70" /></a>
-                    <strong><a href="<?php echo $r['url'];?>"><?php echo str_cut($r[title],'18');?></a></strong><br /><?php echo str_cut($r['description'],50);?>
-                </p>
-            <?php $n++;}unset($n); ?>
-            <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-			<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=97849c6fb7d3e0f9a0891295340b6456&action=hits&catid=6&num=10&order=views+DESC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'hits')) {$data = $content_tag->hits(array('catid'=>'6','order'=>'views DESC','limit'=>'10',));}?>
-				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-					<li><a href="<?php echo $r['url'];?>" target="_blank" title="<?php echo $r['title'];?>"<?php echo title_style($r[style]);?>><?php echo $r['title'];?></a></li>
-				<?php $n++;}unset($n); ?>
-			<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </ul>
-            <ul class="content digg hidden">
-			<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"comment\" data=\"op=comment&tag_md5=55e75bfad540869982aca092575756e4&action=bang&num=10&cache=3600\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array()).'55e75bfad540869982aca092575756e4');if(!$data = tpl_cache($tag_cache_name,3600)){$comment_tag = pc_base::load_app_class("comment_tag", "comment");if (method_exists($comment_tag, 'bang')) {$data = $comment_tag->bang(array('limit'=>'10',));}if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
-				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-					<li><a href="<?php echo $r['url'];?>" target="_blank"><?php echo $r['title'];?></a></li>
-				<?php $n++;}unset($n); ?>
-			<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </ul>
-            <ul class="content digg hidden">
-			<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=97849c6fb7d3e0f9a0891295340b6456&action=hits&catid=6&num=10&order=views+DESC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'hits')) {$data = $content_tag->hits(array('catid'=>'6','order'=>'views DESC','limit'=>'10',));}?>
-				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-					<li><a href="<?php echo $r['url'];?>" target="_blank"><?php echo $r['title'];?></a></li>
-				<?php $n++;}unset($n); ?>
-			<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-            </ul>
-            </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="<?php echo APP_PATH;?>index.php?m=vote&c=index&siteid=<?php echo $siteid;?>" class="more">更多>></a></h5>
- 
-<script language="javascript" src="<?php echo APP_PATH;?>index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
-        </div>
-    </div>
-    <div class="bk10"></div>
-	
-	<div class="box blogroll ylink">
-    	<h5><a href="<?php echo APP_PATH;?>index.php?m=link&siteid=<?php echo $siteid;?>" hidefocus="true" class="rt">更多>></a>友情链接<a href="<?php echo APP_PATH;?>index.php?m=link&c=index&a=register&siteid=<?php echo $siteid;?>" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"link\" data=\"op=link&tag_md5=80574ec69aa2a6c10ed30f7c49e0eda7&action=type_list&siteid=%24siteid&linktype=1&order=listorder+DESC&num=8&return=pic_link\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$link_tag = pc_base::load_app_class("link_tag", "link");if (method_exists($link_tag, 'type_list')) {$pic_link = $link_tag->type_list(array('siteid'=>$siteid,'linktype'=>'1','order'=>'listorder DESC','limit'=>'8',));}?>
-        <?php $n=1;if(is_array($pic_link)) foreach($pic_link AS $v) { ?>
-        <li><a href="<?php echo $v['url'];?>" title="<?php echo $v['name'];?>" target="_blank"><img src="<?php echo $v['logo'];?>" width="88" height="31" /></a></li>
+        </li>
         <?php $n++;}unset($n); ?>
         <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+        <div class="banner_btn">
+            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e790aa3202bc90ba360cc34243008d39&sql=SELECT+setting+FROM+dyw_poster+WHERE+spaceid+%3D+1+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=12\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dyw_poster WHERE spaceid = 1 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 12");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>  
+	        <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+	        <?php $narry=json_decode($r[setting],TRUE)?>
+            <div class="btn_one"></div>
+            <?php $n++;}unset($n); ?>
+        	<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+        </div>
+        <div class="btn_left"></div>
+        <div class="btn_right"></div>
     </ul>
-     <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"link\" data=\"op=link&tag_md5=99c32cd273c57223c20074bf5196e97a&action=type_list&siteid=%24siteid&order=listorder+DESC&num=10&return=dat\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$link_tag = pc_base::load_app_class("link_tag", "link");if (method_exists($link_tag, 'type_list')) {$dat = $link_tag->type_list(array('siteid'=>$siteid,'order'=>'listorder DESC','limit'=>'10',));}?>
-     <div class="bk10"></div>
-	<div class="linka">
-		<?php $n=1;if(is_array($dat)) foreach($dat AS $v) { ?>
-              <?php if($type==0) { ?>
-              <a href="<?php echo $v['url'];?>" target="_blank"><?php echo $v['name'];?></a> |
-              <?php } else { ?>
-              <a href="<?php echo $v['url'];?>" target="_blank"><img src="<?php echo $v['logo'];?>" width="88" height="31" style="border: 1px solid #FFBE7A;"></a> 
-              <?php } ?>
-		<?php $n++;}unset($n); ?>
- 	</div>
-	<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 </div>
+<!-- banner end -->
+
+<!-- 健康/问答 bengin-->
+<div class="health_area">
+    <div class="area_title"></div>
+    <div class="area_con">
+        <div class="area_left">
+            <ul class="find_dct">
+                <li class="find_dct_a">
+                    <span class="dct_a_a"></span>
+                    <span class="dct_a_b">找门店</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_one_yyt"></span>
+                    <span class="dct_a_b">找医师</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_two_yyt"></span>
+                    <span class="dct_a_b">找产品</span>
+                </li>
+                <li class="find_dct_a">
+                    <span class="dct_a_a dct_three_yyt"></span>
+                    <span class="dct_a_b">找视频</span>
+                </li>
+
+            </ul>
+            <div class="area_left_con">
+                <ul class="find_md">
+                    <div class="find_md_title">热门城市</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=141">太原市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=2">北京市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=3">上海市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=187">哈尔滨</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=178">长春市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=200">南京市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=304">黄冈市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=151">吕梁市</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=130">石家庄</a>
+                        </li>
+                    </ul>
+                    <a href="<?php echo $store_url;?>" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">推荐医师</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                    </ul>
+                    <a href="doctorList_yyt.html" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">热门产品</div>
+                    <ul class="find_md_con">
+                        <li class="find_product">
+                            <a href="">独一张 · 温泉</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 老膏药</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 仪年堂</a>
+                        </li>
+                        <li class="find_product">
+                            <a href="">独一张 · 炙骨宁</a>
+                        </li>
+                    </ul>
+                    <a href="" class="find_md_more">查看更多</a>
+                </ul>
+                <ul class="find_md">
+                    <div class="find_md_title">热门视频</div>
+                    <ul class="find_md_con">
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                        <li class="find_md_one">
+                            <a href="">太原店</a>
+                        </li>
+                    </ul>
+                    <a href="" class="find_md_more">查看更多</a>
+                </ul>
+
+            </div>
+        </div>
+        <div class="area_cut_off"></div>
+        <!--*************************************************************************************-->
+        <div class="area_right">
+            <div class="health_select">
+                <div class="health_k_q">健康知识</div>
+                <div class="health_k_q">健康问答</div>
+            </div>
+            <ul class="health_zs">
+                <?php $TYPE = getcache('type_content','commons');?>
+                <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=606dd613830644fee9a9013a4de15140&action=position&posid=2&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'6',));}?>
+                <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+                <li class="health_zs_one">
+                    <a href="<?php echo $r['url'];?>" class="zs_one_a"> · <?php echo $TYPE[$r['typeid']]['name'];?></a>
+                    <span class="zs_one_b">|</span>
+                    <a href="<?php echo $r['url'];?>" class="zs_one_c"><?php echo str_cut($r['title'],42,'');?></a>
+                    <a href="<?php echo $r['url'];?>" class="zs_one_d"><?php echo str_cut($r[description],36,'');?></a>
+                </li>
+                <?php $n++;}unset($n); ?>
+                <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+            </ul>
+            <ul class="health_zs health_zs_">
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+                <li class="haelth_wd_one">
+                    <a href="" class="wd_one_a">为什么高血压患者会血压突然飙升？</a>
+                    <a href="" class="wd_one_b">张医师回答：我国的关节炎患者有一亿以上，且人数在不断增加。关节的红、肿、热、痛，功能障碍及关节畸形，严重...</a>
+                    <a href="" class="wd_one_c">进入</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </div>
+<!-- 健康/问答 end -->
+<!-- 健康讲堂  begin -->
+<div class="health_jt">
+    <div class="health_jt_title"></div>
+    <div class="health_jt_con">
+        <a href="" class="health_jt_a">
+        <script language="javascript" src="<?php echo APP_PATH;?>index.php?m=poster&c=index&a=show_poster&id=10"></script>
+        </a>
+        <a href="" class="health_jt_b">
+            <span class="health_jt_one">
+                <i>太常·视频</i>
+                <i>18</i>
+                <i></i>
+            </span>
+        </a>
+        <a href="" class="health_jt_b">
+            <span class="health_jt_one">
+                <i>太常·视频</i>
+                <i>18</i>
+                <i></i>
+            </span>
+        </a>
+        <ul class="health_jt_circle">
+            <!--228-->
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+            <li class="health_jt_yyt"></li>
+        </ul>
+    </div>
+</div>
+<!-- 健康讲堂 end -->
+
+<!-- 商品推荐 begin -->
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=6b2e484dcba0404b31a65add3f8acd30&action=position&posid=1&order=listorder+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'4',));}?>
+<?php if($data) { ?>
+<div class="goods_for">
+    <div class="goods_for_tirle"></div>
+    <ul class="goods_for_con">
+        <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+        <li class="goods_for_one">
+            <a href="<?php echo $r['url'];?>" class="goods_for_img">
+            <?php if($r[thumb]) { ?>
+            <img src="<?php echo $r['thumb'];?>" alt="$r[title]" title='<?php echo $r['title'];?>'>
+            <?php } else { ?>
+            <img src="<?php echo IMG_PATH;?>nopic.gif" alt="$r[title]" title="<?php echo $r['title'];?>">
+            <?php } ?>
+            </a>
+            <div class="goods_for_name">
+                <span></span>
+                <span><?php echo str_cut($r[title],17,'');?></span>
+                <span></span>
+            </div>
+            <a href="<?php echo $r['url'];?>" class="goods_for_more">查看详情</a>
+        </li>
+        <?php $n++;}unset($n); ?>
+
+    </ul>
+    <div class="goods_forMore" ><a href="<?php echo $CATEGORYS['18']['url'];?>" style="color: #fff">更多</a></div>
+    <div class="goods_forME">TRADITIONAL NOURISHING</div>
+<?php } ?>
+</div>
+<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+<!-- 商品推荐 end -->
 <script type="text/javascript"> 
 $(function(){
 	new slide("#main-slide","cur",310,260,1);//焦点图

@@ -26,7 +26,6 @@ class index {
 		$_userid = $this->_userid;
 		$_username = $this->_username;
 		$_groupid = $this->_groupid;
-		$region_id= 141;//默认未太原的id
 		//SEO
 		$SEO = seo($siteid);
 		$sitelist  = getcache('sitelist','commons');
@@ -38,10 +37,9 @@ class index {
     		$linkge_model=pc_base::load_model('linkage_model');//创建地区模型
     		$city_info=$linkge_model->get_one("name like '%$_city%'");//获取ip所对应的地区信息
     		if($city_info[linkageid]){
-    		    $region_id = $city_info[linkageid];
+    		     $_city = $city_info[name];
     		}
 		}
-		$store_url = $CATEGORYS[8][url].'&region='.$region_id;//取得首页找门店链接地址
 		include template('content','index',$default_style);
 	}
 	//ajax获取省级联动数据
@@ -222,6 +220,7 @@ class index {
 	//列表页
 	public function lists() {
 		$catid = $_GET['catid'] = intval($_GET['catid']);
+		$region_id = $_GET['region'] ? intval($_GET['region']):141;
 		$_priv_data = $this->_category_priv($catid);
 		if($_priv_data=='-1') {
 			$forward = urlencode(get_url());
@@ -232,7 +231,11 @@ class index {
 		$_userid = $this->_userid;
 		$_username = $this->_username;
 		$_groupid = $this->_groupid;
-		$_city = $this->_city[city]?$this->_city[city]:'太原';
+		$linkge_model=pc_base::load_model('linkage_model');//创建地区模型
+		$city_info=$linkge_model->get_one("linkageid = $region_id");//获取ip所对应的地区信息
+		if($city_info[linkageid]){
+		    $_city = $city_info[name];
+		}
 		if(!$catid) showmessage(L('category_not_exists'),'blank');
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
