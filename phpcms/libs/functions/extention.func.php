@@ -197,6 +197,68 @@ function makeurlrule() {
         return $url;
     }
 } 
-
-
+/*
+ * 判断是否为手机访问
+ */
+function is_mobile_end(){
+    $mobileAgent = array("iphone", "ipod", "ipad", "android","windows ce", "mobile","midp", "rv:1.2.3.4","blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+    $user_agent = ( !isset($_SERVER['HTTP_USER_AGENT'])) ? FALSE : trim(strtolower($_SERVER['HTTP_USER_AGENT']));
+    $is_mobile=false;
+    if($user_agent){
+        foreach($mobileAgent as $v){
+            if(strstr($user_agent,$v)!==false){
+                $is_mobile=true;
+                break;
+            }
+        }
+    }
+    return $is_mobile;
+}
+/*
+ * 手机静态版跳转
+ */
+function to_theme(){
+    if(!module_exists('wap'))return;
+    $baseurl=APP_PATH;
+    $script=<<<EOF
+<script>
+function is_mobile(){
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android","windows ce", "mobile","midp", "rv:1.2.3.4","blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+var userAgent = navigator.userAgent.toLowerCase();
+var isMobile = false;
+for (var i=0; i<mobileAgent.length; i++){
+if (userAgent.indexOf(mobileAgent[i])!=-1){
+isMobile = true;
+break;
+}
+}
+return isMobile;
+}
+if(is_mobile() && window.location.pathname == '/'){
+window.location.href=window.location.protocol + '//' + '{$baseurl}'.substr(window.location.protocol.length+2) + 'index.php';
+}
+</script>
+EOF;
+    echo $script;
+    pc_base::load_sys_class('param');
+    if(param::get_cookie('theme') && !$_GET['theme'])return;
+    if($_GET['theme'] ){
+        $theme=$_GET['theme'];
+        param::set_cookie('theme', $_GET['theme'],1);
+    }else{
+        $theme=param::get_cookie('theme');
+    }
+    if($theme=='destop'){
+        if(substr($_SERVER['HTTP_HOST'], 0,2) == 'm.'){
+            header("Location: ".APP_PATH);
+        }
+    }elseif ($theme=='wap' || is_mobile_end()){
+        if(substr($_SERVER['HTTP_HOST'], 0,2) != 'm.'){
+            param::set_cookie('theme', 'wap');
+            $url=substr(APP_PATH, 0,11)=='http://www.'?substr(APP_PATH, 11):substr(APP_PATH, 7);
+            $url='http://m.'.$url.'index.php';
+            header("Location: ".$url);
+        }
+    }
+}
 ?>

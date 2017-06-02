@@ -33,11 +33,13 @@ class index {
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
 		$ip=ip();//获取本机ip
 		$_city = $this->_city[city]?$this->_city[city]:'太原';
+		$region_id=141;
 		if($_city){//如果城市不为空去数据库查询相应的地区id
     		$linkge_model=pc_base::load_model('linkage_model');//创建地区模型
     		$city_info=$linkge_model->get_one("name like '%$_city%'");//获取ip所对应的地区信息
     		if($city_info[linkageid]){
     		     $_city = $city_info[name];
+    		     $region_id = $city_info[linkageid];
     		}
 		}
 		include template('content','index',$default_style);

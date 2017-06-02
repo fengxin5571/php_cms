@@ -1,7 +1,72 @@
 {template "content","header"}
-<div class="main photo-channel">
-<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
-<div class="bk10"></div>
+<link rel="stylesheet" href="{CSS_PATH}themes/css/productDetail.css">
+<script src="{CSS_PATH}themes/js/jquery.min.js"></script>
+<script src="{CSS_PATH}themes/js/producctDetail.js"></script>
+
+<!-- 产品详细页  bengin -->
+<div class="proDet_title">
+    <a href="{siteurl($siteid)}" class="proDet_tit_a">首页</a>
+    <span class="proDet_span"> > </span>
+    <a href="{$CATEGORYS[$CATEGORYS[$catid][parentid]][url]}" class="proDet_tit_a proDet_tit_b">{$CATEGORYS[$catid][catname]}</a>
+    <span class="proDet_span"> > </span>
+    <a href="" class="proDet_tit_a proDet_tit_c">产品详情页</a>
 </div>
+<div class="proDet_con">
+    <span class="proDet_name">{$title}</span>
+    <div class="proDet_photo">
+        <img src="{$thumb}" alt="{$title}" title='{$title}'>
+    </div>
+    <div class="proDet_advice">
+        <div class="proDet_img"></div>
+        <div class="proDet_img_">最新</div>
+        {pc:content action="relation" relation="$relation" id="$id" modelid="1"  num="6" order="id DESC"}
+        <ul class="proDet_advice_con">
+            {php $j=1}
+            {loop $data $r}
+            <li class="proDet_advice_one">
+                <span>{$j}</span>
+                <a href="{$r[url]}">{str_cut($r[title],33,'')}</a>
+            </li>
+            {php $j++}
+            {/loop}
+
+        </ul>
+        {/pc}
+        <div class="productP_p"></div>
+        {pc:content  action="hits" catid="$catid" num="3" order="views DESC" }
+        <ul class="proP_con">
+            {loop $data $r}
+            {if $r[id] != $id}
+            <a href="{$r[url]}">
+            <li class="proP_one">
+                {if $r[thumb]}
+                <img class="proP_img" src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}">
+                {else}
+                <img class="proP_img" src="{IMG_PATH}nopic.gif" alt="{$r[title]}" title="{$r[title]}">
+                {/if}
+                <div class="proP_msg">
+                    <span>{$r[title]}</span>
+                    <span>{number_format($r[views])}</span>
+                    <span>浏览</span>
+                </div>
+            </li>
+			</a>
+			{/if}
+            {/loop}
+        </ul>
+        {/pc}
+    </div>
+    <div class="proDet_introduce">
+        <div class="proIntro_title">
+            <div class="proIntro_one">产品介绍</div>
+            <div class="proIntro_one">售后保障</div>
+            <div class="proIntro_one">产品资料</div>
+        </div>
+        <div class="proIntro_two">{$content}</div>
+        <div class="proIntro_two">{$service}</div>
+        <div class="proIntro_two">{$product_info}</div>
+    </div>
+</div>
+<!-- 产品详细页 end -->
 <script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
 {template "content","footer"}

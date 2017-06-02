@@ -1,3 +1,75 @@
 {template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}themes/css/discoverProduct.css">
+<script src="{CSS_PATH}themes/js/jquery.min.js"></script>
+<script src="{CSS_PATH}themes/js/discoverProduct.js"></script>
+<!-- 产品频道页 begin -->
 
+<div class="disPro_tit">
+    <a class="index_a" href="">首页</a>
+    <span class="index_disPro"> {catpos($catid)} </span>
+    
+</div>
+{pc:get sql="SELECT setting FROM dyw_poster WHERE spaceid = 3 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="12"}  
+<div class="disPro_cir">
+    <ul class="banner_yyt">
+        {loop $data $r}
+        {php $narry=json_decode($r[setting],TRUE)}
+        <li class="banner_a_yyt">
+            <a href="{$narry[1][linkurl]}" class="disPro_a_yyt">
+                <img src="{$narry[1][imageurl]}" alt="">
+            </a>
+        </li>
+        {/loop}
+
+    </ul>
+    <div class="disPro_btn">
+        {loop $data $r}
+        <span class="disPro_one"></span>
+        {/loop}
+    </div>
+    <div class="arrow_left"></div>
+    <div class="arrow_right"></div>
+</div>
+{/pc}
+<div class="aboutPro">
+    <img class="aboutPro_left" src="{CSS_PATH}themes/image/about_product.jpg" alt="">
+    <ul class="aboutPro_right">
+       <li class="aboutPro_one">
+           <a href=""> · 立即预约活动开始了，快点来参与吧！！ ·店铺满一百送精美礼品，先到先得。</a>
+       </li>
+        <li class="aboutPro_one">
+           <a href=""> · 店铺满一百送精美礼品，先到先得。</a>
+       </li>
+
+    </ul>
+</div>
+{loop subcat($catid) $v}
+<div class="duyiz_">
+    {pc:content action="lists" catid="$v[catid]"  num="4" order="id DESC"}
+    {if $data}
+    <div class="duyiz_title"></div>
+    <ul class="duyiz_con">
+       {loop $data $r}
+       <li class="duyiz_one">
+           <a href="{$r[url]}" class="duyiz_a">
+               {if $r[thumb]}
+               <img src="{$r[thumb]}" alt="{$r[title]}" title="{$r[title]}">
+               {else}
+               <img src="{IMG_PATH}nopic.gif" alt="{$r[title]}" title="{$r[title]}">
+               {/if}
+           </a>
+           <a href="{$r[url]}" class="duyiz_b">
+               <span></span>
+               <span>{str_cut($r[title],17,'')}</span>
+               <span></span>
+           </a>
+           <a href="{$r[url]}" class="duyiz_c">查看详情</a>
+       </li>
+       {/loop}
+    </ul>
+    {/if}
+    {/pc}
+</div>
+{/loop}
+<!-- 产品频道也 end -->
 {template "content","footer"}

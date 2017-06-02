@@ -178,8 +178,9 @@ function remove_relation(sid,id) {
 	}
 }
 //显示相关文章
-function show_relation(modelid,id) {
-$.getJSON("?m=content&c=content&a=public_getjson_ids&modelid="+modelid+"&id="+id, function(json){
+function show_relation(modelid,id,targetid) {
+	targetid = 1||targetid;
+$.getJSON("?m=content&c=content&a=public_getjson_ids&modelid="+modelid+"&id="+id+"&targetid="+targetid, function(json){
 	var newrelation_ids = '';
 	if(json==null) {
 		alert('没有添加相关文章');

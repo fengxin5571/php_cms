@@ -70,7 +70,8 @@
 		<!--banner列表结束-->
 		<!--健康养生四个结束-->
 
-		
+		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=91bf7c51a35ded85f1eb4a13f1205782&action=position&posid=18&thumb=1&order=id&num=6&cache=3600\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array('posid'=>'18','thumb'=>'1','order'=>'id',)).'91bf7c51a35ded85f1eb4a13f1205782');if(!$data = tpl_cache($tag_cache_name,3600)){$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'18','thumb'=>'1','order'=>'id','limit'=>'6',));}if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
+		<?php if($data) { ?>
 		<!--热点咨询开始-->
 		<div class="healthBox_qty">
 			<div class="healthImgBox_qty">
@@ -89,7 +90,6 @@
 		<!--热点资讯列表开始-->
 		
 		<ul class="hotBigBox_qty">
-		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=91bf7c51a35ded85f1eb4a13f1205782&action=position&posid=18&thumb=1&order=id&num=6&cache=3600\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array('posid'=>'18','thumb'=>'1','order'=>'id',)).'91bf7c51a35ded85f1eb4a13f1205782');if(!$data = tpl_cache($tag_cache_name,3600)){$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'18','thumb'=>'1','order'=>'id','limit'=>'6',));}if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
 		    <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
 			<li class="hotSmallBox_qty">
 				<a href="<?php echo $v['url'];?>">
@@ -114,10 +114,12 @@
 				</a>
 			</li>
 			<?php $n++;}unset($n); ?>
-	    <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+	    
 		</ul>
 		<!--热点资讯列表结束-->
 		<div class="moreBox"><a href="<?php echo $CATEGORYS['11']['url'];?>">更多</a></div>
+		<?php } ?>
+		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 	</div>
 </div>
 <script type="text/javascript">

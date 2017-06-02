@@ -454,3 +454,103 @@
 <?php exit;?>06-01 16:29:01 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
 <?php exit;?>06-01 16:29:06 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 100
 <?php exit;?>06-01 16:33:13 | 2 | Illegal string offset 'interval' | phpcms\modules\formguide\index.php | 99
+<?php exit;?>06-02 14:21:14 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 14:21:14 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:21:14 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:21:14 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:21:14 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:21:14 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 14:23:09 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 14:23:09 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:23:09 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:23:09 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:23:09 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:23:09 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 14:36:58 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 14:36:58 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:36:58 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:36:58 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 14:36:58 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 14:36:58 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:49 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:49 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:49 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:49 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:49 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:50 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:50 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:50 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:50 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:50 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:50 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:51 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:51 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:51 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:51 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:51 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:08:52 | 2 | mysqli::__construct(): (HY000/2002): ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:08:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:08:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:08:52 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:29 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:29 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-02 15:09:30 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-02 15:09:30 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-02 16:07:28 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>06-02 16:07:28 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84

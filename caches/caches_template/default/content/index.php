@@ -1,4 +1,8 @@
-<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php if(is_mobile_end()) { ?>
+1
+<?php } else { ?>
+
+<?php include template("content","header"); ?>
 
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/index.css">
 <script src="<?php echo CSS_PATH;?>themes/js/index.js"></script>
@@ -87,7 +91,7 @@
                             <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=130">石家庄</a>
                         </li>
                     </ul>
-                    <a href="<?php echo $store_url;?>" class="find_md_more">查看更多</a>
+                    <a href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=8&region=<?php echo $region_id;?>" class="find_md_more">查看更多</a>
                 </ul>
                 <ul class="find_md">
                     <div class="find_md_title">推荐医师</div>
@@ -288,3 +292,4 @@ $(function(){
 })
 </script>
 <?php include template("content","footer"); ?>
+<?php } ?>

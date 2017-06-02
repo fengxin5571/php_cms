@@ -171,3 +171,25 @@
     font-size: 10px;
     text-align: center;
 }
+.ie_seven{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 30px;
+    background: #fff2e2;
+    display: none;
+}
+.ie_con{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.ie_con span{
+    width: 320px;
+}
+.ie_con a{
+    color: #2eb455;
+}

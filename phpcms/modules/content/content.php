@@ -219,6 +219,7 @@ class content extends admin {
 				$modelid = $this->categorys[$catid]['modelid'];
 				$this->db->set_model($modelid);
 				$this->db->edit_content($_POST['info'],$id);
+				
 				if(isset($_POST['dosubmit'])) {
 					showmessage(L('update_success').L('2s_close'),'blank','','','function set_time() {$("#secondid").html(1);}setTimeout("set_time()", 500);setTimeout("window.close()", 1200);');
 				} else {
@@ -629,16 +630,18 @@ class content extends admin {
 	public function public_getjson_ids() {
 		$modelid = intval($_GET['modelid']);
 		$id = intval($_GET['id']);
+		$targetid = $_GET['targetid']?intval($_GET['targetid']):1;
 		$this->db->set_model($modelid);
 		$tablename = $this->db->table_name;
 		$this->db->table_name = $tablename.'_data';
 		$r = $this->db->get_one(array('id'=>$id),'relation');
-
 		if($r['relation']) {
 			$relation = str_replace('|', ',', $r['relation']);
 			$relation = trim($relation,',');
 			$where = "id IN($relation)";
 			$infos = array();
+			$this->db->set_model($targetid);
+			$tablename = $this->db->table_name;
 			$this->db->table_name = $tablename;
 			$datas = $this->db->select($where,'id,title');
 			foreach($datas as $_v) {

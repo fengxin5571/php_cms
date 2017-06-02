@@ -1,0 +1,222 @@
+.disPro_tit{
+    width: 1200px;
+    height: 44px;
+    margin: 0 auto;
+	overflow: hidden;
+}
+.index_a{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 14px;
+    line-height: 44px;
+    color: #a8ce32;
+}
+.index_disPro{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 14px;
+    line-height: 44px;
+    color: #999999;
+    padding: 0 10px;
+}
+.disPro_a{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 14px;
+    line-height: 44px;
+    color: #999999;
+}
+.disPro_cir{
+    width: 1200px;
+    height: 460px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner_yyt{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner_a_yyt{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s ease;
+}
+.banner_a_yyt:first-child{
+    z-index: 1;
+}
+.disPro_a_yyt{
+    width: 100%;
+    height: 100%;
+}
+.disPro_a_yyt img{
+    width: 100%;
+    height: 100%;
+}
+.disPro_btn{
+    width: 96px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    bottom: 20px;
+    z-index: 99999;
+}
+.disPro_one{
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #9dc919;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.arrow_left{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -590px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(../image/left_green.png);
+    background-size: 100% 100%;
+    z-index: 99999;
+    cursor: pointer;
+}
+.arrow_left:hover{
+    background: url("../image/left_orange.png") no-repeat;
+}
+.arrow_right{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    right: 50%;
+    margin-right: -590px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(../image/right_green.png);
+    background-size: 100% 100%;
+    z-index: 99999;
+    cursor: pointer;
+}
+.arrow_right:hover{
+    background: url("../image/right_orange.png") no-repeat;
+}
+.aboutPro{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+.aboutPro_left{
+    width: 151px;
+    height: 100px;
+    background: url("../image/about_product.jpg") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.aboutPro_right{
+    float: left;
+    width: 900px;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.aboutPro_one{
+    width: 100%;
+}
+.aboutPro_one a{
+    font-size: 18px;
+    line-height: 30px;
+    color: #999;
+}
+.duyiz_{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 27px;
+}
+.duyiz_title{
+    width: 140px;
+    height: 49px;
+    background: url("../image/duyiz_.jpg") no-repeat;
+    margin-bottom: 25px;
+}
+.duyiz_con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.duyiz_one{
+    width: 290px;
+    height: 342px;
+    margin: 0 5px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    background: #fff;
+}
+.duyiz_a{
+    width: 100%;
+    height: 233px;
+    display: block;
+}
+.duyiz_a img{
+    width: 100%;
+    height: 100%;
+}
+.duyiz_b{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.duyiz_b span:first-child{
+    width: 23px;
+    height: 23px;
+    background: url("../image/unline__.jpg") no-repeat;
+    float: left;
+    margin-top: 3px;
+    margin-left: 70px;
+}
+.duyiz_b span:nth-child(2){
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    float: left;
+    padding: 0 5px;
+}
+.duyiz_b span:nth-child(3){
+    width: 23px;
+    height: 23px;
+    background: url("../image/unline__.jpg") no-repeat;
+    float: left;
+    margin-top: 3px;
+}
+.duyiz_c{
+    width: 93px;
+    height: 28px;
+    border-radius: 14px;
+    background: #9cc813;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+}
