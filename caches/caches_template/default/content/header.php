@@ -13,12 +13,19 @@
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/header.css">
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>themes/css/footer.css">
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo CSS_PATH;?>themes/js/header.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.sgallery.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>search_common.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>region.js"></script>
 
 </head>
 <body>
+<div class="ie_seven">
+    <div class="ie_con">
+        <span>您的浏览器版本过低。为保证您的最佳体验，</span>
+        <a href="">请点此更新高版本浏览器</a>
+    </div>
+</div>
 <div class="header_yyt">
     <div class="header_con">
     	<script type="text/javascript">document.write('<iframe src="<?php echo APP_PATH;?>index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=<?php echo get_siteid();?>" allowTransparency="true"  width="500" height="50" frameborder="0" scrolling="no"></iframe>')</script>

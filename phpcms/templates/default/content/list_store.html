@@ -1,45 +1,89 @@
 {template "content","header"}
-<!--main-->
-<div class="main photo-channel">
-<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
-<div class="bk10"></div>
-<div style="margin-bottom:10px">
-	<span>位置:{$_city}</span> <button onclick="show_area()">点击切换</button>
+<link rel="stylesheet" href="{CSS_PATH}themes/css/storeList.css">
+<script src="{CSS_PATH}themes/js/jquery.min.js"></script>
+<script src="{CSS_PATH}themes/js/storeList.js"></script>
+<!-- 门店列表 begin -->
+<div class="stLi_title">
+    <a href="{siteurl($siteid)}" class="stLi_title_a">首页</a>
+    <span class="stLi_span"> > </span>
+    <a href="" class="stLi_title_b">{catpos($catid)}</a>
 </div>
-<script type="text/javascript">
-function show_area(){
-	var area_div=document.getElementById('area_div');
-	if(area_div.style.display == "block"){
-		area_div.style.display ='none';
-	}else{
-		area_div.style.display ='block';
-	}
-	
-}
-</script>
-<div style="display:none;margin-bottom:10px" id="area_div">
-	<select  id="province" onchange="region.changed(this,'selCities',1)">
-	<option value='0'>请选择</option>
-	{loop show_linkage(1,0,$modelid,'zone',0) $r}
-	<option value="{$r[value]}">{$r[name]}</option>
-	{/loop}
-	</select>
-</div>
-    {php $sql = structure_filters_sql($modelid)}  
-    {php $urlrule = makeurlrule()}  
-	{pc:content action="lists" where="$sql" catid="$catid" num="10" order="id DESC" page="$page"  urlrule="$urlrule"}
-		<ul class="photo-list picbig">
-			{loop $data $r}
-			<li>
-			<div class="img-wrap">
-			<a href="{$r[url]}"><img src="{thumb($r[thumb],150,112)}" width="150" height="112" alt="{$r[title]}"/></a>
-			</div>
-			<span style="color:{$r[style]}">{str_cut($r[title],28)}</span>
-			</li>
-			{/loop}
-		</ul>
-		<div id="pages" class="text-c">{$pages}</div>
-	{/pc}
+<div class="stLi_con">
+    <div class="sL_con_header">
+        <span class="sL_header_icon"></span>
+        <span class="sL_header_w">您的当前的位置为 : </span>
+        <span class="sL_header_t">{$_city}</span>
+        <span class="sL_header_city">切换城市</span>
     </div>
+    <div class="sL_select_city" id="area_div">
+        <div class="selCity_title">热门城市</div>
+        <ul class="selCity_con">
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=2">北京市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=141">太原市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=3">上海市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=187">哈尔滨</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=178">长春市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=200">南京市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=304">黄冈市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=151">吕梁市</a>
+            </li>
+            <li class="selCity_one">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=8&region=130">石家庄</a>
+            </li>
+           
+        </ul>
+        
+            <select name="" class="area_select" id="area_select" onchange="region.changed(this,'area_city',1)">
+                <option value='0'>请选择</option>
+                {loop show_linkage(1,0,$modelid,'zone',0) $r}
+				<option value="{$r[value]}">{$r[name]}</option>
+				{/loop}
+            </select>
+            
+        
+    </div>
+    <div class="stLi_ad"></div>
 </div>
+{php $sql = structure_filters_sql($modelid)}  
+{php $urlrule = makeurlrule()}  
+{pc:content action="lists" where="$sql" catid="$catid" num="10" order="id DESC" page="$page"  urlrule="$urlrule"}
+<ul class="store_ul">
+   {loop $data $r}
+    <li class="store_li">
+        <a href="{$r[url]}" class="store_li_a">
+            <img src="{thumb($r[thumb],200,150)}" alt="$r[title]" title="{$r[title]}">
+        </a>
+        <div class="store_li_first">
+            <a href="{$r[url]}" class="store_li_name">{$r[title]}</a>
+            <span class="store_li_sp">|</span>
+            <span class="store_call"></span>
+            <span class="store_phone">{php echo $r[store_phone]??'暂无联系方式'}</span>
+        </div>
+        <div class="store_adress">地址：{$r[address]}</div>
+        <div class="store_xiangqing">{str_cut($r[description],179,'')}</div>
+        <a href="{$r[url]}" class="store_in">进入店铺</a>
+    </li>
+    {/loop}
+</ul>
+{/pc}
+<div id="pages" class="text-c">{$pages}</div>
+
+<!-- 门店列表 end -->
+
+
 {template "content","footer"}

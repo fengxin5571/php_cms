@@ -1,4 +1,424 @@
 {template "content","header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/public_qty.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/healthSchool_qty.css"/>
+<!-- 视频频道页 begin -->
+
+<div class="healthSchoolBox_qty">
+			<div class="healthSchoolSmallBox_qty">
+				<!--小健康讲堂开始-->
+				<div class="detailHome_qty">
+					<div class="homeFont">首页<span>&gt {catpos($catid)}</span></div>
+				</div>
+				<!--小健康讲堂结束-->
+				<!--健康讲堂banner开始-->
+				<div class="healthBannerBox_qty">
+					<!--banner左边开始-->
+					
+					<ul class="healthBannerLeft">
+					    {loop subcat($catid) $p}
+						<li class="color_qty">{$p[catname]}</span>
+							<div class="healthHidden_qty">
+								<div class="healthHiddenSmall_qty">
+									<h4>{$p[catname]}介绍</h4>
+									{if $p[description]}
+									<div class="studyBox_qty">
+										<div>起源</div>
+										<p>
+											{str_cut($p[description],197,"")}
+										</p>
+									</div>
+									<div class="studyBox_qty">
+										<div>发展</div>
+										<p>
+											{str_cut($p[description],197,"")}
+										</p>
+									</div>
+									<div class="studyBox_qty">
+										<div>发扬</div>
+										<p>
+											{str_cut($p[description],197,"")}
+										</p>
+									</div>
+									{/if}
+									{if subcat($p[catid])}
+									<h4 class="top_qty">{$p[catname]}分类</h4>
+									<div class="school_qty">
+										<div class="list_qty">
+										    {loop subcat($p[catid]) $c}
+											<a href="{$c[url]}">{$c[catname]}</a>
+											
+											{/loop}
+										</div>
+									</div>
+									{/if}
+								</div>
+								
+							</div>
+						</li>
+					    {/loop}
+					</ul>
+					
+					<!--banner左边结束-->
+					<!--banner右边开始-->
+					<div class="healthBannerRight">
+						<div class="ImgBox_qty">
+						    {pc:get sql="SELECT setting FROM dyw_poster WHERE spaceid = 1 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="12"}  
+					        {loop $data $r}
+					        {php $narry=json_decode($r[setting],TRUE)}
+							<a href="javascript:;">
+								<img src="{thumb($narry[1][imageurl])}"/>
+							</a>
+							{/loop}
+							{/pc}
+						</div>
+						<ul class="btn_qty">
+						</ul>
+					  	<div class="lrbtn_qty">
+							<div class="left_qty">&lt;</div>
+							<div class="right_qty">&gt;</div>
+					  	</div>
+					</div>
+					<!--banner右边结束-->
+				</div>
+				<!--健康讲堂banner结束-->
+				<!--小热门视频开始-->
+				<div class="healthBox_qty">
+					<div class="healthImgBox_qty">
+						<img src="{CSS_PATH}themes/image/store_qty.png"/>
+					</div>
+					<div class="healthRightBox_qty">
+						<div class="healthTopFont_qty">
+							热门<span>视频</span>
+						</div>
+						<div class="healthBottomFont_qty">
+							VID<span>EO</span>
+						</div>
+					</div>
+				</div>
+				<!--小热门视频结束-->
+				<!--热门视频开始-->
+				<div class="videoBox_qty">
+					<div class="videoFont_qty">.独一张视频.</div>
+					<div class="videoList_qty">
+						<ul>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="videoFont_qty">.三诊视频.</div>
+					<div class="videoList_qty">
+						<ul>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="themes/image/video_qty_07.png"/>
+									<div class="videoSmall_qty">
+										太常视频
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--热门视频结束-->
+				<!--小保健讲堂开始-->
+				<div class="healthBox_qty">
+					<div class="healthImgBox_qty">
+						<img src="{CSS_PATH}themes/image/store_qty.png"/>
+					</div>
+					<div class="healthRightBox_qty">
+						<div class="healthTopFont_qty">
+							保健<span>讲堂</span>
+						</div>
+						<div class="healthBottomFont_qty">
+							HEALTH<span> LECTURE ROOM</span>
+						</div>
+					</div>
+				</div>
+				<!--小保健讲堂结束-->
+				<!--保健讲堂开始-->
+				<div class="healthRoom_qty">
+					<div class="healthRoomLeft_qty"></div>
+					<div class="healthRoomRight_qty">
+						<div class="healthRoomTop_qty">
+							<ul>
+								<li>
+									<div class="healthVideo_qty">
+										<a href=""></a>
+									</div>
+									<div class="heathRoomFont_qty">
+										<span>太常视频</span>
+										<div>
+											<img src="{CSS_PATH}themes/image/eyes_qty_03.png"/>
+											18
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="healthVideo_qty">
+										<a href=""></a>
+									</div>
+									<div class="heathRoomFont_qty">
+										<span>太常视频</span>
+										<div>
+											<img src="themes/image/eyes_qty_03.png"/>
+											18
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="healthRoomBottom_qty">
+							<ul class="img_qty">
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+								<li>
+									<div class="healthRoomTops_qty">
+										<a href=""></a>
+									</div>
+									<div class="healthRoomBs_qty"></div>
+								</li>
+							</ul>
+							<ul class="lrbtns_qty">
+								<li class="lbtns_qty">&lt;</li>
+								<li class="rbtns_qty">&gt;</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--保健讲堂结束-->
+			</div>
+		</div>
+		<script>
+			$(".healthBannerLeft li").mouseover(function(){
+	        $(".healthBannerLeft li").eq($(this).index()).addClass("color_qty").siblings().removeClass('color_qty');
+	        });
+	        
+	        
+	        
+	        //banner轮播图
+	        var box=$('.healthBannerRight');
+		    var imgbox=$('.ImgBox_qty');
+		    var imgboxa=$('.ImgBox_qty>a');
+		    var rbtn=$('.right_qty');
+		    var lbtn=$('.left_qty');
+		    var btn=$('.btn_qty');
+		    var length=imgboxa.length;
+		    var flag=true;
+		    console.log(imgboxa)
+		    imgboxa.css('left','100%').eq(0).css('left','0');
+		    for(var i=1;i<=length;i++){
+		        var str=i==1?'<li class="hot_qty">'+i+'</li>':'<li>'+i+'</li>';
+		        btn.append(str);
+		    }
+		    
+		    var $lis=$('.btn_qty>li');
+		    var now=0;
+		    var next=0;
+		    var time=2000;
+		    var t=setInterval(moveR,time);
+		    function moveR(){
+		        next++;
+		        if(next==length){
+		            next=0;
+		        }
+		        imgboxa.eq(next).css('left','100%');
+		        imgboxa.eq(now).animate({'left':'-100%'});
+		        imgboxa.eq(next).animate({'left':'0'},function(){
+		            flag=true;
+		        });
+		        
+		        $lis.eq(now).removeClass('hot_qty');
+		        $lis.eq(next).addClass('hot_qty');
+		        now=next;
+		    }
+		
+		     function moveL(){
+		        next--;
+		        if(next<0){
+		            next=imgboxa.length-1;
+		        }
+		        imgboxa.eq(next).css('left','-100%');
+		        imgboxa.eq(now).animate({'left':'100%'});
+		        imgboxa.eq(next).animate({'left':'0'},function(){
+		            flag=true;
+		        });
+		        
+		        $lis.eq(now).removeClass('hot_qty');
+		        $lis.eq(next).addClass('hot_qty');
+		        now=next;
+		    }
+		
+		    $lis.click(function(){
+		        if(!flag){return;}
+		        flag=false;
+		        var i=$(this).index();
+		        if(now==i){
+		            return;
+		        }
+		        if(now<i){
+		            imgboxa.eq(i).css('left','100%');
+		            imgboxa.eq(now).animate({'left':'-100%'},300);
+		            imgboxa.eq(i).animate({'left':'0'},300);
+		        }else if(now>i){
+		            imgboxa.eq(i).css('left','-100%');
+		            imgboxa.eq(now).animate({'left':'100%'},300);
+		            imgboxa.eq(i).animate({'left':'0'},300);
+		        }
+		        imgboxa.eq(now).animate({left:'100%'},300);
+		        imgboxa.eq(i).animate({left:'0'},300,function(){
+		            flag=true;
+		        });
+		        $lis.eq(now).removeClass('hot_qty');
+		        $lis.eq(i).addClass('hot_qty');
+		        next=now=i;
+		    })
+		    box.mouseover(function(){
+		        clearInterval(t);
+		    })
+		    box.mouseout(function(){
+		        t=setInterval(moveR,time);
+		    })
+		    rbtn.click(function(){
+		        if(flag){
+		            flag=false;
+		             moveR();
+		        }
+		       
+		    })
+		    lbtn.click(function(){
+		        if(flag){
+		            flag=false;
+		             moveL();
+		        }
+		       
+		    })
+			
+			
+			
+			//跑马车效果
+			var imgW=$('.img_qty li').width();
+			var index=0;
+			var s=setInterval(move,2000)
+			function move(){
+				 $('.img_qty').stop(true,true)
+	             $('.img_qty').animate({marginLeft:-imgW},function(){
+	           	 $('.img_qty li:first').appendTo($('.img_qty'))
+	             $('.img_qty').css({marginLeft:0})
+	           })
+			}
+			$('.rbtns_qty').click(function(){
+				move();
+			})
+			$('.lbtns_qty').click(function(){
+				 $('.img_qty').stop(true,true)
+				 $('.img_qty li:last').prependTo($('.img_qty'))
+				 $('.img_qty').css({marginLeft:-imgW});
+				 $('.img_qty').animate({marginLeft:0});
+			})
+			$('.healthRoomBottom_qty').hover(function(){
+				clearInterval(s)
+			},function(){
+				s=setInterval(move,2000)
+			})
+		</script>
+
+
+
+<!-- 视频频道页 end -->
 <link href="{CSS_PATH}vms/vms.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]><link href="{CSS_PATH}vms/ielt9.css" rel="stylesheet" type="text/css" /><![endif]--> 
 <script type="text/javascript" src="{JS_PATH}jquery.tools_tabs.min.js"></script>

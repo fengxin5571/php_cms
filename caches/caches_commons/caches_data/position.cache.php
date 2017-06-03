@@ -16,7 +16,7 @@ return array (
   array (
     'posid' => '1',
     'modelid' => '28',
-    'catid' => '0',
+    'catid' => '18',
     'name' => '首页商品推荐',
     'maxnum' => '20',
     'extention' => '',
@@ -39,11 +39,11 @@ return array (
   5 => 
   array (
     'posid' => '5',
-    'modelid' => '69',
+    'modelid' => '28',
     'catid' => '0',
-    'name' => '推荐下载',
+    'name' => '门店详情页推荐',
     'maxnum' => '20',
-    'extention' => NULL,
+    'extention' => '',
     'listorder' => '0',
     'siteid' => '1',
     'thumb' => '',
@@ -54,18 +54,6 @@ return array (
     'modelid' => '30',
     'catid' => '54',
     'name' => '图片频道首页焦点图',
-    'maxnum' => '20',
-    'extention' => NULL,
-    'listorder' => '0',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
-  10 => 
-  array (
-    'posid' => '10',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '栏目首页推荐',
     'maxnum' => '20',
     'extention' => NULL,
     'listorder' => '0',

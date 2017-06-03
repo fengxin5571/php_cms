@@ -14,7 +14,7 @@ region.loadRegions = function(parent,target,type,selected)
     		  if(select){
     			  select.remove();
     		  }
-    		  select = $('<select id="'+target+'"><select/>');
+    		  select = $('<select id="'+target+'" class="area_select"><select/>');
     		  select.empty();
     		  var option=$("<option value='0'>请选择</option>");
     		  select.append(option);

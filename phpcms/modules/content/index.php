@@ -78,7 +78,6 @@ class index {
 		$this->db->table_name = $tablename.'_data';
 		$r2 = $this->db->get_one(array('id'=>$id));
 		$rs = $r2 ? array_merge($r,$r2) : $r;
-
 		//再次重新赋值，以数据库为准
 		$catid = $CATEGORYS[$r['catid']]['catid'];
 		$modelid = $CATEGORYS[$catid]['modelid'];
@@ -87,7 +86,6 @@ class index {
 		$content_output = new content_output($modelid,$catid,$CATEGORYS);
 		$data = $content_output->get($rs);
 		extract($data);
-		
 		//检查文章会员组权限
 		if($groupids_view && is_array($groupids_view)) {
 			$_groupid = param::get_cookie('_groupid');

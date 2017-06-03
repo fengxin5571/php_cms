@@ -554,3 +554,22 @@
 <?php exit;?>06-02 15:09:30 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
 <?php exit;?>06-02 16:07:28 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
 <?php exit;?>06-02 16:07:28 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>06-03 10:58:09 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 10:58:09 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 10:58:33 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 10:58:33 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 10:58:34 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 10:58:34 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 15:28:20 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 15:28:45 | 2 | strpos() expects parameter 1 to be string, array given | phpcms\libs\functions\global.func.php | 1356
+<?php exit;?>06-03 15:51:33 | 2 | Missing argument 2 for str_cut(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\category_video.php on line 27 and defined | phpcms\libs\functions\global.func.php | 178
+<?php exit;?>06-03 15:51:33 | 2 | Missing argument 2 for str_cut(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\category_video.php on line 27 and defined | phpcms\libs\functions\global.func.php | 178
+<?php exit;?>06-03 15:51:33 | 2 | Missing argument 2 for str_cut(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\category_video.php on line 27 and defined | phpcms\libs\functions\global.func.php | 178
+<?php exit;?>06-03 15:51:33 | 2 | Missing argument 2 for str_cut(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\category_video.php on line 27 and defined | phpcms\libs\functions\global.func.php | 178
+<?php exit;?>06-03 15:51:33 | 2 | Missing argument 2 for str_cut(), called in G:\wamp64\www\php_cms\caches\caches_template\default\content\category_video.php on line 27 and defined | phpcms\libs\functions\global.func.php | 178
+<?php exit;?>06-03 15:58:59 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-03 15:58:59 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-03 16:04:03 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-03 16:04:03 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-03 18:06:20 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-03 18:06:20 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111

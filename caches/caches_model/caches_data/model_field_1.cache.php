@@ -47,10 +47,7 @@ return array (
     'pattern' => '',
     'errortips' => '',
     'formtype' => 'typeid',
-    'setting' => 'array (
-  \'minnumber\' => \'\',
-  \'defaultvalue\' => \'\',
-)',
+    'setting' => '{"minnumber":"","defaultvalue":""}',
     'formattribute' => '',
     'unsetgroupids' => '',
     'unsetroleids' => '',
@@ -61,7 +58,7 @@ return array (
     'issearch' => '1',
     'isadd' => '1',
     'isfulltext' => '0',
-    'isposition' => '0',
+    'isposition' => '1',
     'listorder' => '2',
     'disabled' => '0',
     'isomnipotent' => '0',
@@ -342,9 +339,20 @@ return array (
     'pattern' => '',
     'errortips' => '',
     'formtype' => 'omnipotent',
-    'setting' => '{"formtext":"<input type=\'hidden\' name=\'info[relation]\' id=\'relation\' value=\'{FIELD_VALUE}\' style=\'50\' >\\r\\n<ul class=\\"list-dot\\" id=\\"relation_text\\"><\\/ul>\\r\\n<div>\\r\\n<input type=\'button\' value=\\"\\u6dfb\\u52a0\\u76f8\\u5173\\" onclick=\\"omnipotent(\'selectid\',\'?m=content&c=content&a=public_relationlist&modelid={MODELID}\',\'\\u6dfb\\u52a0\\u76f8\\u5173\\u6587\\u7ae0\',1)\\" class=\\"button\\" style=\\"width:66px;\\">\\r\\n<span class=\\"edit_content\\">\\r\\n<input type=\'button\' value=\\"\\u663e\\u793a\\u5df2\\u6709\\" onclick=\\"show_relation({MODELID},{ID})\\" class=\\"button\\" style=\\"width:66px;\\">\\r\\n<\\/span>\\r\\n<\\/div>","fieldtype":"varchar","minnumber":"1"}',
+    'setting' => 'array (
+  \'formtext\' => \'<input type=\\\'hidden\\\' name=\\\'info[relation]\\\' id=\\\'relation\\\' value=\\\'{FIELD_VALUE}\\\' style=\\\'50\\\' >
+<ul class="list-dot" id="relation_text"></ul>
+<div>
+<input type=\\\'button\\\' value="添加相关" onclick="omnipotent(\\\'selectid\\\',\\\'?m=content&c=content&a=public_relationlist&modelid={MODELID}\\\',\\\'添加相关文章\\\',1)" class="button" style="width:66px;">
+<span class="edit_content">
+<input type=\\\'button\\\' value="显示已有" onclick="show_relation({MODELID},{ID})" class="button" style="width:66px;">
+</span>
+</div>\',
+  \'fieldtype\' => \'varchar\',
+  \'minnumber\' => \'1\',
+)',
     'formattribute' => '',
-    'unsetgroupids' => '2,6,4,5,1,7',
+    'unsetgroupids' => '2,6,4,5,1,17,18,7',
     'unsetroleids' => '',
     'iscore' => '0',
     'issystem' => '0',
