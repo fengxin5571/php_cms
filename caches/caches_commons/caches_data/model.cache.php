@@ -138,5 +138,28 @@ return array (
     'sort' => '0',
     'type' => '0',
   ),
+  32 => 
+  array (
+    'modelid' => '32',
+    'siteid' => '1',
+    'name' => '自视频模型',
+    'description' => '',
+    'tablename' => 'self_video',
+    'setting' => '',
+    'addtime' => '0',
+    'items' => '0',
+    'enablesearch' => '1',
+    'disabled' => '0',
+    'default_style' => 'default',
+    'category_template' => 'category_video',
+    'list_template' => 'list_video',
+    'show_template' => 'show_video',
+    'js_template' => '',
+    'admin_list_template' => '',
+    'member_add_template' => '',
+    'member_list_template' => '',
+    'sort' => '0',
+    'type' => '0',
+  ),
 );
 ?>

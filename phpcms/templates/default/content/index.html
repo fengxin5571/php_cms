@@ -128,53 +128,28 @@
                 </ul>
                 <ul class="find_md">
                     <div class="find_md_title">热门产品</div>
+                    {pc:content action="lists" catid="19" num="4" order="id DESC" page="$page"}
                     <ul class="find_md_con">
+                        {loop $data $r}
                         <li class="find_product">
-                            <a href="">独一张 · 温泉</a>
+                            <a href="{$r[url]}">{str_cut($r[title],17,'')}</a>
                         </li>
-                        <li class="find_product">
-                            <a href="">独一张 · 老膏药</a>
-                        </li>
-                        <li class="find_product">
-                            <a href="">独一张 · 仪年堂</a>
-                        </li>
-                        <li class="find_product">
-                            <a href="">独一张 · 炙骨宁</a>
-                        </li>
+                        {/loop}
                     </ul>
-                    <a href="" class="find_md_more">查看更多</a>
+                    {/pc}
+                    <a href="{$CATEGORYS[18]['url']}" class="find_md_more">查看更多</a>
                 </ul>
                 <ul class="find_md">
                     <div class="find_md_title">热门视频</div>
-                    <ul class="find_md_con">
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
+                    {pc:content action="lists" catid="20" num="4" order="id DESC" page="$page"}
+                    <ul class="find_md_con">   
+                        {loop $data $r}
+                        <li class="find_md_one" style="width:90px;text-align: center;">
+                            <a href="{$r[url]}">{str_cut($r[title],15,'')}</a>
                         </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
+                        {/loop}
                     </ul>
+                    {/pc}
                     <a href="" class="find_md_more">查看更多</a>
                 </ul>
 
@@ -223,35 +198,46 @@
 </div>
 <!-- 健康/问答 end -->
 <!-- 健康讲堂  begin -->
+{pc:content  action="position" posid="16" order="listorder DESC" num="4"}
 <div class="health_jt">
     <div class="health_jt_title"></div>
     <div class="health_jt_con">
         <a href="" class="health_jt_a">
         <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=10"></script>
         </a>
+        {pc:content  action="hits" catid="20" num="2" order="views asc" }
+        {loop $data $r}
         <a href="" class="health_jt_b">
+        {if $r[thumb]}
+        <img src="{$r[thumb]}" alt="$r[title]" title='{$r[title]}' width="440" height='235'>
+        {else}
+        <img src="{IMG_PATH}nopic.gif" alt="$r[title]" title="{$r[title]}" width="440" height='235'>
+        {/if}
             <span class="health_jt_one">
-                <i>太常·视频</i>
-                <i>18</i>
+                <i>{str_cut($r[title],25,"")}</i>
+                <i>{$r[views]}</i>
                 <i></i>
             </span>
         </a>
-        <a href="" class="health_jt_b">
-            <span class="health_jt_one">
-                <i>太常·视频</i>
-                <i>18</i>
-                <i></i>
-            </span>
-        </a>
+        
+        {/loop}
+        {/pc}
         <ul class="health_jt_circle">
             <!--228-->
-            <li class="health_jt_yyt"></li>
-            <li class="health_jt_yyt"></li>
-            <li class="health_jt_yyt"></li>
-            <li class="health_jt_yyt"></li>
+            {loop $data $r}
+            <li class="health_jt_yyt">
+            {if $r[thumb]}
+            <img src="{$r[thumb]}" alt="$r[title]" title='{$r[title]}' width="206" height='122'>
+            {else}
+            <img src="{IMG_PATH}nopic.gif" alt="$r[title]" title="{$r[title]}" width="206" height='122'>
+            {/if}
+            <div class="healthRoomBs_qty" style="width: 100%;height: 30px;float: left;background: #818189;border-radius: 0px 0px 4px 4px;">{str_cut($r[title],25,"")}</div>
+            </li>
+            {/loop}
         </ul>
     </div>
 </div>
+{/pc}
 <!-- 健康讲堂 end -->
 
 <!-- 商品推荐 begin -->

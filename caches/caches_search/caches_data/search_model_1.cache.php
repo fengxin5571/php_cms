@@ -1,5 +1,11 @@
 <?php
 return array (
+  32 => 
+  array (
+    'typeid' => '69',
+    'name' => '自视频模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

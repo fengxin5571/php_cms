@@ -222,6 +222,7 @@ class index {
 		$catid = $_GET['catid'] = intval($_GET['catid']);
 		$region_id = $_GET['region'] ? intval($_GET['region']):141;
 		$_priv_data = $this->_category_priv($catid);
+		$open = $_GET['open'] = intval($_GET['open']);
 		if($_priv_data=='-1') {
 			$forward = urlencode(get_url());
 			showmessage(L('login_website'),APP_PATH.'index.php?m=member&c=index&a=login&forward='.$forward);
@@ -255,7 +256,12 @@ class index {
 		$template_list = $setting['list_template'] ? $setting['list_template'] : 'list';
 		
 		if($type==0) {
-			$template = $child ? $template : $template_list;
+		    if($open){
+		        $template = $template_list;
+		    }else{
+		        $template = $child ? $template : $template_list;
+		    }
+			
 			$arrparentid = explode(',', $arrparentid);
 			$top_parentid = $arrparentid[1] ? $arrparentid[1] : $catid;
 			$array_child = array();

@@ -179,7 +179,8 @@ function remove_relation(sid,id) {
 }
 //显示相关文章
 function show_relation(modelid,id,targetid) {
-	targetid = 1||targetid;
+	
+	targetid = targetid||1;
 $.getJSON("?m=content&c=content&a=public_getjson_ids&modelid="+modelid+"&id="+id+"&targetid="+targetid, function(json){
 	var newrelation_ids = '';
 	if(json==null) {
