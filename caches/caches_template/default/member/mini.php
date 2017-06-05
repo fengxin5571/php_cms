@@ -1,4 +1,4 @@
-<style>
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><style>
 body,html{background:none; padding:0; margin:0}
 .help_ {
     float: right;
@@ -41,12 +41,12 @@ body,html{background:none; padding:0; margin:0}
 }
 </style>
 <body style="background-color:transparent">
-{if $_username}
-<a class="help_ user" href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">{get_nickname()}</a>
-<a class="help_ person_" href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">个人中心</a>
-<a class="help_ go_out" href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">退出</a> 
-{else}
+<?php if($_username) { ?>
+<a class="help_ user" href="<?php echo APP_PATH;?>index.php?m=member&siteid=<?php echo $siteid;?>" target="_blank"><?php echo get_nickname();?></a>
+<a class="help_ person_" href="<?php echo APP_PATH;?>index.php?m=member&siteid=<?php echo $siteid;?>" target="_blank">个人中心</a>
+<a class="help_ go_out" href="<?php echo APP_PATH;?>index.php?m=member&c=index&a=logout&forward=<?php echo urlencode($_GET['forward']);?>&siteid=<?php echo $siteid;?>" target="_top">退出</a> 
+<?php } else { ?>
 <a class="help_ login" href="javascript:alert('正在开发中。。。')" target="_top">登录</a>
 <a class="help_ sign" href="javascript:alert('正在开发中。。。')" target="_top">注册</a>
-{/if}
+<?php } ?>
 </body>

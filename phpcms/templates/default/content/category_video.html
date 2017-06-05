@@ -22,12 +22,12 @@
 									<h4>{$p[catname]}介绍</h4>
 									{if $p[description]}
 									<div class="studyBox_qty">
-										<div>起源</div>
-										<p>
-											{str_cut($p[description],197,"")}
+										<!--  <div>起源</div>-->
+										<p style="text-indent: 30px;">
+											{str_cut($p[description],600,"")}
 										</p>
 									</div>
-									<div class="studyBox_qty">
+									<!--  <div class="studyBox_qty">
 										<div>发展</div>
 										<p>
 											{str_cut($p[description],197,"")}
@@ -38,7 +38,7 @@
 										<p>
 											{str_cut($p[description],197,"")}
 										</p>
-									</div>
+									</div>-->
 									{/if}
 									{if subcat($p[catid])}
 									<h4 class="top_qty">{$p[catname]}分类</h4>
