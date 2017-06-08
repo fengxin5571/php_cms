@@ -7,6 +7,23 @@
 <link rel="stylesheet" href="{CSS_PATH}themes/css/index.css">
 <script src="{CSS_PATH}themes/js/index.js"></script>
 <!-- banner begin -->
+<!--左边固定弹框开始-->
+<div class="fixedBox_qty">
+	<ul>
+		<li>电话
+			<div class="tele_qty">{siteinfo_d($siteid,'company_phone')}</div>
+		</li>
+		<li>微信
+			<div class="weixin_qty"><img class="erWeiMa" src="{siteinfo_d($siteid,'qccode')}" alt=""></div>
+		</li>
+		<li>QQ
+			<div class="tele_qty">正在开发中。。。</div>
+		</li>
+		<li><a href="{APP_PATH}index.php?m=zsask&a=question&cid=0" style="color:#fff">提问</a>
+		</li>
+	</ul>
+</div>
+<!--左边国定弹框结束-->
 <div class="banner_yyt">
     <ul class="banner_con">
         {pc:get sql="SELECT setting FROM dyw_poster WHERE spaceid = 1 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="12"}  
@@ -95,35 +112,15 @@
                 </ul>
                 <ul class="find_md">
                     <div class="find_md_title">推荐医师</div>
+                    {pc:content  action="position" posid="19" order="listorder DESC" num="9"}
                     <ul class="find_md_con">
+                        {loop $data $r}
                         <li class="find_md_one">
-                            <a href="">太原店</a>
+                            <a href="{$r[url]}">{$r[title]}</a>
                         </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
-                        <li class="find_md_one">
-                            <a href="">太原店</a>
-                        </li>
+                        {/loop}
                     </ul>
+                    {/pc}
                     <a href="doctorList_yyt.html" class="find_md_more">查看更多</a>
                 </ul>
                 <ul class="find_md">
@@ -198,7 +195,7 @@
 </div>
 <!-- 健康/问答 end -->
 <!-- 健康讲堂  begin -->
-{pc:content  action="position" posid="16" order="listorder DESC" num="4"}
+
 <div class="health_jt">
     <div class="health_jt_title"></div>
     <div class="health_jt_con">
@@ -222,6 +219,7 @@
         
         {/loop}
         {/pc}
+        {pc:content  action="position" posid="16" order="listorder DESC" num="4"}
         <ul class="health_jt_circle">
             <!--228-->
             {loop $data $r}
@@ -237,9 +235,10 @@
             </li>
             {/loop}
         </ul>
+        {/pc}-
     </div>
 </div>
-{/pc}
+
 <!-- 健康讲堂 end -->
 
 <!-- 商品推荐 begin -->

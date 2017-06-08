@@ -161,5 +161,28 @@ return array (
     'sort' => '0',
     'type' => '0',
   ),
+  33 => 
+  array (
+    'modelid' => '33',
+    'siteid' => '1',
+    'name' => '指导老师模型',
+    'description' => '',
+    'tablename' => 'doctor',
+    'setting' => '',
+    'addtime' => '0',
+    'items' => '0',
+    'enablesearch' => '1',
+    'disabled' => '0',
+    'default_style' => 'default',
+    'category_template' => 'category_dietitian',
+    'list_template' => 'list_dietitian',
+    'show_template' => 'show_dietitian',
+    'js_template' => '',
+    'admin_list_template' => '',
+    'member_add_template' => '',
+    'member_list_template' => '',
+    'sort' => '0',
+    'type' => '0',
+  ),
 );
 ?>

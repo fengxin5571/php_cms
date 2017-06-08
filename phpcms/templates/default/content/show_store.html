@@ -58,7 +58,59 @@
 					
 				</div>
 				<!--门店介绍banner结束-->
-				
+				<!--小健康用药开始-->
+				<div class="healthBox_qty">
+					<div class="healthImgBox_qty">
+						<img src="{CSS_PATH}themes/image/store_qty.png"/>
+					</div>
+					<div class="healthRightBox_qty">
+						<div class="healthTopFont_qty">
+							健康用药<span>指导老师简介</span>
+						</div>
+						<div class="healthBottomFont_qty">
+							INT<span>RODUCTION&nbsp;OF&nbsp;PHYSICIANS</span>
+						</div>
+					</div>
+				</div>
+				<!--小健康用药结束-->
+				<!--健康用药开始-->
+				<div class="healthBigBox_qty">
+				    {pc:get sql="SELECT * FROM dyw_doctor as d,dyw_doctor_data as dd WHERE d.id=dd.id and dd.store =$id" num="12"} 
+					<ul>
+					
+					    {loop $data $r}
+						<li>
+							<div class="imgBoxLeft_qty">
+								<img src="{thumb($r[thumb],126,129)}" width="126" height="129"/>
+							</div>
+							<div class="healthRight_qty">
+								<div class="healthTopRight_qty">
+									<div class="top_qty">
+										<h4><a href="{$r[url]}">{$r[title]}</a></h4>
+										<p>电话：<span>{$r[phone]}</span></p>
+									</div>
+									<div class="top_qty">
+										<h6><a href="">JON ZHANG</a></h6>
+										<p><a href="">所在门店：<span>{$title}</span></a></p>
+									</div>
+									<div class="centerImgBox_qty"></div>
+									<div class="bottomBox_qty">
+										<div class="good_qty">{$r[aptitude]}</div>
+										<p>
+											{str_cut($r[description],160,"")}
+										</p>
+									</div>
+									<div class="see_qty">
+										<a href="{$r[url]}">查看详情</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					    {/loop}
+					</ul>
+					<!--  <div class="change_qty"><span>换一批</span></div>-->
+				</div>
+				<!--健康用药结束-->
 				
 				<!--预约体检跑马车开始-->
 				{pc:content  action="position" posid="5" order="listorder DESC" num="4"}
@@ -106,17 +158,19 @@
 				<!--咨询结束-->
 				<!--咨询大块开始-->
 				<div class="conBigBox_qty">
+				<form name="qform" id="qform" action="{APP_PATH}index.php?m=zsask&a=question&cid=0" method="post">
 					<div class="conLeftBox_qty">
 						<div class="conSmallBox_qty">
 							<div class="inputBox_qty">请输入您的问题</div>
 							<div class="textBox_qty">
-								<textarea name="" rows="4" cols="44"></textarea>
+								<textarea name="question" rows="4" cols="44"></textarea>
 							</div>
 							<div class="meeBox_qty">
-								<span>立即提问</span>
+								<span><input type="submit" name="dosubmit" value=" 提交问题 " class="button" style="color: #fff"/></span>
 							</div>
 						</div>
 					</div>
+				</form>
 					<div class="conLeftBox_qty">
 						<div class="conSmall_qty">
 							<div class="answerBox_qty">

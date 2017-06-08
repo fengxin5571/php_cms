@@ -48,6 +48,15 @@ class index {
 	public function ajax_linkage(){
 	    echo show_linkage(1,0,$modelid,'region_id',1);
 	}
+	//ajax获取门店列表
+	public function ajax_store(){
+	    $this->db->table_name="dyw_store";
+	    $store_lists=$this->db->select();
+	    if($store_lists){
+	        $store_lists=json_encode($store_lists);
+	    }
+	    echo $store_lists;
+	}
 	//内容页
 	public function show() {
 		$catid = intval($_GET['catid']);
@@ -86,6 +95,11 @@ class index {
 		$content_output = new content_output($modelid,$catid,$CATEGORYS);
 		$data = $content_output->get($rs);
 		extract($data);
+		if($modelid == 33){ //如果未医师模型
+		    $this->db->table_name=$this->db->db_tablepre.'store';
+		    $store=$this->db->get_one(array('id'=>$store));
+		}
+		
 		//检查文章会员组权限
 		if($groupids_view && is_array($groupids_view)) {
 			$_groupid = param::get_cookie('_groupid');

@@ -140,6 +140,8 @@
 .imgBoxLeft_qty{
 	width: 126px;
 	float: left;
+	border-radius: 50%;
+    overflow: hidden;
 }
 .healthRight_qty{
 	width: 434px;

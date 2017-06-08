@@ -733,3 +733,10 @@
 <?php exit;?>06-04 16:38:22 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
 <?php exit;?>06-04 16:38:22 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
 <?php exit;?>06-04 16:38:22 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>06-07 13:50:00 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 38
+<?php exit;?>06-07 13:50:00 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 38
+<?php exit;?>06-07 13:50:01 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 38
+<?php exit;?>06-07 13:50:01 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 38
+<?php exit;?>06-07 13:50:03 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 38
+<?php exit;?>06-07 13:50:23 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\show_dietitian.php | 39
+<?php exit;?>06-08 13:35:40 | 2 | Illegal string offset 'content' | caches\caches_template\default\zsask\qlist.php | 72

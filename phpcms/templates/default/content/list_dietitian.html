@@ -1,22 +1,34 @@
 {template "content","header"}
-
-<!--main-->
-<div class="main photo-channel">
-<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
-<div class="bk10"></div>
-	{pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
-		<ul class="photo-list picbig">
-			{loop $data $r}
-			<li>
-			<div class="img-wrap">
-			<a href="{$r[url]}"><img src="{thumb($r[thumb],150,112)}" width="150" height="112" alt="{$r[title]}"/></a>
-			</div>
-			<span style="color:{$r[style]}">{str_cut($r[title],28)}</span>
-			</li>
-			{/loop}
-		</ul>
-		<div id="pages" class="text-c">{$pages}</div>
-	{/pc}
-    </div>
+<link rel="stylesheet" href="{CSS_PATH}themes/css/public.css">
+<link rel="stylesheet" href="{CSS_PATH}themes/css/doctorList_yyt.css">
+<!--医师列表 begin -->
+<div class="doctor_header_yyt">
+    <span>首页</span>
+    <span> > </span>
+    <span>{catpos($catid)}</span>
 </div>
+<div class="doctor_con">
+    <div class="doctor_title"></div>
+    <div class="doctor_ad"></div>
+    <ul class="doctor_list">
+       {pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+       {loop $data $r}
+       <li class="doctor_one">
+           <a href="{$r[url]}" class="doctor_one_photo">
+           <img src="{thumb($r[thumb],200,150)}" width="200" height="150" alt="{$r[title]}"/>
+           </a>
+           <a href="{$r[url]}" class="doctor_oneName">{$r[title]}</a>
+           <span class="doctor_icon"></span>
+           <span class="doctor_phoneNum">{$r[phone]}</span>
+           <div class="doctor_md">工作时间：{$r[worktime]}</div>
+           <div class="doctor_md_ab">{$r[description]}</div>
+           <a href="{$r[url]}" class="doctor_one_more">查看详情</a>
+       </li>
+       {/loop}
+       {/pc}
+    </ul>
+    <div class="" id="pages">{$pages}</div>
+</div>
+<!--医师列表 end -->
+
 {template "content","footer"}

@@ -1,0 +1,137 @@
+{template "content", "header"}
+{template "zsask", "header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/public_qty.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}themes/css/answerList.css"/>
+<!-- 问答列表页 begin-->
+
+<div class="answerBox">
+	<div class="answerSmallBox">
+		<!--小问题列表开始-->
+		<div class="detailHome_qty">
+			<div class="homeFont">首页<span><a href="{ASK_PATH}">&gt热点提问</a></span></div>
+		</div>
+		<!--小问题列表结束-->
+		<!--问题列表开始-->
+		<div class="healthBox_qty">
+			<div class="healthImgBox_qty">
+				<img src="{CSS_PATH}themes/image/store_qty.png"/>
+			</div>
+			<div class="healthRightBox_qty">
+				<div class="healthTopFont_qty">
+					热点<span>提问</span>
+				</div>
+				<div class="healthBottomFont_qty">
+					HOT<span>QUESTIONS</span>
+				</div>
+			</div>
+		</div>
+		<!--问题结束-->
+		<ul class="twzq-nav">
+            <li class="active" id="bgc_2"><a href="javascript:;" onclick="choice(2)">全部</a></li>
+            <li id="bgc_0"><a href="javascript:;" onclick="choice(0)">待解决</a></li>
+            <li id="bgc_99"><a href="javascript:;" onclick="choice(99)">已解决</a></li>
+            <li id="bgc_1"><a href="javascript:;" onclick="choice(1)">零回答</a></li>
+        </ul>
+		{php $where = get_catids($catid); $stus = intval($_GET[s]);}
+		{if $stus ==1}
+		{php $where .= ' AND status=0';}
+		
+		{pc:get sql="SELECT qid FROM dyw_ask_answer WHERE zid=0 AND status=0 GROUP BY qid" return="qids"}
+		{loop $qids $_q}
+		{php $qidarr[] = $_q[qid]}
+		{/loop}
+		{/pc}
+		{if $qidarr}
+		{php $where .= ' AND '.to_sqls($qidarr, '', 'qid NOT');}
+		{/if}
+		{elseif $stus !=2}
+		{php $where .= ' AND status='.$stus;}
+		{else}
+		{php $where .=' AND status !=1'}
+		{/if}
+		
+		{if !empty($_GET['keywords'])}
+		{php $keywords = new_addslashes(safe_replace(urldecode($_GET['keywords']))); }
+		{php $where .= " AND question LIKE '%$keywords%'"; }
+		{/if}
+		
+		<!--问题列表开始-->
+		{pc:get sql="SELECT * FROM dyw_ask_question WHERE $where ORDER BY qid DESC" num="25" page="$page" return="arrq"}
+		<div class="answerListBox_qty">
+			<ul class="answerSmalllistBox_qty">
+			    {loop $arrq $r}
+				<li>
+					<div class="answerLeft_qty">
+						<div class="answer_qty">
+							<a href="{if $r[url]}{$r[url]}{else}{ASK_SHOW}{$r[qid]}{/if}"><h4>Q：{str_cut($r[question],70,"")}<span>&nbsp;&nbsp;{date("Y-m-d h:i:s",$r[addtime])}</span></h4></a>
+						</div>
+						{if get_answers($r[qid])}
+						{loop get_answers($r[qid]) $a}
+						<div class="answer_qty">
+							<h4 class="color_qty">A：</h4>
+							<p>{$a[content]}</p>
+						</div>
+						
+						<div class="anony_qty">
+							<span class="anonyBox_qty">匿名提问</span>
+							<span class="anonyR_qty">{$a[a_username]}的回答</span>
+						</div>
+						{/loop}
+						{else}
+						<div class="answer_qty">
+							<h4 class="color_qty">A：暂无最佳回答，如果要查看所有回答请查看&nbsp;&nbsp;&nbsp;&nbsp;<a href="{if $r[url]}{$r[url]}{else}{ASK_SHOW}{$r[qid]}{/if}">问题详情</a></h4>
+							<p></p>
+						</div>
+						{/if}
+					</div>
+					<div class="answerRight_qty">
+						<a href="">
+							<img src="{CSS_PATH}themes/image/doctor_qty.png"/>
+							<span class="doctor_qty">欢迎您&nbsp;&nbsp;<span>预约+</span></span>
+						</a>
+					</div>
+				</li>
+				{/loop}
+			</ul>
+		</div>
+		{/pc}
+		<!--问题列表结束-->
+		<!--分页开始-->
+		<div id="pages">
+	    {$pages}	
+		</div>
+		<!--分页结束-->
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 问答列表页 end -->
+
+
+<script type="text/javascript">
+	function choice(status) {
+		window.location = '{ASK_LIST}{$catid}&s='+ status;
+	}
+	
+	$('.twzq-nav li').removeClass('active');
+	$('#bgc_{$stus}').addClass('active');
+	var total_q = $('#pages .a1:eq(0)').html();
+	if (!total_q) {
+		$('#total_q').html('{count($arrq)}条');
+	}else {
+		$('#total_q').html(total_q);
+	}
+
+	function srch() {
+		var keywords = $('#keywords').val();
+		window.location = window.location +'&keywords='+ keywords;
+	}
+	
+</script>
+
+
+{template "content", "footer"}

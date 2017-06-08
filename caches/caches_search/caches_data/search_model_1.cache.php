@@ -6,6 +6,12 @@ return array (
     'name' => '自视频模型',
     'sort' => '0',
   ),
+  33 => 
+  array (
+    'typeid' => '70',
+    'name' => '指导老师模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

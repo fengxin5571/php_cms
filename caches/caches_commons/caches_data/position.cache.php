@@ -48,11 +48,23 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  19 => 
+  array (
+    'posid' => '19',
+    'modelid' => '33',
+    'catid' => '29',
+    'name' => '首页医师推荐',
+    'maxnum' => '9',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   16 => 
   array (
     'posid' => '16',
     'modelid' => '32',
-    'catid' => '20',
+    'catid' => '0',
     'name' => '首页视频推荐',
     'maxnum' => '20',
     'extention' => '',
@@ -64,7 +76,7 @@ return array (
   array (
     'posid' => '17',
     'modelid' => '32',
-    'catid' => '20',
+    'catid' => '0',
     'name' => '视频频道页推荐',
     'maxnum' => '20',
     'extention' => '',

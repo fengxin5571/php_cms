@@ -99,6 +99,30 @@ if(is_array($forminfos['base'])) {
 </body>
 </html>
 <script type="text/javascript"> 
+var store_id=<?php echo $data[store]?>;
+$(function(){
+	 $.ajax({
+		  url:'index.php?m=content&c=index&a=ajax_store',
+	      type:'get',
+	      dataType:'json',
+	      success:function(res){
+		      var select=$("#services_store");
+	    	  if(res){
+		    	    $.each(res,function(index,data){
+		    	    	if(data.id == store_id){
+		    	    		var option=$("<option value='"+data.id+"' selected>"+data.title+"</option>");
+		    	    	}else{
+		    	    		var option=$("<option value='"+data.id+"'>"+data.title+"</option>");
+		    	    	}
+		    	    	
+						select.append(option);
+			    	});
+					
+		      }
+	    	  
+	      }
+	  });
+});
 <!--
 //只能放到最下面
 var openClose = $("#RopenClose"), rh = $(".addContent .col-auto").height(),colRight = $(".addContent .col-right"),valClose = getcookie('openClose');

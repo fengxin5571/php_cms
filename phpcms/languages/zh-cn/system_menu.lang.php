@@ -459,4 +459,9 @@ $LANG['video_upload'] = '视频上传';
 
 $LANG['yp']="企业黄页";
 $LANG['yp_model_manage']="企业黄页模型";
+$LANG['zsask'] = '问答模块';
+$LANG['check_question'] = '审核';
+$LANG['cat_list'] = '管理栏目';
+$LANG['add_cat'] = '添加栏目';
+$LANG['ask_settings'] = '问答配置';
 ?>

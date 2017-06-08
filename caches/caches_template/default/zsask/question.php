@@ -1,0 +1,56 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content", "header"); ?>
+<?php include template("zsask", "header"); ?>
+
+<div class="question">
+<div style="margin-bottom:5px;" class="crumbs">
+<a href="<?php echo APP_PATH;?>">首页</a><span> &gt; </span>
+<a href="<?php echo ASK_PATH;?>">问答</a> &gt; 
+<a href="<?php echo ASK_LIST;?>">分类</a> &gt; 提问</div>
+
+<div class="pre fl">
+<form name="qform" id="qform" action="" method="post">
+<table class="table_form">
+<tr><th>问题：</th><td>
+<textarea name="question" id="question" style="width:400px;height:50px;"></textarea>
+</td></tr>
+
+<tr><th>补充：</th><td>
+<textarea name="content" id="cont" style="width:400px;height:50px;"></textarea>
+</td></tr>
+
+<tr height="40"><th>分类：</th><td>
+<input type="hidden" name="catid" id="cid" value="<?php echo $catid;?>" /> <span id="catpath"> <?php echo get_catpath($catid);?></span> 
+<a href="javascript:;" onclick="select_type()" style="color:blue">选择分类</a>
+</td></tr>
+
+<tr><th></th><td>
+<input type="submit" name="dosubmit" value=" 提交问题 " class="button" />
+</td></tr>
+</table>
+</form>
+
+<script type="text/javascript">
+
+	function select_type() {
+		
+		window.top.art.dialog({id:'select_type',lock:false}).close();
+		window.top.art.dialog({title:'选择分类>>',
+			id:'select_type',iframe:'index.php?m=zsask&a=select_type',width:'700',height:'400'}, 
+			function(){
+				var d = window.top.art.dialog({id:'select_type'}).data.iframe;
+				var cid = d.document.getElementById('select_catid').value;
+				var cpath = d.document.getElementById('cpath').innerHTML;
+				if (cid =='0') {
+					alert('请选择完整分类！');
+					return false;
+				}
+				$('#cid').val(cid);
+				$('#catpath').html(cpath);
+			},
+			function(){window.top.art.dialog({id:'select_type',lock:false}).close()});
+	}
+</script>
+</div>
+<?php include template("zsask", "right"); ?>
+</div>
+<?php include template("content", "footer"); ?>
